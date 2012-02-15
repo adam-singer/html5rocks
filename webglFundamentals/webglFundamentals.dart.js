@@ -99,11 +99,14 @@ $defProp(Object.prototype, "noSuchMethod", function(name, args) {
 $defProp(Object.prototype, "add$1", function($0) {
   return this.noSuchMethod("add", [$0]);
 });
-$defProp(Object.prototype, "add$2", function($0, $1) {
-  return this.noSuchMethod("add", [$0, $1]);
-});
 $defProp(Object.prototype, "clear$0", function() {
   return this.noSuchMethod("clear", []);
+});
+$defProp(Object.prototype, "createBuffer$0", function() {
+  return this.noSuchMethod("createBuffer", []);
+});
+$defProp(Object.prototype, "createProgram$0", function() {
+  return this.noSuchMethod("createProgram", []);
 });
 $defProp(Object.prototype, "filter$1", function($0) {
   return this.noSuchMethod("filter", [$0]);
@@ -117,7 +120,13 @@ $defProp(Object.prototype, "getContext$0", function() {
 $defProp(Object.prototype, "is$CanvasElement", function() {
   return false;
 });
-$defProp(Object.prototype, "is$Date", function() {
+$defProp(Object.prototype, "is$List_WebGLShader", function() {
+  return false;
+});
+$defProp(Object.prototype, "is$html_ArrayBuffer", function() {
+  return false;
+});
+$defProp(Object.prototype, "is$html_ArrayBufferView", function() {
   return false;
 });
 $defProp(Object.prototype, "is$html_Element", function() {
@@ -325,6 +334,7 @@ function _toDartException(e) {
 //  ********** Library dart:coreimpl **************
 // ********** Code for ListFactory **************
 ListFactory = Array;
+$defProp(ListFactory.prototype, "is$List_WebGLShader", function(){return true});
 ListFactory.ListFactory$from$factory = function(other) {
   var list = [];
   for (var $$i = other.iterator(); $$i.hasNext(); ) {
@@ -952,6 +962,7 @@ $dynamic("get$length").CSSValueList = function() { return this.length; };
 // ********** Code for _CanvasGradientJs **************
 // ********** Code for _CanvasPatternJs **************
 // ********** Code for _CanvasPixelArrayJs **************
+$dynamic("is$List_WebGLShader").CanvasPixelArray = function(){return false};
 $dynamic("get$length").CanvasPixelArray = function() { return this.length; };
 $dynamic("$index").CanvasPixelArray = function(index) {
   return this[index];
@@ -1035,9 +1046,6 @@ $dynamic("get$length").DataTransferItemList = function() { return this.length; }
 $dynamic("add$1").DataTransferItemList = function($0) {
   return this.add($0);
 };
-$dynamic("add$2").DataTransferItemList = function($0, $1) {
-  return this.add($0, $1);
-};
 $dynamic("clear$0").DataTransferItemList = function() {
   return this.clear();
 };
@@ -1089,6 +1097,7 @@ $dynamic("get$length").FileWriter = function() { return this.length; };
 $dynamic("get$length").FileWriterSync = function() { return this.length; };
 // ********** Code for _Float32ArrayJs **************
 var _Float32ArrayJs = {};
+$dynamic("is$List_WebGLShader").Float32Array = function(){return false};
 $dynamic("get$length").Float32Array = function() { return this.length; };
 $dynamic("$index").Float32Array = function(index) {
   return this[index];
@@ -1122,6 +1131,7 @@ $dynamic("forEach$1").Float32Array = function($0) {
 };
 // ********** Code for _Float64ArrayJs **************
 var _Float64ArrayJs = {};
+$dynamic("is$List_WebGLShader").Float64Array = function(){return false};
 $dynamic("get$length").Float64Array = function() { return this.length; };
 $dynamic("$index").Float64Array = function(index) {
   return this[index];
@@ -1176,6 +1186,7 @@ $dynamic("get$text").HTMLBodyElement = function() { return this.text; };
 $dynamic("get$type").HTMLButtonElement = function() { return this.type; };
 // ********** Code for _HTMLCanvasElementJs **************
 // ********** Code for _HTMLCollectionJs **************
+$dynamic("is$List_WebGLShader").HTMLCollection = function(){return false};
 $dynamic("get$length").HTMLCollection = function() { return this.length; };
 $dynamic("$index").HTMLCollection = function(index) {
   return this[index];
@@ -1255,6 +1266,7 @@ $dynamic("get$type").HTMLObjectElement = function() { return this.type; };
 // ********** Code for _HTMLOptionElementJs **************
 $dynamic("get$text").HTMLOptionElement = function() { return this.text; };
 // ********** Code for _HTMLOptionsCollectionJs **************
+$dynamic("is$List_WebGLShader").HTMLOptionsCollection = function(){return false};
 $dynamic("get$length").HTMLOptionsCollection = function() {
   return this.length;
 }
@@ -1272,9 +1284,6 @@ $dynamic("get$type").HTMLScriptElement = function() { return this.type; };
 // ********** Code for _HTMLSelectElementJs **************
 $dynamic("get$length").HTMLSelectElement = function() { return this.length; };
 $dynamic("get$type").HTMLSelectElement = function() { return this.type; };
-$dynamic("add$2").HTMLSelectElement = function($0, $1) {
-  return this.add($0, $1);
-};
 // ********** Code for _HTMLSourceElementJs **************
 $dynamic("get$type").HTMLSourceElement = function() { return this.type; };
 // ********** Code for _HTMLSpanElementJs **************
@@ -1313,9 +1322,6 @@ $dynamic("get$length").History = function() { return this.length; };
 $dynamic("add$1").IDBObjectStore = function($0) {
   return this.add($0);
 };
-$dynamic("add$2").IDBObjectStore = function($0, $1) {
-  return this.add($0, $1);
-};
 $dynamic("clear$0").IDBObjectStore = function() {
   return this.clear();
 };
@@ -1326,6 +1332,7 @@ $dynamic("clear$0").IDBObjectStore = function() {
 // ********** Code for _ImageDataJs **************
 // ********** Code for _Int16ArrayJs **************
 var _Int16ArrayJs = {};
+$dynamic("is$List_WebGLShader").Int16Array = function(){return false};
 $dynamic("get$length").Int16Array = function() { return this.length; };
 $dynamic("$index").Int16Array = function(index) {
   return this[index];
@@ -1359,6 +1366,7 @@ $dynamic("forEach$1").Int16Array = function($0) {
 };
 // ********** Code for _Int32ArrayJs **************
 var _Int32ArrayJs = {};
+$dynamic("is$List_WebGLShader").Int32Array = function(){return false};
 $dynamic("get$length").Int32Array = function() { return this.length; };
 $dynamic("$index").Int32Array = function(index) {
   return this[index];
@@ -1392,6 +1400,7 @@ $dynamic("forEach$1").Int32Array = function($0) {
 };
 // ********** Code for _Int8ArrayJs **************
 var _Int8ArrayJs = {};
+$dynamic("is$List_WebGLShader").Int8Array = function(){return false};
 $dynamic("get$length").Int8Array = function() { return this.length; };
 $dynamic("$index").Int8Array = function(index) {
   return this[index];
@@ -1433,6 +1442,7 @@ $dynamic("get$type").JavaScriptCallFrame = function() { return this.type; };
 // ********** Code for _MediaElementAudioSourceNodeJs **************
 // ********** Code for _MediaErrorJs **************
 // ********** Code for _MediaListJs **************
+$dynamic("is$List_WebGLShader").MediaList = function(){return false};
 $dynamic("get$length").MediaList = function() { return this.length; };
 $dynamic("$index").MediaList = function(index) {
   return this[index];
@@ -1474,6 +1484,7 @@ $dynamic("forEach$1").MediaList = function($0) {
 // ********** Code for _MouseEventJs **************
 // ********** Code for _MutationEventJs **************
 // ********** Code for _NamedNodeMapJs **************
+$dynamic("is$List_WebGLShader").NamedNodeMap = function(){return false};
 $dynamic("get$length").NamedNodeMap = function() { return this.length; };
 $dynamic("$index").NamedNodeMap = function(index) {
   return this[index];
@@ -1509,6 +1520,7 @@ $dynamic("forEach$1").NamedNodeMap = function($0) {
 // ********** Code for _NodeFilterJs **************
 // ********** Code for _NodeIteratorJs **************
 // ********** Code for _NodeListJs **************
+$dynamic("is$List_WebGLShader").NodeList = function(){return false};
 $dynamic("get$length").NodeList = function() { return this.length; };
 $dynamic("$index").NodeList = function(index) {
   return this[index];
@@ -1787,6 +1799,7 @@ $dynamic("clear$0").Storage = function() {
 // ********** Code for _StyleMediaJs **************
 $dynamic("get$type").StyleMedia = function() { return this.type; };
 // ********** Code for _StyleSheetListJs **************
+$dynamic("is$List_WebGLShader").StyleSheetList = function(){return false};
 $dynamic("get$length").StyleSheetList = function() { return this.length; };
 $dynamic("$index").StyleSheetList = function(index) {
   return this[index];
@@ -1832,6 +1845,7 @@ $dynamic("get$length").TimeRanges = function() { return this.length; };
 // ********** Code for _TouchJs **************
 // ********** Code for _TouchEventJs **************
 // ********** Code for _TouchListJs **************
+$dynamic("is$List_WebGLShader").TouchList = function(){return false};
 $dynamic("get$length").TouchList = function() { return this.length; };
 $dynamic("$index").TouchList = function(index) {
   return this[index];
@@ -1873,6 +1887,7 @@ $dynamic("get$parentNode").TreeWalker = function() {
 }
 // ********** Code for _Uint16ArrayJs **************
 var _Uint16ArrayJs = {};
+$dynamic("is$List_WebGLShader").Uint16Array = function(){return false};
 $dynamic("get$length").Uint16Array = function() { return this.length; };
 $dynamic("$index").Uint16Array = function(index) {
   return this[index];
@@ -1906,6 +1921,7 @@ $dynamic("forEach$1").Uint16Array = function($0) {
 };
 // ********** Code for _Uint32ArrayJs **************
 var _Uint32ArrayJs = {};
+$dynamic("is$List_WebGLShader").Uint32Array = function(){return false};
 $dynamic("get$length").Uint32Array = function() { return this.length; };
 $dynamic("$index").Uint32Array = function(index) {
   return this[index];
@@ -1939,6 +1955,7 @@ $dynamic("forEach$1").Uint32Array = function($0) {
 };
 // ********** Code for _Uint8ArrayJs **************
 var _Uint8ArrayJs = {};
+$dynamic("is$List_WebGLShader").Uint8Array = function(){return false};
 $dynamic("get$length").Uint8Array = function() { return this.length; };
 $dynamic("$index").Uint8Array = function(index) {
   return this[index];
@@ -1972,6 +1989,7 @@ $dynamic("forEach$1").Uint8Array = function($0) {
 };
 // ********** Code for _Uint8ClampedArrayJs **************
 var _Uint8ClampedArrayJs = {};
+$dynamic("is$List_WebGLShader").Uint8ClampedArray = function(){return false};
 // ********** Code for _ValidityStateJs **************
 // ********** Code for _WaveShaperNodeJs **************
 // ********** Code for _WebGLActiveInfoJs **************
@@ -1987,6 +2005,12 @@ $dynamic("get$type").WebGLActiveInfo = function() { return this.type; };
 // ********** Code for _WebGLProgramJs **************
 // ********** Code for _WebGLRenderbufferJs **************
 // ********** Code for _WebGLRenderingContextJs **************
+$dynamic("createBuffer$0").WebGLRenderingContext = function() {
+  return this.createBuffer();
+};
+$dynamic("createProgram$0").WebGLRenderingContext = function() {
+  return this.createProgram();
+};
 // ********** Code for _WebGLShaderJs **************
 // ********** Code for _WebGLTextureJs **************
 // ********** Code for _WebGLUniformLocationJs **************
@@ -2043,6 +2067,15 @@ function _DOMParserFactoryProvider() {}
 function _FileReaderFactoryProvider() {}
 // ********** Code for _TypedArrayFactoryProvider **************
 function _TypedArrayFactoryProvider() {}
+_TypedArrayFactoryProvider.Float32Array$fromList$factory = function(list) {
+  return _TypedArrayFactoryProvider._F32(_TypedArrayFactoryProvider.ensureNative(list));
+}
+_TypedArrayFactoryProvider._F32 = function(arg) {
+  return new Float32Array(arg);
+}
+_TypedArrayFactoryProvider.ensureNative = function(list) {
+  return list;
+}
 // ********** Code for _WebKitCSSMatrixFactoryProvider **************
 function _WebKitCSSMatrixFactoryProvider() {}
 // ********** Code for _WebKitPointFactoryProvider **************
@@ -2235,26 +2268,6 @@ AnchorElementWrappingImplementation.prototype.get$type = function() {
 AnchorElementWrappingImplementation.prototype.toString = function() {
   return this._ptr.toString();
 }
-// ********** Code for AnimationListWrappingImplementation **************
-$inherits(AnimationListWrappingImplementation, DOMWrapperBase);
-AnimationListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-AnimationListWrappingImplementation._wrap$ctor.prototype = AnimationListWrappingImplementation.prototype;
-function AnimationListWrappingImplementation() {}
-AnimationListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-AnimationListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapAnimation(this._ptr.item(index));
-}
-// ********** Code for AnimationWrappingImplementation **************
-$inherits(AnimationWrappingImplementation, DOMWrapperBase);
-AnimationWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-AnimationWrappingImplementation._wrap$ctor.prototype = AnimationWrappingImplementation.prototype;
-function AnimationWrappingImplementation() {}
 // ********** Code for AreaElementWrappingImplementation **************
 $inherits(AreaElementWrappingImplementation, ElementWrappingImplementation);
 AreaElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2270,72 +2283,7 @@ ArrayBufferViewWrappingImplementation._wrap$ctor = function(ptr) {
 }
 ArrayBufferViewWrappingImplementation._wrap$ctor.prototype = ArrayBufferViewWrappingImplementation.prototype;
 function ArrayBufferViewWrappingImplementation() {}
-// ********** Code for ArrayBufferWrappingImplementation **************
-$inherits(ArrayBufferWrappingImplementation, DOMWrapperBase);
-ArrayBufferWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ArrayBufferWrappingImplementation._wrap$ctor.prototype = ArrayBufferWrappingImplementation.prototype;
-function ArrayBufferWrappingImplementation() {}
-// ********** Code for AudioNodeWrappingImplementation **************
-$inherits(AudioNodeWrappingImplementation, DOMWrapperBase);
-AudioNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-AudioNodeWrappingImplementation._wrap$ctor.prototype = AudioNodeWrappingImplementation.prototype;
-function AudioNodeWrappingImplementation() {}
-// ********** Code for AudioSourceNodeWrappingImplementation **************
-$inherits(AudioSourceNodeWrappingImplementation, AudioNodeWrappingImplementation);
-AudioSourceNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioSourceNodeWrappingImplementation._wrap$ctor.prototype = AudioSourceNodeWrappingImplementation.prototype;
-function AudioSourceNodeWrappingImplementation() {}
-// ********** Code for AudioBufferSourceNodeWrappingImplementation **************
-$inherits(AudioBufferSourceNodeWrappingImplementation, AudioSourceNodeWrappingImplementation);
-AudioBufferSourceNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioSourceNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioBufferSourceNodeWrappingImplementation._wrap$ctor.prototype = AudioBufferSourceNodeWrappingImplementation.prototype;
-function AudioBufferSourceNodeWrappingImplementation() {}
-// ********** Code for AudioBufferWrappingImplementation **************
-$inherits(AudioBufferWrappingImplementation, DOMWrapperBase);
-AudioBufferWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-AudioBufferWrappingImplementation._wrap$ctor.prototype = AudioBufferWrappingImplementation.prototype;
-function AudioBufferWrappingImplementation() {}
-AudioBufferWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for AudioChannelMergerWrappingImplementation **************
-$inherits(AudioChannelMergerWrappingImplementation, AudioNodeWrappingImplementation);
-AudioChannelMergerWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioChannelMergerWrappingImplementation._wrap$ctor.prototype = AudioChannelMergerWrappingImplementation.prototype;
-function AudioChannelMergerWrappingImplementation() {}
-// ********** Code for AudioChannelSplitterWrappingImplementation **************
-$inherits(AudioChannelSplitterWrappingImplementation, AudioNodeWrappingImplementation);
-AudioChannelSplitterWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioChannelSplitterWrappingImplementation._wrap$ctor.prototype = AudioChannelSplitterWrappingImplementation.prototype;
-function AudioChannelSplitterWrappingImplementation() {}
-// ********** Code for AudioContextWrappingImplementation **************
-$inherits(AudioContextWrappingImplementation, DOMWrapperBase);
-AudioContextWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-AudioContextWrappingImplementation._wrap$ctor.prototype = AudioContextWrappingImplementation.prototype;
-function AudioContextWrappingImplementation() {}
-// ********** Code for AudioDestinationNodeWrappingImplementation **************
-$inherits(AudioDestinationNodeWrappingImplementation, AudioNodeWrappingImplementation);
-AudioDestinationNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioDestinationNodeWrappingImplementation._wrap$ctor.prototype = AudioDestinationNodeWrappingImplementation.prototype;
-function AudioDestinationNodeWrappingImplementation() {}
+ArrayBufferViewWrappingImplementation.prototype.is$html_ArrayBufferView = function(){return true};
 // ********** Code for MediaElementWrappingImplementation **************
 $inherits(MediaElementWrappingImplementation, ElementWrappingImplementation);
 MediaElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2352,58 +2300,6 @@ AudioElementWrappingImplementation._wrap$ctor = function(ptr) {
 AudioElementWrappingImplementation._wrap$ctor.prototype = AudioElementWrappingImplementation.prototype;
 function AudioElementWrappingImplementation() {}
 AudioElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for AudioGainNodeWrappingImplementation **************
-$inherits(AudioGainNodeWrappingImplementation, AudioNodeWrappingImplementation);
-AudioGainNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioGainNodeWrappingImplementation._wrap$ctor.prototype = AudioGainNodeWrappingImplementation.prototype;
-function AudioGainNodeWrappingImplementation() {}
-// ********** Code for AudioParamWrappingImplementation **************
-$inherits(AudioParamWrappingImplementation, DOMWrapperBase);
-AudioParamWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-AudioParamWrappingImplementation._wrap$ctor.prototype = AudioParamWrappingImplementation.prototype;
-function AudioParamWrappingImplementation() {}
-// ********** Code for AudioGainWrappingImplementation **************
-$inherits(AudioGainWrappingImplementation, AudioParamWrappingImplementation);
-AudioGainWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioParamWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioGainWrappingImplementation._wrap$ctor.prototype = AudioGainWrappingImplementation.prototype;
-function AudioGainWrappingImplementation() {}
-// ********** Code for AudioListenerWrappingImplementation **************
-$inherits(AudioListenerWrappingImplementation, DOMWrapperBase);
-AudioListenerWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-AudioListenerWrappingImplementation._wrap$ctor.prototype = AudioListenerWrappingImplementation.prototype;
-function AudioListenerWrappingImplementation() {}
-// ********** Code for AudioPannerNodeWrappingImplementation **************
-$inherits(AudioPannerNodeWrappingImplementation, AudioNodeWrappingImplementation);
-AudioPannerNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioPannerNodeWrappingImplementation._wrap$ctor.prototype = AudioPannerNodeWrappingImplementation.prototype;
-function AudioPannerNodeWrappingImplementation() {}
-// ********** Code for EventWrappingImplementation **************
-$inherits(EventWrappingImplementation, DOMWrapperBase);
-EventWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-EventWrappingImplementation._wrap$ctor.prototype = EventWrappingImplementation.prototype;
-function EventWrappingImplementation() {}
-EventWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for AudioProcessingEventWrappingImplementation **************
-$inherits(AudioProcessingEventWrappingImplementation, EventWrappingImplementation);
-AudioProcessingEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AudioProcessingEventWrappingImplementation._wrap$ctor.prototype = AudioProcessingEventWrappingImplementation.prototype;
-function AudioProcessingEventWrappingImplementation() {}
 // ********** Code for BRElementWrappingImplementation **************
 $inherits(BRElementWrappingImplementation, ElementWrappingImplementation);
 BRElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2412,13 +2308,6 @@ BRElementWrappingImplementation._wrap$ctor = function(ptr) {
 BRElementWrappingImplementation._wrap$ctor.prototype = BRElementWrappingImplementation.prototype;
 function BRElementWrappingImplementation() {}
 BRElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for BarInfoWrappingImplementation **************
-$inherits(BarInfoWrappingImplementation, DOMWrapperBase);
-BarInfoWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-BarInfoWrappingImplementation._wrap$ctor.prototype = BarInfoWrappingImplementation.prototype;
-function BarInfoWrappingImplementation() {}
 // ********** Code for BaseElementWrappingImplementation **************
 $inherits(BaseElementWrappingImplementation, ElementWrappingImplementation);
 BaseElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2427,33 +2316,6 @@ BaseElementWrappingImplementation._wrap$ctor = function(ptr) {
 BaseElementWrappingImplementation._wrap$ctor.prototype = BaseElementWrappingImplementation.prototype;
 function BaseElementWrappingImplementation() {}
 BaseElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for BiquadFilterNodeWrappingImplementation **************
-$inherits(BiquadFilterNodeWrappingImplementation, AudioNodeWrappingImplementation);
-BiquadFilterNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-BiquadFilterNodeWrappingImplementation._wrap$ctor.prototype = BiquadFilterNodeWrappingImplementation.prototype;
-function BiquadFilterNodeWrappingImplementation() {}
-BiquadFilterNodeWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for BlobBuilderWrappingImplementation **************
-$inherits(BlobBuilderWrappingImplementation, DOMWrapperBase);
-BlobBuilderWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-BlobBuilderWrappingImplementation._wrap$ctor.prototype = BlobBuilderWrappingImplementation.prototype;
-function BlobBuilderWrappingImplementation() {}
-// ********** Code for BlobWrappingImplementation **************
-$inherits(BlobWrappingImplementation, DOMWrapperBase);
-BlobWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-BlobWrappingImplementation._wrap$ctor.prototype = BlobWrappingImplementation.prototype;
-function BlobWrappingImplementation() {}
-BlobWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
 // ********** Code for ButtonElementWrappingImplementation **************
 $inherits(ButtonElementWrappingImplementation, ElementWrappingImplementation);
 ButtonElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2489,153 +2351,6 @@ CDATASectionWrappingImplementation._wrap$ctor = function(ptr) {
 }
 CDATASectionWrappingImplementation._wrap$ctor.prototype = CDATASectionWrappingImplementation.prototype;
 function CDATASectionWrappingImplementation() {}
-// ********** Code for CSSRuleWrappingImplementation **************
-$inherits(CSSRuleWrappingImplementation, DOMWrapperBase);
-CSSRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CSSRuleWrappingImplementation._wrap$ctor.prototype = CSSRuleWrappingImplementation.prototype;
-function CSSRuleWrappingImplementation() {}
-CSSRuleWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for CSSCharsetRuleWrappingImplementation **************
-$inherits(CSSCharsetRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSCharsetRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSCharsetRuleWrappingImplementation._wrap$ctor.prototype = CSSCharsetRuleWrappingImplementation.prototype;
-function CSSCharsetRuleWrappingImplementation() {}
-// ********** Code for CSSFontFaceRuleWrappingImplementation **************
-$inherits(CSSFontFaceRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSFontFaceRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSFontFaceRuleWrappingImplementation._wrap$ctor.prototype = CSSFontFaceRuleWrappingImplementation.prototype;
-function CSSFontFaceRuleWrappingImplementation() {}
-// ********** Code for CSSImportRuleWrappingImplementation **************
-$inherits(CSSImportRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSImportRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSImportRuleWrappingImplementation._wrap$ctor.prototype = CSSImportRuleWrappingImplementation.prototype;
-function CSSImportRuleWrappingImplementation() {}
-// ********** Code for CSSKeyframeRuleWrappingImplementation **************
-$inherits(CSSKeyframeRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSKeyframeRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSKeyframeRuleWrappingImplementation._wrap$ctor.prototype = CSSKeyframeRuleWrappingImplementation.prototype;
-function CSSKeyframeRuleWrappingImplementation() {}
-// ********** Code for CSSKeyframesRuleWrappingImplementation **************
-$inherits(CSSKeyframesRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSKeyframesRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSKeyframesRuleWrappingImplementation._wrap$ctor.prototype = CSSKeyframesRuleWrappingImplementation.prototype;
-function CSSKeyframesRuleWrappingImplementation() {}
-// ********** Code for CSSMatrixWrappingImplementation **************
-$inherits(CSSMatrixWrappingImplementation, DOMWrapperBase);
-CSSMatrixWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CSSMatrixWrappingImplementation._wrap$ctor.prototype = CSSMatrixWrappingImplementation.prototype;
-function CSSMatrixWrappingImplementation() {}
-CSSMatrixWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for CSSMediaRuleWrappingImplementation **************
-$inherits(CSSMediaRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSMediaRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSMediaRuleWrappingImplementation._wrap$ctor.prototype = CSSMediaRuleWrappingImplementation.prototype;
-function CSSMediaRuleWrappingImplementation() {}
-// ********** Code for CSSPageRuleWrappingImplementation **************
-$inherits(CSSPageRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSPageRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSPageRuleWrappingImplementation._wrap$ctor.prototype = CSSPageRuleWrappingImplementation.prototype;
-function CSSPageRuleWrappingImplementation() {}
-// ********** Code for CSSValueWrappingImplementation **************
-$inherits(CSSValueWrappingImplementation, DOMWrapperBase);
-CSSValueWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CSSValueWrappingImplementation._wrap$ctor.prototype = CSSValueWrappingImplementation.prototype;
-function CSSValueWrappingImplementation() {}
-// ********** Code for CSSPrimitiveValueWrappingImplementation **************
-$inherits(CSSPrimitiveValueWrappingImplementation, CSSValueWrappingImplementation);
-CSSPrimitiveValueWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSValueWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSPrimitiveValueWrappingImplementation._wrap$ctor.prototype = CSSPrimitiveValueWrappingImplementation.prototype;
-function CSSPrimitiveValueWrappingImplementation() {}
-// ********** Code for CSSRuleListWrappingImplementation **************
-$inherits(CSSRuleListWrappingImplementation, DOMWrapperBase);
-CSSRuleListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CSSRuleListWrappingImplementation._wrap$ctor.prototype = CSSRuleListWrappingImplementation.prototype;
-function CSSRuleListWrappingImplementation() {}
-CSSRuleListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-CSSRuleListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapCSSRule(this._ptr.item(index));
-}
-// ********** Code for CSSStyleRuleWrappingImplementation **************
-$inherits(CSSStyleRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSStyleRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSStyleRuleWrappingImplementation._wrap$ctor.prototype = CSSStyleRuleWrappingImplementation.prototype;
-function CSSStyleRuleWrappingImplementation() {}
-// ********** Code for StyleSheetWrappingImplementation **************
-$inherits(StyleSheetWrappingImplementation, DOMWrapperBase);
-StyleSheetWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-StyleSheetWrappingImplementation._wrap$ctor.prototype = StyleSheetWrappingImplementation.prototype;
-function StyleSheetWrappingImplementation() {}
-StyleSheetWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for CSSStyleSheetWrappingImplementation **************
-$inherits(CSSStyleSheetWrappingImplementation, StyleSheetWrappingImplementation);
-CSSStyleSheetWrappingImplementation._wrap$ctor = function(ptr) {
-  StyleSheetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSStyleSheetWrappingImplementation._wrap$ctor.prototype = CSSStyleSheetWrappingImplementation.prototype;
-function CSSStyleSheetWrappingImplementation() {}
-// ********** Code for CSSValueListWrappingImplementation **************
-$inherits(CSSValueListWrappingImplementation, CSSValueWrappingImplementation);
-CSSValueListWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSValueWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSValueListWrappingImplementation._wrap$ctor.prototype = CSSValueListWrappingImplementation.prototype;
-function CSSValueListWrappingImplementation() {}
-CSSValueListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-CSSValueListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapCSSValue(this._ptr.item(index));
-}
-// ********** Code for CSSTransformValueWrappingImplementation **************
-$inherits(CSSTransformValueWrappingImplementation, CSSValueListWrappingImplementation);
-CSSTransformValueWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSValueListWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSTransformValueWrappingImplementation._wrap$ctor.prototype = CSSTransformValueWrappingImplementation.prototype;
-function CSSTransformValueWrappingImplementation() {}
-// ********** Code for CSSUnknownRuleWrappingImplementation **************
-$inherits(CSSUnknownRuleWrappingImplementation, CSSRuleWrappingImplementation);
-CSSUnknownRuleWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSRuleWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CSSUnknownRuleWrappingImplementation._wrap$ctor.prototype = CSSUnknownRuleWrappingImplementation.prototype;
-function CSSUnknownRuleWrappingImplementation() {}
 // ********** Code for CanvasElementWrappingImplementation **************
 $inherits(CanvasElementWrappingImplementation, ElementWrappingImplementation);
 CanvasElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2654,62 +2369,6 @@ CanvasElementWrappingImplementation.prototype.getContext = function(contextId) {
   }
 }
 CanvasElementWrappingImplementation.prototype.getContext$0 = CanvasElementWrappingImplementation.prototype.getContext;
-// ********** Code for CanvasGradientWrappingImplementation **************
-$inherits(CanvasGradientWrappingImplementation, DOMWrapperBase);
-CanvasGradientWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CanvasGradientWrappingImplementation._wrap$ctor.prototype = CanvasGradientWrappingImplementation.prototype;
-function CanvasGradientWrappingImplementation() {}
-// ********** Code for CanvasPatternWrappingImplementation **************
-$inherits(CanvasPatternWrappingImplementation, DOMWrapperBase);
-CanvasPatternWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CanvasPatternWrappingImplementation._wrap$ctor.prototype = CanvasPatternWrappingImplementation.prototype;
-function CanvasPatternWrappingImplementation() {}
-// ********** Code for CanvasPixelArrayWrappingImplementation **************
-$inherits(CanvasPixelArrayWrappingImplementation, DOMWrapperBase);
-CanvasPixelArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CanvasPixelArrayWrappingImplementation._wrap$ctor.prototype = CanvasPixelArrayWrappingImplementation.prototype;
-function CanvasPixelArrayWrappingImplementation() {}
-CanvasPixelArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-CanvasPixelArrayWrappingImplementation.prototype.$index = function(index) {
-  return this._ptr.$index(index);
-}
-CanvasPixelArrayWrappingImplementation.prototype.$setindex = function(index, value) {
-  this._ptr.$setindex(index, value);
-}
-CanvasPixelArrayWrappingImplementation.prototype.add = function(value) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-CanvasPixelArrayWrappingImplementation.prototype.addAll = function(collection) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-CanvasPixelArrayWrappingImplementation.prototype.clear = function() {
-  $throw(new UnsupportedOperationException("Cannot clear immutable List."));
-}
-CanvasPixelArrayWrappingImplementation.prototype.forEach = function(f) {
-  _Collections.forEach(this, f);
-}
-CanvasPixelArrayWrappingImplementation.prototype.filter = function(f) {
-  return _Collections.filter(this, new Array(), f);
-}
-CanvasPixelArrayWrappingImplementation.prototype.iterator = function() {
-  return new _FixedSizeListIterator_int(this);
-}
-CanvasPixelArrayWrappingImplementation.prototype.add$1 = CanvasPixelArrayWrappingImplementation.prototype.add;
-CanvasPixelArrayWrappingImplementation.prototype.clear$0 = CanvasPixelArrayWrappingImplementation.prototype.clear;
-CanvasPixelArrayWrappingImplementation.prototype.filter$1 = function($0) {
-  return this.filter(to$call$1($0));
-};
-CanvasPixelArrayWrappingImplementation.prototype.forEach$1 = function($0) {
-  return this.forEach(to$call$1($0));
-};
 // ********** Code for CanvasRenderingContextWrappingImplementation **************
 $inherits(CanvasRenderingContextWrappingImplementation, DOMWrapperBase);
 CanvasRenderingContextWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2724,33 +2383,6 @@ CanvasRenderingContext2DWrappingImplementation._wrap$ctor = function(ptr) {
 }
 CanvasRenderingContext2DWrappingImplementation._wrap$ctor.prototype = CanvasRenderingContext2DWrappingImplementation.prototype;
 function CanvasRenderingContext2DWrappingImplementation() {}
-// ********** Code for ClientRectListWrappingImplementation **************
-$inherits(ClientRectListWrappingImplementation, DOMWrapperBase);
-ClientRectListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ClientRectListWrappingImplementation._wrap$ctor.prototype = ClientRectListWrappingImplementation.prototype;
-function ClientRectListWrappingImplementation() {}
-ClientRectListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-ClientRectListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapClientRect(this._ptr.item(index));
-}
-// ********** Code for ClientRectWrappingImplementation **************
-$inherits(ClientRectWrappingImplementation, DOMWrapperBase);
-ClientRectWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ClientRectWrappingImplementation._wrap$ctor.prototype = ClientRectWrappingImplementation.prototype;
-function ClientRectWrappingImplementation() {}
-// ********** Code for ClipboardWrappingImplementation **************
-$inherits(ClipboardWrappingImplementation, DOMWrapperBase);
-ClipboardWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ClipboardWrappingImplementation._wrap$ctor.prototype = ClipboardWrappingImplementation.prototype;
-function ClipboardWrappingImplementation() {}
 // ********** Code for CommentWrappingImplementation **************
 $inherits(CommentWrappingImplementation, CharacterDataWrappingImplementation);
 CommentWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2758,41 +2390,6 @@ CommentWrappingImplementation._wrap$ctor = function(ptr) {
 }
 CommentWrappingImplementation._wrap$ctor.prototype = CommentWrappingImplementation.prototype;
 function CommentWrappingImplementation() {}
-// ********** Code for ConsoleWrappingImplementation **************
-$inherits(ConsoleWrappingImplementation, DOMWrapperBase);
-ConsoleWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ConsoleWrappingImplementation._wrap$ctor.prototype = ConsoleWrappingImplementation.prototype;
-function ConsoleWrappingImplementation() {}
-// ********** Code for ConvolverNodeWrappingImplementation **************
-$inherits(ConvolverNodeWrappingImplementation, AudioNodeWrappingImplementation);
-ConvolverNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-ConvolverNodeWrappingImplementation._wrap$ctor.prototype = ConvolverNodeWrappingImplementation.prototype;
-function ConvolverNodeWrappingImplementation() {}
-// ********** Code for CoordinatesWrappingImplementation **************
-$inherits(CoordinatesWrappingImplementation, DOMWrapperBase);
-CoordinatesWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CoordinatesWrappingImplementation._wrap$ctor.prototype = CoordinatesWrappingImplementation.prototype;
-function CoordinatesWrappingImplementation() {}
-// ********** Code for CounterWrappingImplementation **************
-$inherits(CounterWrappingImplementation, DOMWrapperBase);
-CounterWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CounterWrappingImplementation._wrap$ctor.prototype = CounterWrappingImplementation.prototype;
-function CounterWrappingImplementation() {}
-// ********** Code for CryptoWrappingImplementation **************
-$inherits(CryptoWrappingImplementation, DOMWrapperBase);
-CryptoWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CryptoWrappingImplementation._wrap$ctor.prototype = CryptoWrappingImplementation.prototype;
-function CryptoWrappingImplementation() {}
 // ********** Code for DListElementWrappingImplementation **************
 $inherits(DListElementWrappingImplementation, ElementWrappingImplementation);
 DListElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2801,141 +2398,6 @@ DListElementWrappingImplementation._wrap$ctor = function(ptr) {
 DListElementWrappingImplementation._wrap$ctor.prototype = DListElementWrappingImplementation.prototype;
 function DListElementWrappingImplementation() {}
 DListElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for DOMExceptionWrappingImplementation **************
-$inherits(DOMExceptionWrappingImplementation, DOMWrapperBase);
-DOMExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMExceptionWrappingImplementation._wrap$ctor.prototype = DOMExceptionWrappingImplementation.prototype;
-function DOMExceptionWrappingImplementation() {}
-DOMExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for DOMFileSystemSyncWrappingImplementation **************
-$inherits(DOMFileSystemSyncWrappingImplementation, DOMWrapperBase);
-DOMFileSystemSyncWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMFileSystemSyncWrappingImplementation._wrap$ctor.prototype = DOMFileSystemSyncWrappingImplementation.prototype;
-function DOMFileSystemSyncWrappingImplementation() {}
-// ********** Code for DOMFileSystemWrappingImplementation **************
-$inherits(DOMFileSystemWrappingImplementation, DOMWrapperBase);
-DOMFileSystemWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMFileSystemWrappingImplementation._wrap$ctor.prototype = DOMFileSystemWrappingImplementation.prototype;
-function DOMFileSystemWrappingImplementation() {}
-// ********** Code for DOMFormDataWrappingImplementation **************
-$inherits(DOMFormDataWrappingImplementation, DOMWrapperBase);
-DOMFormDataWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMFormDataWrappingImplementation._wrap$ctor.prototype = DOMFormDataWrappingImplementation.prototype;
-function DOMFormDataWrappingImplementation() {}
-// ********** Code for DOMMimeTypeArrayWrappingImplementation **************
-$inherits(DOMMimeTypeArrayWrappingImplementation, DOMWrapperBase);
-DOMMimeTypeArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMMimeTypeArrayWrappingImplementation._wrap$ctor.prototype = DOMMimeTypeArrayWrappingImplementation.prototype;
-function DOMMimeTypeArrayWrappingImplementation() {}
-DOMMimeTypeArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-DOMMimeTypeArrayWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapDOMMimeType(this._ptr.item(index));
-}
-// ********** Code for DOMMimeTypeWrappingImplementation **************
-$inherits(DOMMimeTypeWrappingImplementation, DOMWrapperBase);
-DOMMimeTypeWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMMimeTypeWrappingImplementation._wrap$ctor.prototype = DOMMimeTypeWrappingImplementation.prototype;
-function DOMMimeTypeWrappingImplementation() {}
-DOMMimeTypeWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for DOMParserWrappingImplementation **************
-$inherits(DOMParserWrappingImplementation, DOMWrapperBase);
-DOMParserWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMParserWrappingImplementation._wrap$ctor.prototype = DOMParserWrappingImplementation.prototype;
-function DOMParserWrappingImplementation() {}
-// ********** Code for DOMPluginArrayWrappingImplementation **************
-$inherits(DOMPluginArrayWrappingImplementation, DOMWrapperBase);
-DOMPluginArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMPluginArrayWrappingImplementation._wrap$ctor.prototype = DOMPluginArrayWrappingImplementation.prototype;
-function DOMPluginArrayWrappingImplementation() {}
-DOMPluginArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-DOMPluginArrayWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapDOMPlugin(this._ptr.item(index));
-}
-// ********** Code for DOMPluginWrappingImplementation **************
-$inherits(DOMPluginWrappingImplementation, DOMWrapperBase);
-DOMPluginWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMPluginWrappingImplementation._wrap$ctor.prototype = DOMPluginWrappingImplementation.prototype;
-function DOMPluginWrappingImplementation() {}
-DOMPluginWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-DOMPluginWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapDOMMimeType(this._ptr.item(index));
-}
-// ********** Code for DOMSelectionWrappingImplementation **************
-$inherits(DOMSelectionWrappingImplementation, DOMWrapperBase);
-DOMSelectionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMSelectionWrappingImplementation._wrap$ctor.prototype = DOMSelectionWrappingImplementation.prototype;
-function DOMSelectionWrappingImplementation() {}
-DOMSelectionWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-DOMSelectionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for DOMTokenListWrappingImplementation **************
-$inherits(DOMTokenListWrappingImplementation, DOMWrapperBase);
-DOMTokenListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMTokenListWrappingImplementation._wrap$ctor.prototype = DOMTokenListWrappingImplementation.prototype;
-function DOMTokenListWrappingImplementation() {}
-DOMTokenListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-DOMTokenListWrappingImplementation.prototype.add = function(token) {
-  this._ptr.add$1(token);
-  return;
-}
-DOMTokenListWrappingImplementation.prototype.item = function(index) {
-  return this._ptr.item(index);
-}
-DOMTokenListWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-DOMTokenListWrappingImplementation.prototype.add$1 = DOMTokenListWrappingImplementation.prototype.add;
-// ********** Code for DOMSettableTokenListWrappingImplementation **************
-$inherits(DOMSettableTokenListWrappingImplementation, DOMTokenListWrappingImplementation);
-DOMSettableTokenListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMTokenListWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DOMSettableTokenListWrappingImplementation._wrap$ctor.prototype = DOMSettableTokenListWrappingImplementation.prototype;
-function DOMSettableTokenListWrappingImplementation() {}
-// ********** Code for DOMURLWrappingImplementation **************
-$inherits(DOMURLWrappingImplementation, DOMWrapperBase);
-DOMURLWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DOMURLWrappingImplementation._wrap$ctor.prototype = DOMURLWrappingImplementation.prototype;
-function DOMURLWrappingImplementation() {}
 // ********** Code for DataListElementWrappingImplementation **************
 $inherits(DataListElementWrappingImplementation, ElementWrappingImplementation);
 DataListElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2944,53 +2406,6 @@ DataListElementWrappingImplementation._wrap$ctor = function(ptr) {
 DataListElementWrappingImplementation._wrap$ctor.prototype = DataListElementWrappingImplementation.prototype;
 function DataListElementWrappingImplementation() {}
 DataListElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for DataTransferItemListWrappingImplementation **************
-$inherits(DataTransferItemListWrappingImplementation, DOMWrapperBase);
-DataTransferItemListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DataTransferItemListWrappingImplementation._wrap$ctor.prototype = DataTransferItemListWrappingImplementation.prototype;
-function DataTransferItemListWrappingImplementation() {}
-DataTransferItemListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-DataTransferItemListWrappingImplementation.prototype.add = function(data, type) {
-  this._ptr.add$2(data, type);
-  return;
-}
-DataTransferItemListWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-DataTransferItemListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapDataTransferItem(this._ptr.item(index));
-}
-DataTransferItemListWrappingImplementation.prototype.add$2 = DataTransferItemListWrappingImplementation.prototype.add;
-DataTransferItemListWrappingImplementation.prototype.clear$0 = DataTransferItemListWrappingImplementation.prototype.clear;
-// ********** Code for DataTransferItemWrappingImplementation **************
-$inherits(DataTransferItemWrappingImplementation, DOMWrapperBase);
-DataTransferItemWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DataTransferItemWrappingImplementation._wrap$ctor.prototype = DataTransferItemWrappingImplementation.prototype;
-function DataTransferItemWrappingImplementation() {}
-DataTransferItemWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for DataViewWrappingImplementation **************
-$inherits(DataViewWrappingImplementation, ArrayBufferViewWrappingImplementation);
-DataViewWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DataViewWrappingImplementation._wrap$ctor.prototype = DataViewWrappingImplementation.prototype;
-function DataViewWrappingImplementation() {}
-// ********** Code for DelayNodeWrappingImplementation **************
-$inherits(DelayNodeWrappingImplementation, AudioNodeWrappingImplementation);
-DelayNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DelayNodeWrappingImplementation._wrap$ctor.prototype = DelayNodeWrappingImplementation.prototype;
-function DelayNodeWrappingImplementation() {}
 // ********** Code for DetailsElementWrappingImplementation **************
 $inherits(DetailsElementWrappingImplementation, ElementWrappingImplementation);
 DetailsElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -2999,48 +2414,6 @@ DetailsElementWrappingImplementation._wrap$ctor = function(ptr) {
 DetailsElementWrappingImplementation._wrap$ctor.prototype = DetailsElementWrappingImplementation.prototype;
 function DetailsElementWrappingImplementation() {}
 DetailsElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for EntrySyncWrappingImplementation **************
-$inherits(EntrySyncWrappingImplementation, DOMWrapperBase);
-EntrySyncWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-EntrySyncWrappingImplementation._wrap$ctor.prototype = EntrySyncWrappingImplementation.prototype;
-function EntrySyncWrappingImplementation() {}
-// ********** Code for DirectoryEntrySyncWrappingImplementation **************
-$inherits(DirectoryEntrySyncWrappingImplementation, EntrySyncWrappingImplementation);
-DirectoryEntrySyncWrappingImplementation._wrap$ctor = function(ptr) {
-  EntrySyncWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DirectoryEntrySyncWrappingImplementation._wrap$ctor.prototype = DirectoryEntrySyncWrappingImplementation.prototype;
-function DirectoryEntrySyncWrappingImplementation() {}
-// ********** Code for EntryWrappingImplementation **************
-$inherits(EntryWrappingImplementation, DOMWrapperBase);
-EntryWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-EntryWrappingImplementation._wrap$ctor.prototype = EntryWrappingImplementation.prototype;
-function EntryWrappingImplementation() {}
-// ********** Code for DirectoryEntryWrappingImplementation **************
-$inherits(DirectoryEntryWrappingImplementation, EntryWrappingImplementation);
-DirectoryEntryWrappingImplementation._wrap$ctor = function(ptr) {
-  EntryWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DirectoryEntryWrappingImplementation._wrap$ctor.prototype = DirectoryEntryWrappingImplementation.prototype;
-function DirectoryEntryWrappingImplementation() {}
-// ********** Code for DirectoryReaderSyncWrappingImplementation **************
-$inherits(DirectoryReaderSyncWrappingImplementation, DOMWrapperBase);
-DirectoryReaderSyncWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DirectoryReaderSyncWrappingImplementation._wrap$ctor.prototype = DirectoryReaderSyncWrappingImplementation.prototype;
-function DirectoryReaderSyncWrappingImplementation() {}
-// ********** Code for DirectoryReaderWrappingImplementation **************
-$inherits(DirectoryReaderWrappingImplementation, DOMWrapperBase);
-DirectoryReaderWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-DirectoryReaderWrappingImplementation._wrap$ctor.prototype = DirectoryReaderWrappingImplementation.prototype;
-function DirectoryReaderWrappingImplementation() {}
 // ********** Code for DivElementWrappingImplementation **************
 $inherits(DivElementWrappingImplementation, ElementWrappingImplementation);
 DivElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3049,20 +2422,6 @@ DivElementWrappingImplementation._wrap$ctor = function(ptr) {
 DivElementWrappingImplementation._wrap$ctor.prototype = DivElementWrappingImplementation.prototype;
 function DivElementWrappingImplementation() {}
 DivElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for DynamicsCompressorNodeWrappingImplementation **************
-$inherits(DynamicsCompressorNodeWrappingImplementation, AudioNodeWrappingImplementation);
-DynamicsCompressorNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DynamicsCompressorNodeWrappingImplementation._wrap$ctor.prototype = DynamicsCompressorNodeWrappingImplementation.prototype;
-function DynamicsCompressorNodeWrappingImplementation() {}
-// ********** Code for ElementTimeControlWrappingImplementation **************
-$inherits(ElementTimeControlWrappingImplementation, DOMWrapperBase);
-ElementTimeControlWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ElementTimeControlWrappingImplementation._wrap$ctor.prototype = ElementTimeControlWrappingImplementation.prototype;
-function ElementTimeControlWrappingImplementation() {}
 // ********** Code for EmbedElementWrappingImplementation **************
 $inherits(EmbedElementWrappingImplementation, ElementWrappingImplementation);
 EmbedElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3088,42 +2447,6 @@ EntityWrappingImplementation._wrap$ctor = function(ptr) {
 }
 EntityWrappingImplementation._wrap$ctor.prototype = EntityWrappingImplementation.prototype;
 function EntityWrappingImplementation() {}
-// ********** Code for EntryArraySyncWrappingImplementation **************
-$inherits(EntryArraySyncWrappingImplementation, DOMWrapperBase);
-EntryArraySyncWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-EntryArraySyncWrappingImplementation._wrap$ctor.prototype = EntryArraySyncWrappingImplementation.prototype;
-function EntryArraySyncWrappingImplementation() {}
-EntryArraySyncWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-EntryArraySyncWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapEntrySync(this._ptr.item(index));
-}
-// ********** Code for EntryArrayWrappingImplementation **************
-$inherits(EntryArrayWrappingImplementation, DOMWrapperBase);
-EntryArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-EntryArrayWrappingImplementation._wrap$ctor.prototype = EntryArrayWrappingImplementation.prototype;
-function EntryArrayWrappingImplementation() {}
-EntryArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-EntryArrayWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapEntry(this._ptr.item(index));
-}
-// ********** Code for EventExceptionWrappingImplementation **************
-$inherits(EventExceptionWrappingImplementation, DOMWrapperBase);
-EventExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-EventExceptionWrappingImplementation._wrap$ctor.prototype = EventExceptionWrappingImplementation.prototype;
-function EventExceptionWrappingImplementation() {}
-EventExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
 // ********** Code for FieldSetElementWrappingImplementation **************
 $inherits(FieldSetElementWrappingImplementation, ElementWrappingImplementation);
 FieldSetElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3132,98 +2455,6 @@ FieldSetElementWrappingImplementation._wrap$ctor = function(ptr) {
 FieldSetElementWrappingImplementation._wrap$ctor.prototype = FieldSetElementWrappingImplementation.prototype;
 function FieldSetElementWrappingImplementation() {}
 FieldSetElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for FileEntrySyncWrappingImplementation **************
-$inherits(FileEntrySyncWrappingImplementation, EntrySyncWrappingImplementation);
-FileEntrySyncWrappingImplementation._wrap$ctor = function(ptr) {
-  EntrySyncWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-FileEntrySyncWrappingImplementation._wrap$ctor.prototype = FileEntrySyncWrappingImplementation.prototype;
-function FileEntrySyncWrappingImplementation() {}
-// ********** Code for FileEntryWrappingImplementation **************
-$inherits(FileEntryWrappingImplementation, EntryWrappingImplementation);
-FileEntryWrappingImplementation._wrap$ctor = function(ptr) {
-  EntryWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-FileEntryWrappingImplementation._wrap$ctor.prototype = FileEntryWrappingImplementation.prototype;
-function FileEntryWrappingImplementation() {}
-// ********** Code for FileErrorWrappingImplementation **************
-$inherits(FileErrorWrappingImplementation, DOMWrapperBase);
-FileErrorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FileErrorWrappingImplementation._wrap$ctor.prototype = FileErrorWrappingImplementation.prototype;
-function FileErrorWrappingImplementation() {}
-// ********** Code for FileExceptionWrappingImplementation **************
-$inherits(FileExceptionWrappingImplementation, DOMWrapperBase);
-FileExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FileExceptionWrappingImplementation._wrap$ctor.prototype = FileExceptionWrappingImplementation.prototype;
-function FileExceptionWrappingImplementation() {}
-FileExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for FileListWrappingImplementation **************
-$inherits(FileListWrappingImplementation, DOMWrapperBase);
-FileListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FileListWrappingImplementation._wrap$ctor.prototype = FileListWrappingImplementation.prototype;
-function FileListWrappingImplementation() {}
-FileListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-FileListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapFile(this._ptr.item(index));
-}
-// ********** Code for FileReaderSyncWrappingImplementation **************
-$inherits(FileReaderSyncWrappingImplementation, DOMWrapperBase);
-FileReaderSyncWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FileReaderSyncWrappingImplementation._wrap$ctor.prototype = FileReaderSyncWrappingImplementation.prototype;
-function FileReaderSyncWrappingImplementation() {}
-// ********** Code for FileReaderWrappingImplementation **************
-$inherits(FileReaderWrappingImplementation, DOMWrapperBase);
-FileReaderWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FileReaderWrappingImplementation._wrap$ctor.prototype = FileReaderWrappingImplementation.prototype;
-function FileReaderWrappingImplementation() {}
-// ********** Code for FileWrappingImplementation **************
-$inherits(FileWrappingImplementation, BlobWrappingImplementation);
-FileWrappingImplementation._wrap$ctor = function(ptr) {
-  BlobWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-FileWrappingImplementation._wrap$ctor.prototype = FileWrappingImplementation.prototype;
-function FileWrappingImplementation() {}
-// ********** Code for FileWriterSyncWrappingImplementation **************
-$inherits(FileWriterSyncWrappingImplementation, DOMWrapperBase);
-FileWriterSyncWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FileWriterSyncWrappingImplementation._wrap$ctor.prototype = FileWriterSyncWrappingImplementation.prototype;
-function FileWriterSyncWrappingImplementation() {}
-FileWriterSyncWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for FileWriterWrappingImplementation **************
-$inherits(FileWriterWrappingImplementation, DOMWrapperBase);
-FileWriterWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FileWriterWrappingImplementation._wrap$ctor.prototype = FileWriterWrappingImplementation.prototype;
-function FileWriterWrappingImplementation() {}
-FileWriterWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for FlagsWrappingImplementation **************
-$inherits(FlagsWrappingImplementation, DOMWrapperBase);
-FlagsWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-FlagsWrappingImplementation._wrap$ctor.prototype = FlagsWrappingImplementation.prototype;
-function FlagsWrappingImplementation() {}
 // ********** Code for FontElementWrappingImplementation **************
 $inherits(FontElementWrappingImplementation, ElementWrappingImplementation);
 FontElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3243,20 +2474,6 @@ FormElementWrappingImplementation.prototype.is$html_Element = function(){return 
 FormElementWrappingImplementation.prototype.get$length = function() {
   return this._ptr.get$length();
 }
-// ********** Code for GeolocationWrappingImplementation **************
-$inherits(GeolocationWrappingImplementation, DOMWrapperBase);
-GeolocationWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-GeolocationWrappingImplementation._wrap$ctor.prototype = GeolocationWrappingImplementation.prototype;
-function GeolocationWrappingImplementation() {}
-// ********** Code for GeopositionWrappingImplementation **************
-$inherits(GeopositionWrappingImplementation, DOMWrapperBase);
-GeopositionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-GeopositionWrappingImplementation._wrap$ctor.prototype = GeopositionWrappingImplementation.prototype;
-function GeopositionWrappingImplementation() {}
 // ********** Code for HRElementWrappingImplementation **************
 $inherits(HRElementWrappingImplementation, ElementWrappingImplementation);
 HRElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3265,19 +2482,6 @@ HRElementWrappingImplementation._wrap$ctor = function(ptr) {
 HRElementWrappingImplementation._wrap$ctor.prototype = HRElementWrappingImplementation.prototype;
 function HRElementWrappingImplementation() {}
 HRElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for HTMLAllCollectionWrappingImplementation **************
-$inherits(HTMLAllCollectionWrappingImplementation, DOMWrapperBase);
-HTMLAllCollectionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-HTMLAllCollectionWrappingImplementation._wrap$ctor.prototype = HTMLAllCollectionWrappingImplementation.prototype;
-function HTMLAllCollectionWrappingImplementation() {}
-HTMLAllCollectionWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-HTMLAllCollectionWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapNode(this._ptr.item(index));
-}
 // ********** Code for HeadElementWrappingImplementation **************
 $inherits(HeadElementWrappingImplementation, ElementWrappingImplementation);
 HeadElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3294,145 +2498,6 @@ HeadingElementWrappingImplementation._wrap$ctor = function(ptr) {
 HeadingElementWrappingImplementation._wrap$ctor.prototype = HeadingElementWrappingImplementation.prototype;
 function HeadingElementWrappingImplementation() {}
 HeadingElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for HighPass2FilterNodeWrappingImplementation **************
-$inherits(HighPass2FilterNodeWrappingImplementation, AudioNodeWrappingImplementation);
-HighPass2FilterNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-HighPass2FilterNodeWrappingImplementation._wrap$ctor.prototype = HighPass2FilterNodeWrappingImplementation.prototype;
-function HighPass2FilterNodeWrappingImplementation() {}
-// ********** Code for HistoryWrappingImplementation **************
-$inherits(HistoryWrappingImplementation, DOMWrapperBase);
-HistoryWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-HistoryWrappingImplementation._wrap$ctor.prototype = HistoryWrappingImplementation.prototype;
-function HistoryWrappingImplementation() {}
-HistoryWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for IDBAnyWrappingImplementation **************
-$inherits(IDBAnyWrappingImplementation, DOMWrapperBase);
-IDBAnyWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBAnyWrappingImplementation._wrap$ctor.prototype = IDBAnyWrappingImplementation.prototype;
-function IDBAnyWrappingImplementation() {}
-// ********** Code for IDBCursorWrappingImplementation **************
-$inherits(IDBCursorWrappingImplementation, DOMWrapperBase);
-IDBCursorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBCursorWrappingImplementation._wrap$ctor.prototype = IDBCursorWrappingImplementation.prototype;
-function IDBCursorWrappingImplementation() {}
-// ********** Code for IDBCursorWithValueWrappingImplementation **************
-$inherits(IDBCursorWithValueWrappingImplementation, IDBCursorWrappingImplementation);
-IDBCursorWithValueWrappingImplementation._wrap$ctor = function(ptr) {
-  IDBCursorWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-IDBCursorWithValueWrappingImplementation._wrap$ctor.prototype = IDBCursorWithValueWrappingImplementation.prototype;
-function IDBCursorWithValueWrappingImplementation() {}
-// ********** Code for IDBDatabaseErrorWrappingImplementation **************
-$inherits(IDBDatabaseErrorWrappingImplementation, DOMWrapperBase);
-IDBDatabaseErrorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBDatabaseErrorWrappingImplementation._wrap$ctor.prototype = IDBDatabaseErrorWrappingImplementation.prototype;
-function IDBDatabaseErrorWrappingImplementation() {}
-// ********** Code for IDBDatabaseExceptionWrappingImplementation **************
-$inherits(IDBDatabaseExceptionWrappingImplementation, DOMWrapperBase);
-IDBDatabaseExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBDatabaseExceptionWrappingImplementation._wrap$ctor.prototype = IDBDatabaseExceptionWrappingImplementation.prototype;
-function IDBDatabaseExceptionWrappingImplementation() {}
-IDBDatabaseExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for IDBDatabaseWrappingImplementation **************
-$inherits(IDBDatabaseWrappingImplementation, DOMWrapperBase);
-IDBDatabaseWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBDatabaseWrappingImplementation._wrap$ctor.prototype = IDBDatabaseWrappingImplementation.prototype;
-function IDBDatabaseWrappingImplementation() {}
-// ********** Code for IDBFactoryWrappingImplementation **************
-$inherits(IDBFactoryWrappingImplementation, DOMWrapperBase);
-IDBFactoryWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBFactoryWrappingImplementation._wrap$ctor.prototype = IDBFactoryWrappingImplementation.prototype;
-function IDBFactoryWrappingImplementation() {}
-// ********** Code for IDBIndexWrappingImplementation **************
-$inherits(IDBIndexWrappingImplementation, DOMWrapperBase);
-IDBIndexWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBIndexWrappingImplementation._wrap$ctor.prototype = IDBIndexWrappingImplementation.prototype;
-function IDBIndexWrappingImplementation() {}
-// ********** Code for IDBKeyRangeWrappingImplementation **************
-$inherits(IDBKeyRangeWrappingImplementation, DOMWrapperBase);
-IDBKeyRangeWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBKeyRangeWrappingImplementation._wrap$ctor.prototype = IDBKeyRangeWrappingImplementation.prototype;
-function IDBKeyRangeWrappingImplementation() {}
-// ********** Code for IDBKeyWrappingImplementation **************
-$inherits(IDBKeyWrappingImplementation, DOMWrapperBase);
-IDBKeyWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBKeyWrappingImplementation._wrap$ctor.prototype = IDBKeyWrappingImplementation.prototype;
-function IDBKeyWrappingImplementation() {}
-// ********** Code for IDBObjectStoreWrappingImplementation **************
-$inherits(IDBObjectStoreWrappingImplementation, DOMWrapperBase);
-IDBObjectStoreWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBObjectStoreWrappingImplementation._wrap$ctor.prototype = IDBObjectStoreWrappingImplementation.prototype;
-function IDBObjectStoreWrappingImplementation() {}
-IDBObjectStoreWrappingImplementation.prototype.add = function(value, key) {
-  if (null == key) {
-    return LevelDom.wrapIDBRequest(this._ptr.add$1(value));
-  }
-  else {
-    return LevelDom.wrapIDBRequest(this._ptr.add$2(value, LevelDom.unwrap(key)));
-  }
-}
-IDBObjectStoreWrappingImplementation.prototype.clear = function() {
-  return LevelDom.wrapIDBRequest(this._ptr.clear$0());
-}
-IDBObjectStoreWrappingImplementation.prototype.add$1 = IDBObjectStoreWrappingImplementation.prototype.add;
-IDBObjectStoreWrappingImplementation.prototype.add$2 = IDBObjectStoreWrappingImplementation.prototype.add;
-IDBObjectStoreWrappingImplementation.prototype.clear$0 = IDBObjectStoreWrappingImplementation.prototype.clear;
-// ********** Code for IDBRequestWrappingImplementation **************
-$inherits(IDBRequestWrappingImplementation, DOMWrapperBase);
-IDBRequestWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBRequestWrappingImplementation._wrap$ctor.prototype = IDBRequestWrappingImplementation.prototype;
-function IDBRequestWrappingImplementation() {}
-// ********** Code for IDBTransactionWrappingImplementation **************
-$inherits(IDBTransactionWrappingImplementation, DOMWrapperBase);
-IDBTransactionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-IDBTransactionWrappingImplementation._wrap$ctor.prototype = IDBTransactionWrappingImplementation.prototype;
-function IDBTransactionWrappingImplementation() {}
-// ********** Code for IDBVersionChangeEventWrappingImplementation **************
-$inherits(IDBVersionChangeEventWrappingImplementation, EventWrappingImplementation);
-IDBVersionChangeEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-IDBVersionChangeEventWrappingImplementation._wrap$ctor.prototype = IDBVersionChangeEventWrappingImplementation.prototype;
-function IDBVersionChangeEventWrappingImplementation() {}
-// ********** Code for IDBVersionChangeRequestWrappingImplementation **************
-$inherits(IDBVersionChangeRequestWrappingImplementation, IDBRequestWrappingImplementation);
-IDBVersionChangeRequestWrappingImplementation._wrap$ctor = function(ptr) {
-  IDBRequestWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-IDBVersionChangeRequestWrappingImplementation._wrap$ctor.prototype = IDBVersionChangeRequestWrappingImplementation.prototype;
-function IDBVersionChangeRequestWrappingImplementation() {}
 // ********** Code for IFrameElementWrappingImplementation **************
 $inherits(IFrameElementWrappingImplementation, ElementWrappingImplementation);
 IFrameElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3441,13 +2506,6 @@ IFrameElementWrappingImplementation._wrap$ctor = function(ptr) {
 IFrameElementWrappingImplementation._wrap$ctor.prototype = IFrameElementWrappingImplementation.prototype;
 function IFrameElementWrappingImplementation() {}
 IFrameElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for ImageDataWrappingImplementation **************
-$inherits(ImageDataWrappingImplementation, DOMWrapperBase);
-ImageDataWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ImageDataWrappingImplementation._wrap$ctor.prototype = ImageDataWrappingImplementation.prototype;
-function ImageDataWrappingImplementation() {}
 // ********** Code for ImageElementWrappingImplementation **************
 $inherits(ImageElementWrappingImplementation, ElementWrappingImplementation);
 ImageElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3467,13 +2525,6 @@ InputElementWrappingImplementation.prototype.is$html_Element = function(){return
 InputElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
 }
-// ********** Code for JavaScriptAudioNodeWrappingImplementation **************
-$inherits(JavaScriptAudioNodeWrappingImplementation, AudioNodeWrappingImplementation);
-JavaScriptAudioNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-JavaScriptAudioNodeWrappingImplementation._wrap$ctor.prototype = JavaScriptAudioNodeWrappingImplementation.prototype;
-function JavaScriptAudioNodeWrappingImplementation() {}
 // ********** Code for KeygenElementWrappingImplementation **************
 $inherits(KeygenElementWrappingImplementation, ElementWrappingImplementation);
 KeygenElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3523,23 +2574,6 @@ LinkElementWrappingImplementation.prototype.is$html_Element = function(){return 
 LinkElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
 }
-// ********** Code for LocationWrappingImplementation **************
-$inherits(LocationWrappingImplementation, DOMWrapperBase);
-LocationWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-LocationWrappingImplementation._wrap$ctor.prototype = LocationWrappingImplementation.prototype;
-function LocationWrappingImplementation() {}
-LocationWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for LowPass2FilterNodeWrappingImplementation **************
-$inherits(LowPass2FilterNodeWrappingImplementation, AudioNodeWrappingImplementation);
-LowPass2FilterNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-LowPass2FilterNodeWrappingImplementation._wrap$ctor.prototype = LowPass2FilterNodeWrappingImplementation.prototype;
-function LowPass2FilterNodeWrappingImplementation() {}
 // ********** Code for MapElementWrappingImplementation **************
 $inherits(MapElementWrappingImplementation, ElementWrappingImplementation);
 MapElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3556,79 +2590,6 @@ MarqueeElementWrappingImplementation._wrap$ctor = function(ptr) {
 MarqueeElementWrappingImplementation._wrap$ctor.prototype = MarqueeElementWrappingImplementation.prototype;
 function MarqueeElementWrappingImplementation() {}
 MarqueeElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for MediaElementAudioSourceNodeWrappingImplementation **************
-$inherits(MediaElementAudioSourceNodeWrappingImplementation, AudioSourceNodeWrappingImplementation);
-MediaElementAudioSourceNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioSourceNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-MediaElementAudioSourceNodeWrappingImplementation._wrap$ctor.prototype = MediaElementAudioSourceNodeWrappingImplementation.prototype;
-function MediaElementAudioSourceNodeWrappingImplementation() {}
-// ********** Code for MediaErrorWrappingImplementation **************
-$inherits(MediaErrorWrappingImplementation, DOMWrapperBase);
-MediaErrorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MediaErrorWrappingImplementation._wrap$ctor.prototype = MediaErrorWrappingImplementation.prototype;
-function MediaErrorWrappingImplementation() {}
-// ********** Code for MediaListWrappingImplementation **************
-$inherits(MediaListWrappingImplementation, DOMWrapperBase);
-MediaListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MediaListWrappingImplementation._wrap$ctor.prototype = MediaListWrappingImplementation.prototype;
-function MediaListWrappingImplementation() {}
-MediaListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-MediaListWrappingImplementation.prototype.$index = function(index) {
-  return this._ptr.$index(index);
-}
-MediaListWrappingImplementation.prototype.$setindex = function(index, value) {
-  this._ptr.$setindex(index, value);
-}
-MediaListWrappingImplementation.prototype.add = function(value) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-MediaListWrappingImplementation.prototype.addAll = function(collection) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-MediaListWrappingImplementation.prototype.clear = function() {
-  $throw(new UnsupportedOperationException("Cannot clear immutable List."));
-}
-MediaListWrappingImplementation.prototype.forEach = function(f) {
-  _Collections.forEach(this, f);
-}
-MediaListWrappingImplementation.prototype.filter = function(f) {
-  return _Collections.filter(this, new Array(), f);
-}
-MediaListWrappingImplementation.prototype.iterator = function() {
-  return new _FixedSizeListIterator_dart_core_String(this);
-}
-MediaListWrappingImplementation.prototype.item = function(index) {
-  return this._ptr.item(index);
-}
-MediaListWrappingImplementation.prototype.add$1 = MediaListWrappingImplementation.prototype.add;
-MediaListWrappingImplementation.prototype.clear$0 = MediaListWrappingImplementation.prototype.clear;
-MediaListWrappingImplementation.prototype.filter$1 = function($0) {
-  return this.filter(to$call$1($0));
-};
-MediaListWrappingImplementation.prototype.forEach$1 = function($0) {
-  return this.forEach(to$call$1($0));
-};
-// ********** Code for MediaQueryListListenerWrappingImplementation **************
-$inherits(MediaQueryListListenerWrappingImplementation, DOMWrapperBase);
-MediaQueryListListenerWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MediaQueryListListenerWrappingImplementation._wrap$ctor.prototype = MediaQueryListListenerWrappingImplementation.prototype;
-function MediaQueryListListenerWrappingImplementation() {}
-// ********** Code for MediaQueryListWrappingImplementation **************
-$inherits(MediaQueryListWrappingImplementation, DOMWrapperBase);
-MediaQueryListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MediaQueryListWrappingImplementation._wrap$ctor.prototype = MediaQueryListWrappingImplementation.prototype;
-function MediaQueryListWrappingImplementation() {}
 // ********** Code for MenuElementWrappingImplementation **************
 $inherits(MenuElementWrappingImplementation, ElementWrappingImplementation);
 MenuElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3637,13 +2598,6 @@ MenuElementWrappingImplementation._wrap$ctor = function(ptr) {
 MenuElementWrappingImplementation._wrap$ctor.prototype = MenuElementWrappingImplementation.prototype;
 function MenuElementWrappingImplementation() {}
 MenuElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for MessageChannelWrappingImplementation **************
-$inherits(MessageChannelWrappingImplementation, DOMWrapperBase);
-MessageChannelWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MessageChannelWrappingImplementation._wrap$ctor.prototype = MessageChannelWrappingImplementation.prototype;
-function MessageChannelWrappingImplementation() {}
 // ********** Code for MetaElementWrappingImplementation **************
 $inherits(MetaElementWrappingImplementation, ElementWrappingImplementation);
 MetaElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3652,13 +2606,6 @@ MetaElementWrappingImplementation._wrap$ctor = function(ptr) {
 MetaElementWrappingImplementation._wrap$ctor.prototype = MetaElementWrappingImplementation.prototype;
 function MetaElementWrappingImplementation() {}
 MetaElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for MetadataWrappingImplementation **************
-$inherits(MetadataWrappingImplementation, DOMWrapperBase);
-MetadataWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MetadataWrappingImplementation._wrap$ctor.prototype = MetadataWrappingImplementation.prototype;
-function MetadataWrappingImplementation() {}
 // ********** Code for MeterElementWrappingImplementation **************
 $inherits(MeterElementWrappingImplementation, ElementWrappingImplementation);
 MeterElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3675,44 +2622,6 @@ ModElementWrappingImplementation._wrap$ctor = function(ptr) {
 ModElementWrappingImplementation._wrap$ctor.prototype = ModElementWrappingImplementation.prototype;
 function ModElementWrappingImplementation() {}
 ModElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for MutationCallbackWrappingImplementation **************
-$inherits(MutationCallbackWrappingImplementation, DOMWrapperBase);
-MutationCallbackWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MutationCallbackWrappingImplementation._wrap$ctor.prototype = MutationCallbackWrappingImplementation.prototype;
-function MutationCallbackWrappingImplementation() {}
-// ********** Code for MutationRecordWrappingImplementation **************
-$inherits(MutationRecordWrappingImplementation, DOMWrapperBase);
-MutationRecordWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-MutationRecordWrappingImplementation._wrap$ctor.prototype = MutationRecordWrappingImplementation.prototype;
-function MutationRecordWrappingImplementation() {}
-MutationRecordWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for NavigatorUserMediaErrorWrappingImplementation **************
-$inherits(NavigatorUserMediaErrorWrappingImplementation, DOMWrapperBase);
-NavigatorUserMediaErrorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-NavigatorUserMediaErrorWrappingImplementation._wrap$ctor.prototype = NavigatorUserMediaErrorWrappingImplementation.prototype;
-function NavigatorUserMediaErrorWrappingImplementation() {}
-// ********** Code for NavigatorUserMediaSuccessCallbackWrappingImplementation **************
-$inherits(NavigatorUserMediaSuccessCallbackWrappingImplementation, DOMWrapperBase);
-NavigatorUserMediaSuccessCallbackWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-NavigatorUserMediaSuccessCallbackWrappingImplementation._wrap$ctor.prototype = NavigatorUserMediaSuccessCallbackWrappingImplementation.prototype;
-function NavigatorUserMediaSuccessCallbackWrappingImplementation() {}
-// ********** Code for NavigatorWrappingImplementation **************
-$inherits(NavigatorWrappingImplementation, DOMWrapperBase);
-NavigatorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-NavigatorWrappingImplementation._wrap$ctor.prototype = NavigatorWrappingImplementation.prototype;
-function NavigatorWrappingImplementation() {}
 // ********** Code for NotationWrappingImplementation **************
 $inherits(NotationWrappingImplementation, NodeWrappingImplementation);
 NotationWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3720,34 +2629,6 @@ NotationWrappingImplementation._wrap$ctor = function(ptr) {
 }
 NotationWrappingImplementation._wrap$ctor.prototype = NotationWrappingImplementation.prototype;
 function NotationWrappingImplementation() {}
-// ********** Code for NotificationCenterWrappingImplementation **************
-$inherits(NotificationCenterWrappingImplementation, DOMWrapperBase);
-NotificationCenterWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-NotificationCenterWrappingImplementation._wrap$ctor.prototype = NotificationCenterWrappingImplementation.prototype;
-function NotificationCenterWrappingImplementation() {}
-// ********** Code for OESStandardDerivativesWrappingImplementation **************
-$inherits(OESStandardDerivativesWrappingImplementation, DOMWrapperBase);
-OESStandardDerivativesWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-OESStandardDerivativesWrappingImplementation._wrap$ctor.prototype = OESStandardDerivativesWrappingImplementation.prototype;
-function OESStandardDerivativesWrappingImplementation() {}
-// ********** Code for OESTextureFloatWrappingImplementation **************
-$inherits(OESTextureFloatWrappingImplementation, DOMWrapperBase);
-OESTextureFloatWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-OESTextureFloatWrappingImplementation._wrap$ctor.prototype = OESTextureFloatWrappingImplementation.prototype;
-function OESTextureFloatWrappingImplementation() {}
-// ********** Code for OESVertexArrayObjectWrappingImplementation **************
-$inherits(OESVertexArrayObjectWrappingImplementation, DOMWrapperBase);
-OESVertexArrayObjectWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-OESVertexArrayObjectWrappingImplementation._wrap$ctor.prototype = OESVertexArrayObjectWrappingImplementation.prototype;
-function OESVertexArrayObjectWrappingImplementation() {}
 // ********** Code for OListElementWrappingImplementation **************
 $inherits(OListElementWrappingImplementation, ElementWrappingImplementation);
 OListElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3758,23 +2639,6 @@ function OListElementWrappingImplementation() {}
 OListElementWrappingImplementation.prototype.is$html_Element = function(){return true};
 OListElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
-}
-// ********** Code for OfflineAudioCompletionEventWrappingImplementation **************
-$inherits(OfflineAudioCompletionEventWrappingImplementation, EventWrappingImplementation);
-OfflineAudioCompletionEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-OfflineAudioCompletionEventWrappingImplementation._wrap$ctor.prototype = OfflineAudioCompletionEventWrappingImplementation.prototype;
-function OfflineAudioCompletionEventWrappingImplementation() {}
-// ********** Code for OperationNotAllowedExceptionWrappingImplementation **************
-$inherits(OperationNotAllowedExceptionWrappingImplementation, DOMWrapperBase);
-OperationNotAllowedExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-OperationNotAllowedExceptionWrappingImplementation._wrap$ctor.prototype = OperationNotAllowedExceptionWrappingImplementation.prototype;
-function OperationNotAllowedExceptionWrappingImplementation() {}
-OperationNotAllowedExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
 }
 // ********** Code for OptGroupElementWrappingImplementation **************
 $inherits(OptGroupElementWrappingImplementation, ElementWrappingImplementation);
@@ -3825,20 +2689,6 @@ ParamElementWrappingImplementation.prototype.is$html_Element = function(){return
 ParamElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
 }
-// ********** Code for PointWrappingImplementation **************
-$inherits(PointWrappingImplementation, DOMWrapperBase);
-PointWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-PointWrappingImplementation._wrap$ctor.prototype = PointWrappingImplementation.prototype;
-function PointWrappingImplementation() {}
-// ********** Code for PositionErrorWrappingImplementation **************
-$inherits(PositionErrorWrappingImplementation, DOMWrapperBase);
-PositionErrorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-PositionErrorWrappingImplementation._wrap$ctor.prototype = PositionErrorWrappingImplementation.prototype;
-function PositionErrorWrappingImplementation() {}
 // ********** Code for PreElementWrappingImplementation **************
 $inherits(PreElementWrappingImplementation, ElementWrappingImplementation);
 PreElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3870,47 +2720,6 @@ QuoteElementWrappingImplementation._wrap$ctor = function(ptr) {
 QuoteElementWrappingImplementation._wrap$ctor.prototype = QuoteElementWrappingImplementation.prototype;
 function QuoteElementWrappingImplementation() {}
 QuoteElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for RGBColorWrappingImplementation **************
-$inherits(RGBColorWrappingImplementation, DOMWrapperBase);
-RGBColorWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-RGBColorWrappingImplementation._wrap$ctor.prototype = RGBColorWrappingImplementation.prototype;
-function RGBColorWrappingImplementation() {}
-// ********** Code for RangeExceptionWrappingImplementation **************
-$inherits(RangeExceptionWrappingImplementation, DOMWrapperBase);
-RangeExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-RangeExceptionWrappingImplementation._wrap$ctor.prototype = RangeExceptionWrappingImplementation.prototype;
-function RangeExceptionWrappingImplementation() {}
-RangeExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for RangeWrappingImplementation **************
-$inherits(RangeWrappingImplementation, DOMWrapperBase);
-RangeWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-RangeWrappingImplementation._wrap$ctor.prototype = RangeWrappingImplementation.prototype;
-function RangeWrappingImplementation() {}
-RangeWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for RealtimeAnalyserNodeWrappingImplementation **************
-$inherits(RealtimeAnalyserNodeWrappingImplementation, AudioNodeWrappingImplementation);
-RealtimeAnalyserNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-RealtimeAnalyserNodeWrappingImplementation._wrap$ctor.prototype = RealtimeAnalyserNodeWrappingImplementation.prototype;
-function RealtimeAnalyserNodeWrappingImplementation() {}
-// ********** Code for RectWrappingImplementation **************
-$inherits(RectWrappingImplementation, DOMWrapperBase);
-RectWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-RectWrappingImplementation._wrap$ctor.prototype = RectWrappingImplementation.prototype;
-function RectWrappingImplementation() {}
 // ********** Code for SVGElementWrappingImplementation **************
 $inherits(SVGElementWrappingImplementation, ElementWrappingImplementation);
 SVGElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -3983,13 +2792,6 @@ SVGAltGlyphItemElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGAltGlyphItemElementWrappingImplementation._wrap$ctor.prototype = SVGAltGlyphItemElementWrappingImplementation.prototype;
 function SVGAltGlyphItemElementWrappingImplementation() {}
 SVGAltGlyphItemElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGAngleWrappingImplementation **************
-$inherits(SVGAngleWrappingImplementation, DOMWrapperBase);
-SVGAngleWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAngleWrappingImplementation._wrap$ctor.prototype = SVGAngleWrappingImplementation.prototype;
-function SVGAngleWrappingImplementation() {}
 // ********** Code for SVGAnimationElementWrappingImplementation **************
 $inherits(SVGAnimationElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGAnimationElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4030,20 +2832,6 @@ SVGAnimateTransformElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGAnimateTransformElementWrappingImplementation._wrap$ctor.prototype = SVGAnimateTransformElementWrappingImplementation.prototype;
 function SVGAnimateTransformElementWrappingImplementation() {}
 SVGAnimateTransformElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGAnimatedAngleWrappingImplementation **************
-$inherits(SVGAnimatedAngleWrappingImplementation, DOMWrapperBase);
-SVGAnimatedAngleWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedAngleWrappingImplementation._wrap$ctor.prototype = SVGAnimatedAngleWrappingImplementation.prototype;
-function SVGAnimatedAngleWrappingImplementation() {}
-// ********** Code for SVGAnimatedBooleanWrappingImplementation **************
-$inherits(SVGAnimatedBooleanWrappingImplementation, DOMWrapperBase);
-SVGAnimatedBooleanWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedBooleanWrappingImplementation._wrap$ctor.prototype = SVGAnimatedBooleanWrappingImplementation.prototype;
-function SVGAnimatedBooleanWrappingImplementation() {}
 // ********** Code for SVGAnimatedEnumerationWrappingImplementation **************
 $inherits(SVGAnimatedEnumerationWrappingImplementation, DOMWrapperBase);
 SVGAnimatedEnumerationWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4051,69 +2839,6 @@ SVGAnimatedEnumerationWrappingImplementation._wrap$ctor = function(ptr) {
 }
 SVGAnimatedEnumerationWrappingImplementation._wrap$ctor.prototype = SVGAnimatedEnumerationWrappingImplementation.prototype;
 function SVGAnimatedEnumerationWrappingImplementation() {}
-// ********** Code for SVGAnimatedIntegerWrappingImplementation **************
-$inherits(SVGAnimatedIntegerWrappingImplementation, DOMWrapperBase);
-SVGAnimatedIntegerWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedIntegerWrappingImplementation._wrap$ctor.prototype = SVGAnimatedIntegerWrappingImplementation.prototype;
-function SVGAnimatedIntegerWrappingImplementation() {}
-// ********** Code for SVGAnimatedLengthListWrappingImplementation **************
-$inherits(SVGAnimatedLengthListWrappingImplementation, DOMWrapperBase);
-SVGAnimatedLengthListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedLengthListWrappingImplementation._wrap$ctor.prototype = SVGAnimatedLengthListWrappingImplementation.prototype;
-function SVGAnimatedLengthListWrappingImplementation() {}
-// ********** Code for SVGAnimatedLengthWrappingImplementation **************
-$inherits(SVGAnimatedLengthWrappingImplementation, DOMWrapperBase);
-SVGAnimatedLengthWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedLengthWrappingImplementation._wrap$ctor.prototype = SVGAnimatedLengthWrappingImplementation.prototype;
-function SVGAnimatedLengthWrappingImplementation() {}
-// ********** Code for SVGAnimatedNumberListWrappingImplementation **************
-$inherits(SVGAnimatedNumberListWrappingImplementation, DOMWrapperBase);
-SVGAnimatedNumberListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedNumberListWrappingImplementation._wrap$ctor.prototype = SVGAnimatedNumberListWrappingImplementation.prototype;
-function SVGAnimatedNumberListWrappingImplementation() {}
-// ********** Code for SVGAnimatedNumberWrappingImplementation **************
-$inherits(SVGAnimatedNumberWrappingImplementation, DOMWrapperBase);
-SVGAnimatedNumberWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedNumberWrappingImplementation._wrap$ctor.prototype = SVGAnimatedNumberWrappingImplementation.prototype;
-function SVGAnimatedNumberWrappingImplementation() {}
-// ********** Code for SVGAnimatedPreserveAspectRatioWrappingImplementation **************
-$inherits(SVGAnimatedPreserveAspectRatioWrappingImplementation, DOMWrapperBase);
-SVGAnimatedPreserveAspectRatioWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedPreserveAspectRatioWrappingImplementation._wrap$ctor.prototype = SVGAnimatedPreserveAspectRatioWrappingImplementation.prototype;
-function SVGAnimatedPreserveAspectRatioWrappingImplementation() {}
-// ********** Code for SVGAnimatedRectWrappingImplementation **************
-$inherits(SVGAnimatedRectWrappingImplementation, DOMWrapperBase);
-SVGAnimatedRectWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedRectWrappingImplementation._wrap$ctor.prototype = SVGAnimatedRectWrappingImplementation.prototype;
-function SVGAnimatedRectWrappingImplementation() {}
-// ********** Code for SVGAnimatedStringWrappingImplementation **************
-$inherits(SVGAnimatedStringWrappingImplementation, DOMWrapperBase);
-SVGAnimatedStringWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedStringWrappingImplementation._wrap$ctor.prototype = SVGAnimatedStringWrappingImplementation.prototype;
-function SVGAnimatedStringWrappingImplementation() {}
-// ********** Code for SVGAnimatedTransformListWrappingImplementation **************
-$inherits(SVGAnimatedTransformListWrappingImplementation, DOMWrapperBase);
-SVGAnimatedTransformListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGAnimatedTransformListWrappingImplementation._wrap$ctor.prototype = SVGAnimatedTransformListWrappingImplementation.prototype;
-function SVGAnimatedTransformListWrappingImplementation() {}
 // ********** Code for SVGCircleElementWrappingImplementation **************
 $inherits(SVGCircleElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGCircleElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4130,13 +2855,6 @@ SVGClipPathElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGClipPathElementWrappingImplementation._wrap$ctor.prototype = SVGClipPathElementWrappingImplementation.prototype;
 function SVGClipPathElementWrappingImplementation() {}
 SVGClipPathElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGColorWrappingImplementation **************
-$inherits(SVGColorWrappingImplementation, CSSValueWrappingImplementation);
-SVGColorWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSValueWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGColorWrappingImplementation._wrap$ctor.prototype = SVGColorWrappingImplementation.prototype;
-function SVGColorWrappingImplementation() {}
 // ********** Code for SVGComponentTransferFunctionElementWrappingImplementation **************
 $inherits(SVGComponentTransferFunctionElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGComponentTransferFunctionElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4172,19 +2890,6 @@ SVGDescElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGDescElementWrappingImplementation._wrap$ctor.prototype = SVGDescElementWrappingImplementation.prototype;
 function SVGDescElementWrappingImplementation() {}
 SVGDescElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGElementInstanceListWrappingImplementation **************
-$inherits(SVGElementInstanceListWrappingImplementation, DOMWrapperBase);
-SVGElementInstanceListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGElementInstanceListWrappingImplementation._wrap$ctor.prototype = SVGElementInstanceListWrappingImplementation.prototype;
-function SVGElementInstanceListWrappingImplementation() {}
-SVGElementInstanceListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-SVGElementInstanceListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapSVGElementInstance(this._ptr.item(index));
-}
 // ********** Code for SVGEllipseElementWrappingImplementation **************
 $inherits(SVGEllipseElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGEllipseElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4193,23 +2898,6 @@ SVGEllipseElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGEllipseElementWrappingImplementation._wrap$ctor.prototype = SVGEllipseElementWrappingImplementation.prototype;
 function SVGEllipseElementWrappingImplementation() {}
 SVGEllipseElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGExceptionWrappingImplementation **************
-$inherits(SVGExceptionWrappingImplementation, DOMWrapperBase);
-SVGExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGExceptionWrappingImplementation._wrap$ctor.prototype = SVGExceptionWrappingImplementation.prototype;
-function SVGExceptionWrappingImplementation() {}
-SVGExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
-// ********** Code for SVGExternalResourcesRequiredWrappingImplementation **************
-$inherits(SVGExternalResourcesRequiredWrappingImplementation, DOMWrapperBase);
-SVGExternalResourcesRequiredWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGExternalResourcesRequiredWrappingImplementation._wrap$ctor.prototype = SVGExternalResourcesRequiredWrappingImplementation.prototype;
-function SVGExternalResourcesRequiredWrappingImplementation() {}
 // ********** Code for SVGFEBlendElementWrappingImplementation **************
 $inherits(SVGFEBlendElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGFEBlendElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4408,27 +3096,6 @@ SVGFilterElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGFilterElementWrappingImplementation._wrap$ctor.prototype = SVGFilterElementWrappingImplementation.prototype;
 function SVGFilterElementWrappingImplementation() {}
 SVGFilterElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGStylableWrappingImplementation **************
-$inherits(SVGStylableWrappingImplementation, DOMWrapperBase);
-SVGStylableWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGStylableWrappingImplementation._wrap$ctor.prototype = SVGStylableWrappingImplementation.prototype;
-function SVGStylableWrappingImplementation() {}
-// ********** Code for SVGFilterPrimitiveStandardAttributesWrappingImplementation **************
-$inherits(SVGFilterPrimitiveStandardAttributesWrappingImplementation, SVGStylableWrappingImplementation);
-SVGFilterPrimitiveStandardAttributesWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGStylableWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGFilterPrimitiveStandardAttributesWrappingImplementation._wrap$ctor.prototype = SVGFilterPrimitiveStandardAttributesWrappingImplementation.prototype;
-function SVGFilterPrimitiveStandardAttributesWrappingImplementation() {}
-// ********** Code for SVGFitToViewBoxWrappingImplementation **************
-$inherits(SVGFitToViewBoxWrappingImplementation, DOMWrapperBase);
-SVGFitToViewBoxWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGFitToViewBoxWrappingImplementation._wrap$ctor.prototype = SVGFitToViewBoxWrappingImplementation.prototype;
-function SVGFitToViewBoxWrappingImplementation() {}
 // ********** Code for SVGFontElementWrappingImplementation **************
 $inherits(SVGFontElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGFontElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4533,32 +3200,6 @@ SVGImageElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGImageElementWrappingImplementation._wrap$ctor.prototype = SVGImageElementWrappingImplementation.prototype;
 function SVGImageElementWrappingImplementation() {}
 SVGImageElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGLangSpaceWrappingImplementation **************
-$inherits(SVGLangSpaceWrappingImplementation, DOMWrapperBase);
-SVGLangSpaceWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGLangSpaceWrappingImplementation._wrap$ctor.prototype = SVGLangSpaceWrappingImplementation.prototype;
-function SVGLangSpaceWrappingImplementation() {}
-// ********** Code for SVGLengthListWrappingImplementation **************
-$inherits(SVGLengthListWrappingImplementation, DOMWrapperBase);
-SVGLengthListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGLengthListWrappingImplementation._wrap$ctor.prototype = SVGLengthListWrappingImplementation.prototype;
-function SVGLengthListWrappingImplementation() {}
-SVGLengthListWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-SVGLengthListWrappingImplementation.prototype.clear$0 = SVGLengthListWrappingImplementation.prototype.clear;
-// ********** Code for SVGLengthWrappingImplementation **************
-$inherits(SVGLengthWrappingImplementation, DOMWrapperBase);
-SVGLengthWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGLengthWrappingImplementation._wrap$ctor.prototype = SVGLengthWrappingImplementation.prototype;
-function SVGLengthWrappingImplementation() {}
 // ********** Code for SVGLineElementWrappingImplementation **************
 $inherits(SVGLineElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGLineElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4575,13 +3216,6 @@ SVGLinearGradientElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGLinearGradientElementWrappingImplementation._wrap$ctor.prototype = SVGLinearGradientElementWrappingImplementation.prototype;
 function SVGLinearGradientElementWrappingImplementation() {}
 SVGLinearGradientElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGLocatableWrappingImplementation **************
-$inherits(SVGLocatableWrappingImplementation, DOMWrapperBase);
-SVGLocatableWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGLocatableWrappingImplementation._wrap$ctor.prototype = SVGLocatableWrappingImplementation.prototype;
-function SVGLocatableWrappingImplementation() {}
 // ********** Code for SVGMPathElementWrappingImplementation **************
 $inherits(SVGMPathElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGMPathElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4606,13 +3240,6 @@ SVGMaskElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGMaskElementWrappingImplementation._wrap$ctor.prototype = SVGMaskElementWrappingImplementation.prototype;
 function SVGMaskElementWrappingImplementation() {}
 SVGMaskElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGMatrixWrappingImplementation **************
-$inherits(SVGMatrixWrappingImplementation, DOMWrapperBase);
-SVGMatrixWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGMatrixWrappingImplementation._wrap$ctor.prototype = SVGMatrixWrappingImplementation.prototype;
-function SVGMatrixWrappingImplementation() {}
 // ********** Code for SVGMetadataElementWrappingImplementation **************
 $inherits(SVGMetadataElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGMetadataElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4629,32 +3256,6 @@ SVGMissingGlyphElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGMissingGlyphElementWrappingImplementation._wrap$ctor.prototype = SVGMissingGlyphElementWrappingImplementation.prototype;
 function SVGMissingGlyphElementWrappingImplementation() {}
 SVGMissingGlyphElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGNumberListWrappingImplementation **************
-$inherits(SVGNumberListWrappingImplementation, DOMWrapperBase);
-SVGNumberListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGNumberListWrappingImplementation._wrap$ctor.prototype = SVGNumberListWrappingImplementation.prototype;
-function SVGNumberListWrappingImplementation() {}
-SVGNumberListWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-SVGNumberListWrappingImplementation.prototype.clear$0 = SVGNumberListWrappingImplementation.prototype.clear;
-// ********** Code for SVGNumberWrappingImplementation **************
-$inherits(SVGNumberWrappingImplementation, DOMWrapperBase);
-SVGNumberWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGNumberWrappingImplementation._wrap$ctor.prototype = SVGNumberWrappingImplementation.prototype;
-function SVGNumberWrappingImplementation() {}
-// ********** Code for SVGPaintWrappingImplementation **************
-$inherits(SVGPaintWrappingImplementation, SVGColorWrappingImplementation);
-SVGPaintWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGColorWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPaintWrappingImplementation._wrap$ctor.prototype = SVGPaintWrappingImplementation.prototype;
-function SVGPaintWrappingImplementation() {}
 // ********** Code for SVGPathElementWrappingImplementation **************
 $inherits(SVGPathElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGPathElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4663,158 +3264,6 @@ SVGPathElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGPathElementWrappingImplementation._wrap$ctor.prototype = SVGPathElementWrappingImplementation.prototype;
 function SVGPathElementWrappingImplementation() {}
 SVGPathElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGPathSegWrappingImplementation **************
-$inherits(SVGPathSegWrappingImplementation, DOMWrapperBase);
-SVGPathSegWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGPathSegWrappingImplementation._wrap$ctor.prototype = SVGPathSegWrappingImplementation.prototype;
-function SVGPathSegWrappingImplementation() {}
-// ********** Code for SVGPathSegArcAbsWrappingImplementation **************
-$inherits(SVGPathSegArcAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegArcAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegArcAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegArcAbsWrappingImplementation.prototype;
-function SVGPathSegArcAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegArcRelWrappingImplementation **************
-$inherits(SVGPathSegArcRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegArcRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegArcRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegArcRelWrappingImplementation.prototype;
-function SVGPathSegArcRelWrappingImplementation() {}
-// ********** Code for SVGPathSegClosePathWrappingImplementation **************
-$inherits(SVGPathSegClosePathWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegClosePathWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegClosePathWrappingImplementation._wrap$ctor.prototype = SVGPathSegClosePathWrappingImplementation.prototype;
-function SVGPathSegClosePathWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoCubicAbsWrappingImplementation **************
-$inherits(SVGPathSegCurvetoCubicAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoCubicAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoCubicAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoCubicAbsWrappingImplementation.prototype;
-function SVGPathSegCurvetoCubicAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoCubicRelWrappingImplementation **************
-$inherits(SVGPathSegCurvetoCubicRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoCubicRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoCubicRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoCubicRelWrappingImplementation.prototype;
-function SVGPathSegCurvetoCubicRelWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoCubicSmoothAbsWrappingImplementation **************
-$inherits(SVGPathSegCurvetoCubicSmoothAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoCubicSmoothAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoCubicSmoothAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoCubicSmoothAbsWrappingImplementation.prototype;
-function SVGPathSegCurvetoCubicSmoothAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoCubicSmoothRelWrappingImplementation **************
-$inherits(SVGPathSegCurvetoCubicSmoothRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoCubicSmoothRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoCubicSmoothRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoCubicSmoothRelWrappingImplementation.prototype;
-function SVGPathSegCurvetoCubicSmoothRelWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoQuadraticAbsWrappingImplementation **************
-$inherits(SVGPathSegCurvetoQuadraticAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoQuadraticAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoQuadraticAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoQuadraticAbsWrappingImplementation.prototype;
-function SVGPathSegCurvetoQuadraticAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoQuadraticRelWrappingImplementation **************
-$inherits(SVGPathSegCurvetoQuadraticRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoQuadraticRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoQuadraticRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoQuadraticRelWrappingImplementation.prototype;
-function SVGPathSegCurvetoQuadraticRelWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoQuadraticSmoothAbsWrappingImplementation **************
-$inherits(SVGPathSegCurvetoQuadraticSmoothAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoQuadraticSmoothAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoQuadraticSmoothAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoQuadraticSmoothAbsWrappingImplementation.prototype;
-function SVGPathSegCurvetoQuadraticSmoothAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegCurvetoQuadraticSmoothRelWrappingImplementation **************
-$inherits(SVGPathSegCurvetoQuadraticSmoothRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegCurvetoQuadraticSmoothRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegCurvetoQuadraticSmoothRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegCurvetoQuadraticSmoothRelWrappingImplementation.prototype;
-function SVGPathSegCurvetoQuadraticSmoothRelWrappingImplementation() {}
-// ********** Code for SVGPathSegLinetoAbsWrappingImplementation **************
-$inherits(SVGPathSegLinetoAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegLinetoAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegLinetoAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegLinetoAbsWrappingImplementation.prototype;
-function SVGPathSegLinetoAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegLinetoHorizontalAbsWrappingImplementation **************
-$inherits(SVGPathSegLinetoHorizontalAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegLinetoHorizontalAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegLinetoHorizontalAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegLinetoHorizontalAbsWrappingImplementation.prototype;
-function SVGPathSegLinetoHorizontalAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegLinetoHorizontalRelWrappingImplementation **************
-$inherits(SVGPathSegLinetoHorizontalRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegLinetoHorizontalRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegLinetoHorizontalRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegLinetoHorizontalRelWrappingImplementation.prototype;
-function SVGPathSegLinetoHorizontalRelWrappingImplementation() {}
-// ********** Code for SVGPathSegLinetoRelWrappingImplementation **************
-$inherits(SVGPathSegLinetoRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegLinetoRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegLinetoRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegLinetoRelWrappingImplementation.prototype;
-function SVGPathSegLinetoRelWrappingImplementation() {}
-// ********** Code for SVGPathSegLinetoVerticalAbsWrappingImplementation **************
-$inherits(SVGPathSegLinetoVerticalAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegLinetoVerticalAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegLinetoVerticalAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegLinetoVerticalAbsWrappingImplementation.prototype;
-function SVGPathSegLinetoVerticalAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegLinetoVerticalRelWrappingImplementation **************
-$inherits(SVGPathSegLinetoVerticalRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegLinetoVerticalRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegLinetoVerticalRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegLinetoVerticalRelWrappingImplementation.prototype;
-function SVGPathSegLinetoVerticalRelWrappingImplementation() {}
-// ********** Code for SVGPathSegListWrappingImplementation **************
-$inherits(SVGPathSegListWrappingImplementation, DOMWrapperBase);
-SVGPathSegListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGPathSegListWrappingImplementation._wrap$ctor.prototype = SVGPathSegListWrappingImplementation.prototype;
-function SVGPathSegListWrappingImplementation() {}
-SVGPathSegListWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-SVGPathSegListWrappingImplementation.prototype.clear$0 = SVGPathSegListWrappingImplementation.prototype.clear;
-// ********** Code for SVGPathSegMovetoAbsWrappingImplementation **************
-$inherits(SVGPathSegMovetoAbsWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegMovetoAbsWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegMovetoAbsWrappingImplementation._wrap$ctor.prototype = SVGPathSegMovetoAbsWrappingImplementation.prototype;
-function SVGPathSegMovetoAbsWrappingImplementation() {}
-// ********** Code for SVGPathSegMovetoRelWrappingImplementation **************
-$inherits(SVGPathSegMovetoRelWrappingImplementation, SVGPathSegWrappingImplementation);
-SVGPathSegMovetoRelWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGPathSegWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGPathSegMovetoRelWrappingImplementation._wrap$ctor.prototype = SVGPathSegMovetoRelWrappingImplementation.prototype;
-function SVGPathSegMovetoRelWrappingImplementation() {}
 // ********** Code for SVGPatternElementWrappingImplementation **************
 $inherits(SVGPatternElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGPatternElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4823,25 +3272,6 @@ SVGPatternElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGPatternElementWrappingImplementation._wrap$ctor.prototype = SVGPatternElementWrappingImplementation.prototype;
 function SVGPatternElementWrappingImplementation() {}
 SVGPatternElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGPointListWrappingImplementation **************
-$inherits(SVGPointListWrappingImplementation, DOMWrapperBase);
-SVGPointListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGPointListWrappingImplementation._wrap$ctor.prototype = SVGPointListWrappingImplementation.prototype;
-function SVGPointListWrappingImplementation() {}
-SVGPointListWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-SVGPointListWrappingImplementation.prototype.clear$0 = SVGPointListWrappingImplementation.prototype.clear;
-// ********** Code for SVGPointWrappingImplementation **************
-$inherits(SVGPointWrappingImplementation, DOMWrapperBase);
-SVGPointWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGPointWrappingImplementation._wrap$ctor.prototype = SVGPointWrappingImplementation.prototype;
-function SVGPointWrappingImplementation() {}
 // ********** Code for SVGPolygonElementWrappingImplementation **************
 $inherits(SVGPolygonElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGPolygonElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4858,13 +3288,6 @@ SVGPolylineElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGPolylineElementWrappingImplementation._wrap$ctor.prototype = SVGPolylineElementWrappingImplementation.prototype;
 function SVGPolylineElementWrappingImplementation() {}
 SVGPolylineElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGPreserveAspectRatioWrappingImplementation **************
-$inherits(SVGPreserveAspectRatioWrappingImplementation, DOMWrapperBase);
-SVGPreserveAspectRatioWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGPreserveAspectRatioWrappingImplementation._wrap$ctor.prototype = SVGPreserveAspectRatioWrappingImplementation.prototype;
-function SVGPreserveAspectRatioWrappingImplementation() {}
 // ********** Code for SVGRadialGradientElementWrappingImplementation **************
 $inherits(SVGRadialGradientElementWrappingImplementation, SVGGradientElementWrappingImplementation);
 SVGRadialGradientElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4881,20 +3304,6 @@ SVGRectElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGRectElementWrappingImplementation._wrap$ctor.prototype = SVGRectElementWrappingImplementation.prototype;
 function SVGRectElementWrappingImplementation() {}
 SVGRectElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGRectWrappingImplementation **************
-$inherits(SVGRectWrappingImplementation, DOMWrapperBase);
-SVGRectWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGRectWrappingImplementation._wrap$ctor.prototype = SVGRectWrappingImplementation.prototype;
-function SVGRectWrappingImplementation() {}
-// ********** Code for SVGRenderingIntentWrappingImplementation **************
-$inherits(SVGRenderingIntentWrappingImplementation, DOMWrapperBase);
-SVGRenderingIntentWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGRenderingIntentWrappingImplementation._wrap$ctor.prototype = SVGRenderingIntentWrappingImplementation.prototype;
-function SVGRenderingIntentWrappingImplementation() {}
 // ********** Code for SVGScriptElementWrappingImplementation **************
 $inherits(SVGScriptElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGScriptElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4922,18 +3331,6 @@ SVGStopElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGStopElementWrappingImplementation._wrap$ctor.prototype = SVGStopElementWrappingImplementation.prototype;
 function SVGStopElementWrappingImplementation() {}
 SVGStopElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGStringListWrappingImplementation **************
-$inherits(SVGStringListWrappingImplementation, DOMWrapperBase);
-SVGStringListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGStringListWrappingImplementation._wrap$ctor.prototype = SVGStringListWrappingImplementation.prototype;
-function SVGStringListWrappingImplementation() {}
-SVGStringListWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-SVGStringListWrappingImplementation.prototype.clear$0 = SVGStringListWrappingImplementation.prototype.clear;
 // ********** Code for SVGStyleElementWrappingImplementation **************
 $inherits(SVGStyleElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGStyleElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -4977,13 +3374,6 @@ SVGTSpanElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGTSpanElementWrappingImplementation._wrap$ctor.prototype = SVGTSpanElementWrappingImplementation.prototype;
 function SVGTSpanElementWrappingImplementation() {}
 SVGTSpanElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGTestsWrappingImplementation **************
-$inherits(SVGTestsWrappingImplementation, DOMWrapperBase);
-SVGTestsWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGTestsWrappingImplementation._wrap$ctor.prototype = SVGTestsWrappingImplementation.prototype;
-function SVGTestsWrappingImplementation() {}
 // ********** Code for SVGTextElementWrappingImplementation **************
 $inherits(SVGTextElementWrappingImplementation, SVGTextPositioningElementWrappingImplementation);
 SVGTextElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5008,49 +3398,6 @@ SVGTitleElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGTitleElementWrappingImplementation._wrap$ctor.prototype = SVGTitleElementWrappingImplementation.prototype;
 function SVGTitleElementWrappingImplementation() {}
 SVGTitleElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGTransformListWrappingImplementation **************
-$inherits(SVGTransformListWrappingImplementation, DOMWrapperBase);
-SVGTransformListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGTransformListWrappingImplementation._wrap$ctor.prototype = SVGTransformListWrappingImplementation.prototype;
-function SVGTransformListWrappingImplementation() {}
-SVGTransformListWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-SVGTransformListWrappingImplementation.prototype.clear$0 = SVGTransformListWrappingImplementation.prototype.clear;
-// ********** Code for SVGTransformWrappingImplementation **************
-$inherits(SVGTransformWrappingImplementation, DOMWrapperBase);
-SVGTransformWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGTransformWrappingImplementation._wrap$ctor.prototype = SVGTransformWrappingImplementation.prototype;
-function SVGTransformWrappingImplementation() {}
-SVGTransformWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for SVGTransformableWrappingImplementation **************
-$inherits(SVGTransformableWrappingImplementation, SVGLocatableWrappingImplementation);
-SVGTransformableWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGLocatableWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGTransformableWrappingImplementation._wrap$ctor.prototype = SVGTransformableWrappingImplementation.prototype;
-function SVGTransformableWrappingImplementation() {}
-// ********** Code for SVGURIReferenceWrappingImplementation **************
-$inherits(SVGURIReferenceWrappingImplementation, DOMWrapperBase);
-SVGURIReferenceWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGURIReferenceWrappingImplementation._wrap$ctor.prototype = SVGURIReferenceWrappingImplementation.prototype;
-function SVGURIReferenceWrappingImplementation() {}
-// ********** Code for SVGUnitTypesWrappingImplementation **************
-$inherits(SVGUnitTypesWrappingImplementation, DOMWrapperBase);
-SVGUnitTypesWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGUnitTypesWrappingImplementation._wrap$ctor.prototype = SVGUnitTypesWrappingImplementation.prototype;
-function SVGUnitTypesWrappingImplementation() {}
 // ********** Code for SVGUseElementWrappingImplementation **************
 $inherits(SVGUseElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGUseElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5075,41 +3422,6 @@ SVGViewElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGViewElementWrappingImplementation._wrap$ctor.prototype = SVGViewElementWrappingImplementation.prototype;
 function SVGViewElementWrappingImplementation() {}
 SVGViewElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGZoomAndPanWrappingImplementation **************
-$inherits(SVGZoomAndPanWrappingImplementation, DOMWrapperBase);
-SVGZoomAndPanWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SVGZoomAndPanWrappingImplementation._wrap$ctor.prototype = SVGZoomAndPanWrappingImplementation.prototype;
-function SVGZoomAndPanWrappingImplementation() {}
-// ********** Code for SVGViewSpecWrappingImplementation **************
-$inherits(SVGViewSpecWrappingImplementation, SVGZoomAndPanWrappingImplementation);
-SVGViewSpecWrappingImplementation._wrap$ctor = function(ptr) {
-  SVGZoomAndPanWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGViewSpecWrappingImplementation._wrap$ctor.prototype = SVGViewSpecWrappingImplementation.prototype;
-function SVGViewSpecWrappingImplementation() {}
-// ********** Code for UIEventWrappingImplementation **************
-$inherits(UIEventWrappingImplementation, EventWrappingImplementation);
-UIEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-UIEventWrappingImplementation._wrap$ctor.prototype = UIEventWrappingImplementation.prototype;
-function UIEventWrappingImplementation() {}
-// ********** Code for SVGZoomEventWrappingImplementation **************
-$inherits(SVGZoomEventWrappingImplementation, UIEventWrappingImplementation);
-SVGZoomEventWrappingImplementation._wrap$ctor = function(ptr) {
-  UIEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGZoomEventWrappingImplementation._wrap$ctor.prototype = SVGZoomEventWrappingImplementation.prototype;
-function SVGZoomEventWrappingImplementation() {}
-// ********** Code for ScreenWrappingImplementation **************
-$inherits(ScreenWrappingImplementation, DOMWrapperBase);
-ScreenWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ScreenWrappingImplementation._wrap$ctor.prototype = ScreenWrappingImplementation.prototype;
-function ScreenWrappingImplementation() {}
 // ********** Code for ScriptElementWrappingImplementation **************
 $inherits(ScriptElementWrappingImplementation, ElementWrappingImplementation);
 ScriptElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5138,14 +3450,9 @@ SelectElementWrappingImplementation.prototype.get$length = function() {
 SelectElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
 }
-SelectElementWrappingImplementation.prototype.add = function(element, before) {
-  this._ptr.add$2(LevelDom.unwrap(element), LevelDom.unwrap(before));
-  return;
-}
 SelectElementWrappingImplementation.prototype.item = function(index) {
   return LevelDom.wrapNode(this._ptr.item(index));
 }
-SelectElementWrappingImplementation.prototype.add$2 = SelectElementWrappingImplementation.prototype.add;
 // ********** Code for SourceElementWrappingImplementation **************
 $inherits(SourceElementWrappingImplementation, ElementWrappingImplementation);
 SourceElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5165,55 +3472,6 @@ SpanElementWrappingImplementation._wrap$ctor = function(ptr) {
 SpanElementWrappingImplementation._wrap$ctor.prototype = SpanElementWrappingImplementation.prototype;
 function SpanElementWrappingImplementation() {}
 SpanElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SpeechInputEventWrappingImplementation **************
-$inherits(SpeechInputEventWrappingImplementation, EventWrappingImplementation);
-SpeechInputEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SpeechInputEventWrappingImplementation._wrap$ctor.prototype = SpeechInputEventWrappingImplementation.prototype;
-function SpeechInputEventWrappingImplementation() {}
-// ********** Code for SpeechInputResultListWrappingImplementation **************
-$inherits(SpeechInputResultListWrappingImplementation, DOMWrapperBase);
-SpeechInputResultListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SpeechInputResultListWrappingImplementation._wrap$ctor.prototype = SpeechInputResultListWrappingImplementation.prototype;
-function SpeechInputResultListWrappingImplementation() {}
-SpeechInputResultListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-SpeechInputResultListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapSpeechInputResult(this._ptr.item(index));
-}
-// ********** Code for SpeechInputResultWrappingImplementation **************
-$inherits(SpeechInputResultWrappingImplementation, DOMWrapperBase);
-SpeechInputResultWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-SpeechInputResultWrappingImplementation._wrap$ctor.prototype = SpeechInputResultWrappingImplementation.prototype;
-function SpeechInputResultWrappingImplementation() {}
-// ********** Code for StorageInfoWrappingImplementation **************
-$inherits(StorageInfoWrappingImplementation, DOMWrapperBase);
-StorageInfoWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-StorageInfoWrappingImplementation._wrap$ctor.prototype = StorageInfoWrappingImplementation.prototype;
-function StorageInfoWrappingImplementation() {}
-// ********** Code for StorageWrappingImplementation **************
-$inherits(StorageWrappingImplementation, DOMWrapperBase);
-StorageWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-StorageWrappingImplementation._wrap$ctor.prototype = StorageWrappingImplementation.prototype;
-function StorageWrappingImplementation() {}
-StorageWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-StorageWrappingImplementation.prototype.clear = function() {
-  this._ptr.clear$0();
-  return;
-}
-StorageWrappingImplementation.prototype.clear$0 = StorageWrappingImplementation.prototype.clear;
 // ********** Code for StyleElementWrappingImplementation **************
 $inherits(StyleElementWrappingImplementation, ElementWrappingImplementation);
 StyleElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5225,61 +3483,6 @@ StyleElementWrappingImplementation.prototype.is$html_Element = function(){return
 StyleElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
 }
-// ********** Code for StyleMediaWrappingImplementation **************
-$inherits(StyleMediaWrappingImplementation, DOMWrapperBase);
-StyleMediaWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-StyleMediaWrappingImplementation._wrap$ctor.prototype = StyleMediaWrappingImplementation.prototype;
-function StyleMediaWrappingImplementation() {}
-StyleMediaWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
-// ********** Code for StyleSheetListWrappingImplementation **************
-$inherits(StyleSheetListWrappingImplementation, DOMWrapperBase);
-StyleSheetListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-StyleSheetListWrappingImplementation._wrap$ctor.prototype = StyleSheetListWrappingImplementation.prototype;
-function StyleSheetListWrappingImplementation() {}
-StyleSheetListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-StyleSheetListWrappingImplementation.prototype.$index = function(index) {
-  return LevelDom.wrapStyleSheet(this._ptr.$index(index));
-}
-StyleSheetListWrappingImplementation.prototype.$setindex = function(index, value) {
-  this._ptr.$setindex(index, LevelDom.unwrap(value));
-}
-StyleSheetListWrappingImplementation.prototype.add = function(value) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-StyleSheetListWrappingImplementation.prototype.addAll = function(collection) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-StyleSheetListWrappingImplementation.prototype.clear = function() {
-  $throw(new UnsupportedOperationException("Cannot clear immutable List."));
-}
-StyleSheetListWrappingImplementation.prototype.forEach = function(f) {
-  _Collections.forEach(this, f);
-}
-StyleSheetListWrappingImplementation.prototype.filter = function(f) {
-  return _Collections.filter(this, new Array(), f);
-}
-StyleSheetListWrappingImplementation.prototype.iterator = function() {
-  return new _FixedSizeListIterator_html_StyleSheet(this);
-}
-StyleSheetListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapStyleSheet(this._ptr.item(index));
-}
-StyleSheetListWrappingImplementation.prototype.add$1 = StyleSheetListWrappingImplementation.prototype.add;
-StyleSheetListWrappingImplementation.prototype.clear$0 = StyleSheetListWrappingImplementation.prototype.clear;
-StyleSheetListWrappingImplementation.prototype.filter$1 = function($0) {
-  return this.filter(to$call$1($0));
-};
-StyleSheetListWrappingImplementation.prototype.forEach$1 = function($0) {
-  return this.forEach(to$call$1($0));
-};
 // ********** Code for TableCaptionElementWrappingImplementation **************
 $inherits(TableCaptionElementWrappingImplementation, ElementWrappingImplementation);
 TableCaptionElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5339,50 +3542,6 @@ TextAreaElementWrappingImplementation.prototype.is$html_Element = function(){ret
 TextAreaElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
 }
-// ********** Code for TextMetricsWrappingImplementation **************
-$inherits(TextMetricsWrappingImplementation, DOMWrapperBase);
-TextMetricsWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-TextMetricsWrappingImplementation._wrap$ctor.prototype = TextMetricsWrappingImplementation.prototype;
-function TextMetricsWrappingImplementation() {}
-// ********** Code for TextTrackCueListWrappingImplementation **************
-$inherits(TextTrackCueListWrappingImplementation, DOMWrapperBase);
-TextTrackCueListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-TextTrackCueListWrappingImplementation._wrap$ctor.prototype = TextTrackCueListWrappingImplementation.prototype;
-function TextTrackCueListWrappingImplementation() {}
-TextTrackCueListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-TextTrackCueListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapTextTrackCue(this._ptr.item(index));
-}
-// ********** Code for TextTrackCueWrappingImplementation **************
-$inherits(TextTrackCueWrappingImplementation, DOMWrapperBase);
-TextTrackCueWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-TextTrackCueWrappingImplementation._wrap$ctor.prototype = TextTrackCueWrappingImplementation.prototype;
-function TextTrackCueWrappingImplementation() {}
-// ********** Code for TextTrackWrappingImplementation **************
-$inherits(TextTrackWrappingImplementation, DOMWrapperBase);
-TextTrackWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-TextTrackWrappingImplementation._wrap$ctor.prototype = TextTrackWrappingImplementation.prototype;
-function TextTrackWrappingImplementation() {}
-// ********** Code for TimeRangesWrappingImplementation **************
-$inherits(TimeRangesWrappingImplementation, DOMWrapperBase);
-TimeRangesWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-TimeRangesWrappingImplementation._wrap$ctor.prototype = TimeRangesWrappingImplementation.prototype;
-function TimeRangesWrappingImplementation() {}
-TimeRangesWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
 // ********** Code for TitleElementWrappingImplementation **************
 $inherits(TitleElementWrappingImplementation, ElementWrappingImplementation);
 TitleElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5394,58 +3553,6 @@ TitleElementWrappingImplementation.prototype.is$html_Element = function(){return
 TitleElementWrappingImplementation.prototype.get$text = function() {
   return this._ptr.get$text();
 }
-// ********** Code for TouchListWrappingImplementation **************
-$inherits(TouchListWrappingImplementation, DOMWrapperBase);
-TouchListWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-TouchListWrappingImplementation._wrap$ctor.prototype = TouchListWrappingImplementation.prototype;
-function TouchListWrappingImplementation() {}
-TouchListWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-TouchListWrappingImplementation.prototype.$index = function(index) {
-  return LevelDom.wrapTouch(this._ptr.$index(index));
-}
-TouchListWrappingImplementation.prototype.$setindex = function(index, value) {
-  this._ptr.$setindex(index, LevelDom.unwrap(value));
-}
-TouchListWrappingImplementation.prototype.add = function(value) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-TouchListWrappingImplementation.prototype.addAll = function(collection) {
-  $throw(new UnsupportedOperationException("Cannot add to immutable List."));
-}
-TouchListWrappingImplementation.prototype.clear = function() {
-  $throw(new UnsupportedOperationException("Cannot clear immutable List."));
-}
-TouchListWrappingImplementation.prototype.forEach = function(f) {
-  _Collections.forEach(this, f);
-}
-TouchListWrappingImplementation.prototype.filter = function(f) {
-  return _Collections.filter(this, new Array(), f);
-}
-TouchListWrappingImplementation.prototype.iterator = function() {
-  return new _FixedSizeListIterator_html_Touch(this);
-}
-TouchListWrappingImplementation.prototype.item = function(index) {
-  return LevelDom.wrapTouch(this._ptr.item(index));
-}
-TouchListWrappingImplementation.prototype.add$1 = TouchListWrappingImplementation.prototype.add;
-TouchListWrappingImplementation.prototype.clear$0 = TouchListWrappingImplementation.prototype.clear;
-TouchListWrappingImplementation.prototype.filter$1 = function($0) {
-  return this.filter(to$call$1($0));
-};
-TouchListWrappingImplementation.prototype.forEach$1 = function($0) {
-  return this.forEach(to$call$1($0));
-};
-// ********** Code for TouchWrappingImplementation **************
-$inherits(TouchWrappingImplementation, DOMWrapperBase);
-TouchWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-TouchWrappingImplementation._wrap$ctor.prototype = TouchWrappingImplementation.prototype;
-function TouchWrappingImplementation() {}
 // ********** Code for TrackElementWrappingImplementation **************
 $inherits(TrackElementWrappingImplementation, ElementWrappingImplementation);
 TrackElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5473,13 +3580,6 @@ UnknownElementWrappingImplementation._wrap$ctor = function(ptr) {
 UnknownElementWrappingImplementation._wrap$ctor.prototype = UnknownElementWrappingImplementation.prototype;
 function UnknownElementWrappingImplementation() {}
 UnknownElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for ValidityStateWrappingImplementation **************
-$inherits(ValidityStateWrappingImplementation, DOMWrapperBase);
-ValidityStateWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-ValidityStateWrappingImplementation._wrap$ctor.prototype = ValidityStateWrappingImplementation.prototype;
-function ValidityStateWrappingImplementation() {}
 // ********** Code for VideoElementWrappingImplementation **************
 $inherits(VideoElementWrappingImplementation, MediaElementWrappingImplementation);
 VideoElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5488,30 +3588,6 @@ VideoElementWrappingImplementation._wrap$ctor = function(ptr) {
 VideoElementWrappingImplementation._wrap$ctor.prototype = VideoElementWrappingImplementation.prototype;
 function VideoElementWrappingImplementation() {}
 VideoElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for VoidCallbackWrappingImplementation **************
-$inherits(VoidCallbackWrappingImplementation, DOMWrapperBase);
-VoidCallbackWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-VoidCallbackWrappingImplementation._wrap$ctor.prototype = VoidCallbackWrappingImplementation.prototype;
-function VoidCallbackWrappingImplementation() {}
-// ********** Code for WaveShaperNodeWrappingImplementation **************
-$inherits(WaveShaperNodeWrappingImplementation, AudioNodeWrappingImplementation);
-WaveShaperNodeWrappingImplementation._wrap$ctor = function(ptr) {
-  AudioNodeWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-WaveShaperNodeWrappingImplementation._wrap$ctor.prototype = WaveShaperNodeWrappingImplementation.prototype;
-function WaveShaperNodeWrappingImplementation() {}
-// ********** Code for WebGLActiveInfoWrappingImplementation **************
-$inherits(WebGLActiveInfoWrappingImplementation, DOMWrapperBase);
-WebGLActiveInfoWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLActiveInfoWrappingImplementation._wrap$ctor.prototype = WebGLActiveInfoWrappingImplementation.prototype;
-function WebGLActiveInfoWrappingImplementation() {}
-WebGLActiveInfoWrappingImplementation.prototype.get$type = function() {
-  return this._ptr.get$type();
-}
 // ********** Code for WebGLBufferWrappingImplementation **************
 $inherits(WebGLBufferWrappingImplementation, DOMWrapperBase);
 WebGLBufferWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5519,41 +3595,6 @@ WebGLBufferWrappingImplementation._wrap$ctor = function(ptr) {
 }
 WebGLBufferWrappingImplementation._wrap$ctor.prototype = WebGLBufferWrappingImplementation.prototype;
 function WebGLBufferWrappingImplementation() {}
-// ********** Code for WebGLContextAttributesWrappingImplementation **************
-$inherits(WebGLContextAttributesWrappingImplementation, DOMWrapperBase);
-WebGLContextAttributesWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLContextAttributesWrappingImplementation._wrap$ctor.prototype = WebGLContextAttributesWrappingImplementation.prototype;
-function WebGLContextAttributesWrappingImplementation() {}
-// ********** Code for WebGLContextEventWrappingImplementation **************
-$inherits(WebGLContextEventWrappingImplementation, EventWrappingImplementation);
-WebGLContextEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-WebGLContextEventWrappingImplementation._wrap$ctor.prototype = WebGLContextEventWrappingImplementation.prototype;
-function WebGLContextEventWrappingImplementation() {}
-// ********** Code for WebGLDebugRendererInfoWrappingImplementation **************
-$inherits(WebGLDebugRendererInfoWrappingImplementation, DOMWrapperBase);
-WebGLDebugRendererInfoWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLDebugRendererInfoWrappingImplementation._wrap$ctor.prototype = WebGLDebugRendererInfoWrappingImplementation.prototype;
-function WebGLDebugRendererInfoWrappingImplementation() {}
-// ********** Code for WebGLDebugShadersWrappingImplementation **************
-$inherits(WebGLDebugShadersWrappingImplementation, DOMWrapperBase);
-WebGLDebugShadersWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLDebugShadersWrappingImplementation._wrap$ctor.prototype = WebGLDebugShadersWrappingImplementation.prototype;
-function WebGLDebugShadersWrappingImplementation() {}
-// ********** Code for WebGLFramebufferWrappingImplementation **************
-$inherits(WebGLFramebufferWrappingImplementation, DOMWrapperBase);
-WebGLFramebufferWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLFramebufferWrappingImplementation._wrap$ctor.prototype = WebGLFramebufferWrappingImplementation.prototype;
-function WebGLFramebufferWrappingImplementation() {}
 // ********** Code for WebGLProgramWrappingImplementation **************
 $inherits(WebGLProgramWrappingImplementation, DOMWrapperBase);
 WebGLProgramWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5561,13 +3602,6 @@ WebGLProgramWrappingImplementation._wrap$ctor = function(ptr) {
 }
 WebGLProgramWrappingImplementation._wrap$ctor.prototype = WebGLProgramWrappingImplementation.prototype;
 function WebGLProgramWrappingImplementation() {}
-// ********** Code for WebGLRenderbufferWrappingImplementation **************
-$inherits(WebGLRenderbufferWrappingImplementation, DOMWrapperBase);
-WebGLRenderbufferWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLRenderbufferWrappingImplementation._wrap$ctor.prototype = WebGLRenderbufferWrappingImplementation.prototype;
-function WebGLRenderbufferWrappingImplementation() {}
 // ********** Code for WebGLRenderingContextWrappingImplementation **************
 $inherits(WebGLRenderingContextWrappingImplementation, CanvasRenderingContextWrappingImplementation);
 WebGLRenderingContextWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5575,20 +3609,75 @@ WebGLRenderingContextWrappingImplementation._wrap$ctor = function(ptr) {
 }
 WebGLRenderingContextWrappingImplementation._wrap$ctor.prototype = WebGLRenderingContextWrappingImplementation.prototype;
 function WebGLRenderingContextWrappingImplementation() {}
+WebGLRenderingContextWrappingImplementation.prototype.attachShader = function(program, shader) {
+  this._ptr.attachShader(LevelDom.unwrap(program), LevelDom.unwrap(shader));
+  return;
+}
+WebGLRenderingContextWrappingImplementation.prototype.bindBuffer = function(target, buffer) {
+  this._ptr.bindBuffer(target, LevelDom.unwrap(buffer));
+  return;
+}
+WebGLRenderingContextWrappingImplementation.prototype.bufferData = function(target, data_OR_size, usage) {
+  if (!!(data_OR_size && data_OR_size.is$html_ArrayBuffer())) {
+    this._ptr.bufferData(target, LevelDom.unwrapMaybePrimitive(data_OR_size), usage);
+    return;
+  }
+  else {
+    if (!!(data_OR_size && data_OR_size.is$html_ArrayBufferView())) {
+      this._ptr.bufferData(target, LevelDom.unwrapMaybePrimitive(data_OR_size), usage);
+      return;
+    }
+    else {
+      if ((typeof(data_OR_size) == 'number')) {
+        this._ptr.bufferData(target, LevelDom.unwrapMaybePrimitive(data_OR_size), usage);
+        return;
+      }
+    }
+  }
+  $throw("Incorrect number or type of arguments");
+}
 WebGLRenderingContextWrappingImplementation.prototype.compileShader = function(shader) {
   this._ptr.compileShader(LevelDom.unwrap(shader));
   return;
 }
+WebGLRenderingContextWrappingImplementation.prototype.createBuffer = function() {
+  return LevelDom.wrapWebGLBuffer(this._ptr.createBuffer());
+}
+WebGLRenderingContextWrappingImplementation.prototype.createProgram = function() {
+  return LevelDom.wrapWebGLProgram(this._ptr.createProgram$0());
+}
 WebGLRenderingContextWrappingImplementation.prototype.createShader = function(type) {
   return LevelDom.wrapWebGLShader(this._ptr.createShader(type));
 }
-WebGLRenderingContextWrappingImplementation.prototype.getShaderParameter = function(shader, pname) {
-  return LevelDom.wrapObject(this._ptr.getShaderParameter(LevelDom.unwrap(shader), pname));
+WebGLRenderingContextWrappingImplementation.prototype.drawArrays = function(mode, first, count) {
+  this._ptr.drawArrays(mode, first, count);
+  return;
+}
+WebGLRenderingContextWrappingImplementation.prototype.enableVertexAttribArray = function(index) {
+  this._ptr.enableVertexAttribArray(index);
+  return;
+}
+WebGLRenderingContextWrappingImplementation.prototype.getAttribLocation = function(program, name) {
+  return this._ptr.getAttribLocation(LevelDom.unwrap(program), name);
+}
+WebGLRenderingContextWrappingImplementation.prototype.linkProgram = function(program) {
+  this._ptr.linkProgram(LevelDom.unwrap(program));
+  return;
 }
 WebGLRenderingContextWrappingImplementation.prototype.shaderSource = function(shader, string) {
   this._ptr.shaderSource(LevelDom.unwrap(shader), string);
   return;
 }
+WebGLRenderingContextWrappingImplementation.prototype.useProgram = function(program) {
+  this._ptr.useProgram(LevelDom.unwrap(program));
+  return;
+}
+WebGLRenderingContextWrappingImplementation.prototype.vertexAttribPointer = function(indx, size, type, normalized, stride, offset) {
+  this._ptr.vertexAttribPointer(indx, size, type, normalized, stride, offset);
+  return;
+}
+WebGLRenderingContextWrappingImplementation.prototype.createBuffer$0 = WebGLRenderingContextWrappingImplementation.prototype.createBuffer;
+WebGLRenderingContextWrappingImplementation.prototype.createProgram$0 = WebGLRenderingContextWrappingImplementation.prototype.createProgram;
 // ********** Code for WebGLShaderWrappingImplementation **************
 $inherits(WebGLShaderWrappingImplementation, DOMWrapperBase);
 WebGLShaderWrappingImplementation._wrap$ctor = function(ptr) {
@@ -5596,152 +3685,8 @@ WebGLShaderWrappingImplementation._wrap$ctor = function(ptr) {
 }
 WebGLShaderWrappingImplementation._wrap$ctor.prototype = WebGLShaderWrappingImplementation.prototype;
 function WebGLShaderWrappingImplementation() {}
-// ********** Code for WebGLTextureWrappingImplementation **************
-$inherits(WebGLTextureWrappingImplementation, DOMWrapperBase);
-WebGLTextureWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLTextureWrappingImplementation._wrap$ctor.prototype = WebGLTextureWrappingImplementation.prototype;
-function WebGLTextureWrappingImplementation() {}
-// ********** Code for WebGLUniformLocationWrappingImplementation **************
-$inherits(WebGLUniformLocationWrappingImplementation, DOMWrapperBase);
-WebGLUniformLocationWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLUniformLocationWrappingImplementation._wrap$ctor.prototype = WebGLUniformLocationWrappingImplementation.prototype;
-function WebGLUniformLocationWrappingImplementation() {}
-// ********** Code for WebGLVertexArrayObjectOESWrappingImplementation **************
-$inherits(WebGLVertexArrayObjectOESWrappingImplementation, DOMWrapperBase);
-WebGLVertexArrayObjectOESWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebGLVertexArrayObjectOESWrappingImplementation._wrap$ctor.prototype = WebGLVertexArrayObjectOESWrappingImplementation.prototype;
-function WebGLVertexArrayObjectOESWrappingImplementation() {}
-// ********** Code for WebKitCSSFilterValueWrappingImplementation **************
-$inherits(WebKitCSSFilterValueWrappingImplementation, CSSValueListWrappingImplementation);
-WebKitCSSFilterValueWrappingImplementation._wrap$ctor = function(ptr) {
-  CSSValueListWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-WebKitCSSFilterValueWrappingImplementation._wrap$ctor.prototype = WebKitCSSFilterValueWrappingImplementation.prototype;
-function WebKitCSSFilterValueWrappingImplementation() {}
-// ********** Code for WebKitMutationObserverWrappingImplementation **************
-$inherits(WebKitMutationObserverWrappingImplementation, DOMWrapperBase);
-WebKitMutationObserverWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-WebKitMutationObserverWrappingImplementation._wrap$ctor.prototype = WebKitMutationObserverWrappingImplementation.prototype;
-function WebKitMutationObserverWrappingImplementation() {}
-// ********** Code for XMLHttpRequestExceptionWrappingImplementation **************
-$inherits(XMLHttpRequestExceptionWrappingImplementation, DOMWrapperBase);
-XMLHttpRequestExceptionWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-XMLHttpRequestExceptionWrappingImplementation._wrap$ctor.prototype = XMLHttpRequestExceptionWrappingImplementation.prototype;
-function XMLHttpRequestExceptionWrappingImplementation() {}
-XMLHttpRequestExceptionWrappingImplementation.prototype.toString = function() {
-  return this._ptr.toString();
-}
 // ********** Code for LevelDom **************
 function LevelDom() {}
-LevelDom.wrapAnimation = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new AnimationWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapCSSRule = function(raw) {
-  if (null == raw) {
-    return null;
-  }
-  if (null != raw.get$dartObjectLocalStorage()) {
-    return raw.get$dartObjectLocalStorage();
-  }
-  switch (raw.get$typeName()) {
-    case "CSSCharsetRule":
-
-      return new CSSCharsetRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSFontFaceRule":
-
-      return new CSSFontFaceRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSImportRule":
-
-      return new CSSImportRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSKeyframeRule":
-
-      return new CSSKeyframeRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSKeyframesRule":
-
-      return new CSSKeyframesRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSMediaRule":
-
-      return new CSSMediaRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSPageRule":
-
-      return new CSSPageRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSRule":
-
-      return new CSSRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSStyleRule":
-
-      return new CSSStyleRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSUnknownRule":
-
-      return new CSSUnknownRuleWrappingImplementation._wrap$ctor(raw);
-
-    default:
-
-      $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
-
-  }
-}
-LevelDom.wrapCSSValue = function(raw) {
-  if (null == raw) {
-    return null;
-  }
-  if (null != raw.get$dartObjectLocalStorage()) {
-    return raw.get$dartObjectLocalStorage();
-  }
-  switch (raw.get$typeName()) {
-    case "CSSPrimitiveValue":
-
-      return new CSSPrimitiveValueWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSTransformValue":
-
-      return new CSSTransformValueWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSValue":
-
-      return new CSSValueWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSValueList":
-
-      return new CSSValueListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGColor":
-
-      return new SVGColorWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPaint":
-
-      return new SVGPaintWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSFilterValue":
-
-      return new WebKitCSSFilterValueWrappingImplementation._wrap$ctor(raw);
-
-    default:
-
-      $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
-
-  }
-}
 LevelDom.wrapCanvasRenderingContext = function(raw) {
   if (null == raw) {
     return null;
@@ -5767,18 +3712,6 @@ LevelDom.wrapCanvasRenderingContext = function(raw) {
       $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
 
   }
-}
-LevelDom.wrapClientRect = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new ClientRectWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapDOMMimeType = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new DOMMimeTypeWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapDOMPlugin = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new DOMPluginWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapDataTransferItem = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new DataTransferItemWrappingImplementation._wrap$ctor(raw);
 }
 LevelDom.wrapDocument = function(raw) {
   if (null == raw) {
@@ -6404,82 +4337,8 @@ LevelDom.wrapElement = function(raw) {
 
   }
 }
-LevelDom.wrapEntry = function(raw) {
-  if (null == raw) {
-    return null;
-  }
-  if (null != raw.get$dartObjectLocalStorage()) {
-    return raw.get$dartObjectLocalStorage();
-  }
-  switch (raw.get$typeName()) {
-    case "DirectoryEntry":
-
-      return new DirectoryEntryWrappingImplementation._wrap$ctor(raw);
-
-    case "Entry":
-
-      return new EntryWrappingImplementation._wrap$ctor(raw);
-
-    case "FileEntry":
-
-      return new FileEntryWrappingImplementation._wrap$ctor(raw);
-
-    default:
-
-      $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
-
-  }
-}
-LevelDom.wrapEntrySync = function(raw) {
-  if (null == raw) {
-    return null;
-  }
-  if (null != raw.get$dartObjectLocalStorage()) {
-    return raw.get$dartObjectLocalStorage();
-  }
-  switch (raw.get$typeName()) {
-    case "DirectoryEntrySync":
-
-      return new DirectoryEntrySyncWrappingImplementation._wrap$ctor(raw);
-
-    case "EntrySync":
-
-      return new EntrySyncWrappingImplementation._wrap$ctor(raw);
-
-    case "FileEntrySync":
-
-      return new FileEntrySyncWrappingImplementation._wrap$ctor(raw);
-
-    default:
-
-      $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
-
-  }
-}
-LevelDom.wrapFile = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new FileWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapIDBRequest = function(raw) {
-  if (null == raw) {
-    return null;
-  }
-  if (null != raw.get$dartObjectLocalStorage()) {
-    return raw.get$dartObjectLocalStorage();
-  }
-  switch (raw.get$typeName()) {
-    case "IDBRequest":
-
-      return new IDBRequestWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBVersionChangeRequest":
-
-      return new IDBVersionChangeRequestWrappingImplementation._wrap$ctor(raw);
-
-    default:
-
-      $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
-
-  }
+LevelDom.wrapFloat32Array = function(raw) {
+  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new Float32ArrayWrappingImplementation._wrap$ctor(raw);
 }
 LevelDom.wrapNode = function(raw) {
   if (null == raw) {
@@ -7134,42 +4993,11 @@ LevelDom.wrapNode = function(raw) {
 LevelDom.wrapSVGAnimatedEnumeration = function(raw) {
   return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new SVGAnimatedEnumerationWrappingImplementation._wrap$ctor(raw);
 }
-LevelDom.wrapSVGElementInstance = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new SVGElementInstanceWrappingImplementation._wrap$ctor(raw);
+LevelDom.wrapWebGLBuffer = function(raw) {
+  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new WebGLBufferWrappingImplementation._wrap$ctor(raw);
 }
-LevelDom.wrapSVGElementInstanceList = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new SVGElementInstanceListWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapSpeechInputResult = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new SpeechInputResultWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapStyleSheet = function(raw) {
-  if (null == raw) {
-    return null;
-  }
-  if (null != raw.get$dartObjectLocalStorage()) {
-    return raw.get$dartObjectLocalStorage();
-  }
-  switch (raw.get$typeName()) {
-    case "CSSStyleSheet":
-
-      return new CSSStyleSheetWrappingImplementation._wrap$ctor(raw);
-
-    case "StyleSheet":
-
-      return new StyleSheetWrappingImplementation._wrap$ctor(raw);
-
-    default:
-
-      $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
-
-  }
-}
-LevelDom.wrapTextTrackCue = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new TextTrackCueWrappingImplementation._wrap$ctor(raw);
-}
-LevelDom.wrapTouch = function(raw) {
-  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new TouchWrappingImplementation._wrap$ctor(raw);
+LevelDom.wrapWebGLProgram = function(raw) {
+  return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new WebGLProgramWrappingImplementation._wrap$ctor(raw);
 }
 LevelDom.wrapWebGLShader = function(raw) {
   return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new WebGLShaderWrappingImplementation._wrap$ctor(raw);
@@ -7177,1803 +5005,8 @@ LevelDom.wrapWebGLShader = function(raw) {
 LevelDom.wrapWindow = function(raw) {
   return null == raw ? null : null != raw.get$dartObjectLocalStorage() ? raw.get$dartObjectLocalStorage() : new WindowWrappingImplementation._wrap$ctor(raw);
 }
-LevelDom.wrapObject = function(raw) {
-  if (null == raw || (typeof(raw) == 'string') || (typeof(raw) == 'number') || !!(raw && raw.is$Date())) {
-    return raw;
-  }
-  if (null != raw.get$dartObjectLocalStorage()) {
-    return raw.get$dartObjectLocalStorage();
-  }
-  switch (raw.get$typeName()) {
-    case "HTMLAnchorElement":
-
-      return new AnchorElementWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitAnimation":
-
-      return new AnimationWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitAnimationEvent":
-
-      return new AnimationEventWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitAnimationList":
-
-      return new AnimationListWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLAreaElement":
-
-      return new AreaElementWrappingImplementation._wrap$ctor(raw);
-
-    case "ArrayBuffer":
-
-      return new ArrayBufferWrappingImplementation._wrap$ctor(raw);
-
-    case "ArrayBufferView":
-
-      return new ArrayBufferViewWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioBuffer":
-
-      return new AudioBufferWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioBufferSourceNode":
-
-      return new AudioBufferSourceNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioChannelMerger":
-
-      return new AudioChannelMergerWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioChannelSplitter":
-
-      return new AudioChannelSplitterWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioContext":
-
-      return new AudioContextWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioDestinationNode":
-
-      return new AudioDestinationNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLAudioElement":
-
-      return new AudioElementWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioGain":
-
-      return new AudioGainWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioGainNode":
-
-      return new AudioGainNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioListener":
-
-      return new AudioListenerWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioNode":
-
-      return new AudioNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioPannerNode":
-
-      return new AudioPannerNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioParam":
-
-      return new AudioParamWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioProcessingEvent":
-
-      return new AudioProcessingEventWrappingImplementation._wrap$ctor(raw);
-
-    case "AudioSourceNode":
-
-      return new AudioSourceNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLBRElement":
-
-      return new BRElementWrappingImplementation._wrap$ctor(raw);
-
-    case "BarInfo":
-
-      return new BarInfoWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLBaseElement":
-
-      return new BaseElementWrappingImplementation._wrap$ctor(raw);
-
-    case "BeforeLoadEvent":
-
-      return new BeforeLoadEventWrappingImplementation._wrap$ctor(raw);
-
-    case "BiquadFilterNode":
-
-      return new BiquadFilterNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "Blob":
-
-      return new BlobWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitBlobBuilder":
-
-      return new BlobBuilderWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLBodyElement":
-
-      return new BodyElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLButtonElement":
-
-      return new ButtonElementWrappingImplementation._wrap$ctor(raw);
-
-    case "CDATASection":
-
-      return new CDATASectionWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSCharsetRule":
-
-      return new CSSCharsetRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSFontFaceRule":
-
-      return new CSSFontFaceRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSImportRule":
-
-      return new CSSImportRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSKeyframeRule":
-
-      return new CSSKeyframeRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSKeyframesRule":
-
-      return new CSSKeyframesRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSMatrix":
-
-      return new CSSMatrixWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSMediaRule":
-
-      return new CSSMediaRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSPageRule":
-
-      return new CSSPageRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSPrimitiveValue":
-
-      return new CSSPrimitiveValueWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSRule":
-
-      return new CSSRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSRuleList":
-
-      return new CSSRuleListWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSStyleDeclaration":
-
-      return new CSSStyleDeclarationWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSStyleRule":
-
-      return new CSSStyleRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSStyleSheet":
-
-      return new CSSStyleSheetWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSTransformValue":
-
-      return new CSSTransformValueWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSUnknownRule":
-
-      return new CSSUnknownRuleWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSValue":
-
-      return new CSSValueWrappingImplementation._wrap$ctor(raw);
-
-    case "CSSValueList":
-
-      return new CSSValueListWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLCanvasElement":
-
-      return new CanvasElementWrappingImplementation._wrap$ctor(raw);
-
-    case "CanvasGradient":
-
-      return new CanvasGradientWrappingImplementation._wrap$ctor(raw);
-
-    case "CanvasPattern":
-
-      return new CanvasPatternWrappingImplementation._wrap$ctor(raw);
-
-    case "CanvasPixelArray":
-
-      return new CanvasPixelArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "CanvasRenderingContext":
-
-      return new CanvasRenderingContextWrappingImplementation._wrap$ctor(raw);
-
-    case "CanvasRenderingContext2D":
-
-      return new CanvasRenderingContext2DWrappingImplementation._wrap$ctor(raw);
-
-    case "CharacterData":
-
-      return new CharacterDataWrappingImplementation._wrap$ctor(raw);
-
-    case "ClientRect":
-
-      return new ClientRectWrappingImplementation._wrap$ctor(raw);
-
-    case "ClientRectList":
-
-      return new ClientRectListWrappingImplementation._wrap$ctor(raw);
-
-    case "Clipboard":
-
-      return new ClipboardWrappingImplementation._wrap$ctor(raw);
-
-    case "CloseEvent":
-
-      return new CloseEventWrappingImplementation._wrap$ctor(raw);
-
-    case "Comment":
-
-      return new CommentWrappingImplementation._wrap$ctor(raw);
-
-    case "CompositionEvent":
-
-      return new CompositionEventWrappingImplementation._wrap$ctor(raw);
-
-    case "Console":
-
-      return new ConsoleWrappingImplementation._wrap$ctor(raw);
-
-    case "ConvolverNode":
-
-      return new ConvolverNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "Coordinates":
-
-      return new CoordinatesWrappingImplementation._wrap$ctor(raw);
-
-    case "Counter":
-
-      return new CounterWrappingImplementation._wrap$ctor(raw);
-
-    case "Crypto":
-
-      return new CryptoWrappingImplementation._wrap$ctor(raw);
-
-    case "CustomEvent":
-
-      return new CustomEventWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLDListElement":
-
-      return new DListElementWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMApplicationCache":
-
-      return new DOMApplicationCacheWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMException":
-
-      return new DOMExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMFileSystem":
-
-      return new DOMFileSystemWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMFileSystemSync":
-
-      return new DOMFileSystemSyncWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMFormData":
-
-      return new DOMFormDataWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMMimeType":
-
-      return new DOMMimeTypeWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMMimeTypeArray":
-
-      return new DOMMimeTypeArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMParser":
-
-      return new DOMParserWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMPlugin":
-
-      return new DOMPluginWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMPluginArray":
-
-      return new DOMPluginArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMSelection":
-
-      return new DOMSelectionWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMSettableTokenList":
-
-      return new DOMSettableTokenListWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMTokenList":
-
-      return new DOMTokenListWrappingImplementation._wrap$ctor(raw);
-
-    case "DOMURL":
-
-      return new DOMURLWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLDataListElement":
-
-      return new DataListElementWrappingImplementation._wrap$ctor(raw);
-
-    case "DataTransferItem":
-
-      return new DataTransferItemWrappingImplementation._wrap$ctor(raw);
-
-    case "DataTransferItemList":
-
-      return new DataTransferItemListWrappingImplementation._wrap$ctor(raw);
-
-    case "DataView":
-
-      return new DataViewWrappingImplementation._wrap$ctor(raw);
-
-    case "DelayNode":
-
-      return new DelayNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLDetailsElement":
-
-      return new DetailsElementWrappingImplementation._wrap$ctor(raw);
-
-    case "DeviceMotionEvent":
-
-      return new DeviceMotionEventWrappingImplementation._wrap$ctor(raw);
-
-    case "DeviceOrientationEvent":
-
-      return new DeviceOrientationEventWrappingImplementation._wrap$ctor(raw);
-
-    case "DirectoryEntry":
-
-      return new DirectoryEntryWrappingImplementation._wrap$ctor(raw);
-
-    case "DirectoryEntrySync":
-
-      return new DirectoryEntrySyncWrappingImplementation._wrap$ctor(raw);
-
-    case "DirectoryReader":
-
-      return new DirectoryReaderWrappingImplementation._wrap$ctor(raw);
-
-    case "DirectoryReaderSync":
-
-      return new DirectoryReaderSyncWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLDivElement":
-
-      return new DivElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLDocument":
-
-      return new DocumentWrappingImplementation._wrap$ctor(raw, raw.get$documentElement());
-
-    case "DocumentFragment":
-
-      return new DocumentFragmentWrappingImplementation._wrap$ctor(raw);
-
-    case "DynamicsCompressorNode":
-
-      return new DynamicsCompressorNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLElement":
-
-      return new ElementWrappingImplementation._wrap$ctor(raw);
-
-    case "ElementTimeControl":
-
-      return new ElementTimeControlWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLEmbedElement":
-
-      return new EmbedElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Entity":
-
-      return new EntityWrappingImplementation._wrap$ctor(raw);
-
-    case "EntityReference":
-
-      return new EntityReferenceWrappingImplementation._wrap$ctor(raw);
-
-    case "Entry":
-
-      return new EntryWrappingImplementation._wrap$ctor(raw);
-
-    case "EntryArray":
-
-      return new EntryArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "EntryArraySync":
-
-      return new EntryArraySyncWrappingImplementation._wrap$ctor(raw);
-
-    case "EntrySync":
-
-      return new EntrySyncWrappingImplementation._wrap$ctor(raw);
-
-    case "ErrorEvent":
-
-      return new ErrorEventWrappingImplementation._wrap$ctor(raw);
-
-    case "Event":
-
-      return new EventWrappingImplementation._wrap$ctor(raw);
-
-    case "EventException":
-
-      return new EventExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "EventSource":
-
-      return new EventSourceWrappingImplementation._wrap$ctor(raw);
-
-    case "EventTarget":
-
-      return new EventTargetWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLFieldSetElement":
-
-      return new FieldSetElementWrappingImplementation._wrap$ctor(raw);
-
-    case "File":
-
-      return new FileWrappingImplementation._wrap$ctor(raw);
-
-    case "FileEntry":
-
-      return new FileEntryWrappingImplementation._wrap$ctor(raw);
-
-    case "FileEntrySync":
-
-      return new FileEntrySyncWrappingImplementation._wrap$ctor(raw);
-
-    case "FileError":
-
-      return new FileErrorWrappingImplementation._wrap$ctor(raw);
-
-    case "FileException":
-
-      return new FileExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "FileList":
-
-      return new FileListWrappingImplementation._wrap$ctor(raw);
-
-    case "FileReader":
-
-      return new FileReaderWrappingImplementation._wrap$ctor(raw);
-
-    case "FileReaderSync":
-
-      return new FileReaderSyncWrappingImplementation._wrap$ctor(raw);
-
-    case "FileWriter":
-
-      return new FileWriterWrappingImplementation._wrap$ctor(raw);
-
-    case "FileWriterSync":
-
-      return new FileWriterSyncWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitFlags":
-
-      return new FlagsWrappingImplementation._wrap$ctor(raw);
-
-    case "Float32Array":
-
-      return new Float32ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "Float64Array":
-
-      return new Float64ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLFontElement":
-
-      return new FontElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLFormElement":
-
-      return new FormElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Geolocation":
-
-      return new GeolocationWrappingImplementation._wrap$ctor(raw);
-
-    case "Geoposition":
-
-      return new GeopositionWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLHRElement":
-
-      return new HRElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLAllCollection":
-
-      return new HTMLAllCollectionWrappingImplementation._wrap$ctor(raw);
-
-    case "HashChangeEvent":
-
-      return new HashChangeEventWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLHeadElement":
-
-      return new HeadElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLHeadingElement":
-
-      return new HeadingElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HighPass2FilterNode":
-
-      return new HighPass2FilterNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "History":
-
-      return new HistoryWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLHtmlElement":
-
-      return new DocumentWrappingImplementation._wrap$ctor(raw.get$parentNode(), raw);
-
-    case "IDBAny":
-
-      return new IDBAnyWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBCursor":
-
-      return new IDBCursorWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBCursorWithValue":
-
-      return new IDBCursorWithValueWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBDatabase":
-
-      return new IDBDatabaseWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBDatabaseError":
-
-      return new IDBDatabaseErrorWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBDatabaseException":
-
-      return new IDBDatabaseExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBFactory":
-
-      return new IDBFactoryWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBIndex":
-
-      return new IDBIndexWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBKey":
-
-      return new IDBKeyWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBKeyRange":
-
-      return new IDBKeyRangeWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBObjectStore":
-
-      return new IDBObjectStoreWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBRequest":
-
-      return new IDBRequestWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBTransaction":
-
-      return new IDBTransactionWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBVersionChangeEvent":
-
-      return new IDBVersionChangeEventWrappingImplementation._wrap$ctor(raw);
-
-    case "IDBVersionChangeRequest":
-
-      return new IDBVersionChangeRequestWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLIFrameElement":
-
-      return new IFrameElementWrappingImplementation._wrap$ctor(raw);
-
-    case "ImageData":
-
-      return new ImageDataWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLImageElement":
-
-      return new ImageElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLInputElement":
-
-      return new InputElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Int16Array":
-
-      return new Int16ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "Int32Array":
-
-      return new Int32ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "Int8Array":
-
-      return new Int8ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "JavaScriptAudioNode":
-
-      return new JavaScriptAudioNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "KeyboardEvent":
-
-      return new KeyboardEventWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLKeygenElement":
-
-      return new KeygenElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLLIElement":
-
-      return new LIElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLLabelElement":
-
-      return new LabelElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLLegendElement":
-
-      return new LegendElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLLinkElement":
-
-      return new LinkElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Location":
-
-      return new LocationWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitLoseContext":
-
-      return new LoseContextWrappingImplementation._wrap$ctor(raw);
-
-    case "LowPass2FilterNode":
-
-      return new LowPass2FilterNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLMapElement":
-
-      return new MapElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLMarqueeElement":
-
-      return new MarqueeElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLMediaElement":
-
-      return new MediaElementWrappingImplementation._wrap$ctor(raw);
-
-    case "MediaElementAudioSourceNode":
-
-      return new MediaElementAudioSourceNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "MediaError":
-
-      return new MediaErrorWrappingImplementation._wrap$ctor(raw);
-
-    case "MediaList":
-
-      return new MediaListWrappingImplementation._wrap$ctor(raw);
-
-    case "MediaQueryList":
-
-      return new MediaQueryListWrappingImplementation._wrap$ctor(raw);
-
-    case "MediaQueryListListener":
-
-      return new MediaQueryListListenerWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLMenuElement":
-
-      return new MenuElementWrappingImplementation._wrap$ctor(raw);
-
-    case "MessageChannel":
-
-      return new MessageChannelWrappingImplementation._wrap$ctor(raw);
-
-    case "MessageEvent":
-
-      return new MessageEventWrappingImplementation._wrap$ctor(raw);
-
-    case "MessagePort":
-
-      return new MessagePortWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLMetaElement":
-
-      return new MetaElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Metadata":
-
-      return new MetadataWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLMeterElement":
-
-      return new MeterElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLModElement":
-
-      return new ModElementWrappingImplementation._wrap$ctor(raw);
-
-    case "MouseEvent":
-
-      return new MouseEventWrappingImplementation._wrap$ctor(raw);
-
-    case "MutationCallback":
-
-      return new MutationCallbackWrappingImplementation._wrap$ctor(raw);
-
-    case "MutationEvent":
-
-      return new MutationEventWrappingImplementation._wrap$ctor(raw);
-
-    case "MutationRecord":
-
-      return new MutationRecordWrappingImplementation._wrap$ctor(raw);
-
-    case "Navigator":
-
-      return new NavigatorWrappingImplementation._wrap$ctor(raw);
-
-    case "NavigatorUserMediaError":
-
-      return new NavigatorUserMediaErrorWrappingImplementation._wrap$ctor(raw);
-
-    case "NavigatorUserMediaSuccessCallback":
-
-      return new NavigatorUserMediaSuccessCallbackWrappingImplementation._wrap$ctor(raw);
-
-    case "Node":
-
-      return new NodeWrappingImplementation._wrap$ctor(raw);
-
-    case "Notation":
-
-      return new NotationWrappingImplementation._wrap$ctor(raw);
-
-    case "Notification":
-
-      return new NotificationWrappingImplementation._wrap$ctor(raw);
-
-    case "NotificationCenter":
-
-      return new NotificationCenterWrappingImplementation._wrap$ctor(raw);
-
-    case "OESStandardDerivatives":
-
-      return new OESStandardDerivativesWrappingImplementation._wrap$ctor(raw);
-
-    case "OESTextureFloat":
-
-      return new OESTextureFloatWrappingImplementation._wrap$ctor(raw);
-
-    case "OESVertexArrayObject":
-
-      return new OESVertexArrayObjectWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLOListElement":
-
-      return new OListElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLObjectElement":
-
-      return new ObjectElementWrappingImplementation._wrap$ctor(raw);
-
-    case "OfflineAudioCompletionEvent":
-
-      return new OfflineAudioCompletionEventWrappingImplementation._wrap$ctor(raw);
-
-    case "OperationNotAllowedException":
-
-      return new OperationNotAllowedExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLOptGroupElement":
-
-      return new OptGroupElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLOptionElement":
-
-      return new OptionElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLOutputElement":
-
-      return new OutputElementWrappingImplementation._wrap$ctor(raw);
-
-    case "OverflowEvent":
-
-      return new OverflowEventWrappingImplementation._wrap$ctor(raw);
-
-    case "PageTransitionEvent":
-
-      return new PageTransitionEventWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLParagraphElement":
-
-      return new ParagraphElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLParamElement":
-
-      return new ParamElementWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitPoint":
-
-      return new PointWrappingImplementation._wrap$ctor(raw);
-
-    case "PopStateEvent":
-
-      return new PopStateEventWrappingImplementation._wrap$ctor(raw);
-
-    case "PositionError":
-
-      return new PositionErrorWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLPreElement":
-
-      return new PreElementWrappingImplementation._wrap$ctor(raw);
-
-    case "ProcessingInstruction":
-
-      return new ProcessingInstructionWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLProgressElement":
-
-      return new ProgressElementWrappingImplementation._wrap$ctor(raw);
-
-    case "ProgressEvent":
-
-      return new ProgressEventWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLQuoteElement":
-
-      return new QuoteElementWrappingImplementation._wrap$ctor(raw);
-
-    case "RGBColor":
-
-      return new RGBColorWrappingImplementation._wrap$ctor(raw);
-
-    case "Range":
-
-      return new RangeWrappingImplementation._wrap$ctor(raw);
-
-    case "RangeException":
-
-      return new RangeExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "RealtimeAnalyserNode":
-
-      return new RealtimeAnalyserNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "Rect":
-
-      return new RectWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAElement":
-
-      return new SVGAElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAltGlyphDefElement":
-
-      return new SVGAltGlyphDefElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAltGlyphElement":
-
-      return new SVGAltGlyphElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAltGlyphItemElement":
-
-      return new SVGAltGlyphItemElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAngle":
-
-      return new SVGAngleWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimateColorElement":
-
-      return new SVGAnimateColorElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimateElement":
-
-      return new SVGAnimateElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimateMotionElement":
-
-      return new SVGAnimateMotionElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimateTransformElement":
-
-      return new SVGAnimateTransformElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedAngle":
-
-      return new SVGAnimatedAngleWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedBoolean":
-
-      return new SVGAnimatedBooleanWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedEnumeration":
-
-      return new SVGAnimatedEnumerationWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedInteger":
-
-      return new SVGAnimatedIntegerWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedLength":
-
-      return new SVGAnimatedLengthWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedLengthList":
-
-      return new SVGAnimatedLengthListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedNumber":
-
-      return new SVGAnimatedNumberWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedNumberList":
-
-      return new SVGAnimatedNumberListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedPreserveAspectRatio":
-
-      return new SVGAnimatedPreserveAspectRatioWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedRect":
-
-      return new SVGAnimatedRectWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedString":
-
-      return new SVGAnimatedStringWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimatedTransformList":
-
-      return new SVGAnimatedTransformListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGAnimationElement":
-
-      return new SVGAnimationElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGCircleElement":
-
-      return new SVGCircleElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGClipPathElement":
-
-      return new SVGClipPathElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGColor":
-
-      return new SVGColorWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGComponentTransferFunctionElement":
-
-      return new SVGComponentTransferFunctionElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGCursorElement":
-
-      return new SVGCursorElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGDefsElement":
-
-      return new SVGDefsElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGDescElement":
-
-      return new SVGDescElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGDocument":
-
-      return new SVGDocumentWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGElement":
-
-      return new SVGElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGElementInstance":
-
-      return new SVGElementInstanceWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGElementInstanceList":
-
-      return new SVGElementInstanceListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGEllipseElement":
-
-      return new SVGEllipseElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGException":
-
-      return new SVGExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGExternalResourcesRequired":
-
-      return new SVGExternalResourcesRequiredWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEBlendElement":
-
-      return new SVGFEBlendElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEColorMatrixElement":
-
-      return new SVGFEColorMatrixElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEComponentTransferElement":
-
-      return new SVGFEComponentTransferElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEConvolveMatrixElement":
-
-      return new SVGFEConvolveMatrixElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEDiffuseLightingElement":
-
-      return new SVGFEDiffuseLightingElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEDisplacementMapElement":
-
-      return new SVGFEDisplacementMapElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEDistantLightElement":
-
-      return new SVGFEDistantLightElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEDropShadowElement":
-
-      return new SVGFEDropShadowElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEFloodElement":
-
-      return new SVGFEFloodElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEFuncAElement":
-
-      return new SVGFEFuncAElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEFuncBElement":
-
-      return new SVGFEFuncBElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEFuncGElement":
-
-      return new SVGFEFuncGElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEFuncRElement":
-
-      return new SVGFEFuncRElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEGaussianBlurElement":
-
-      return new SVGFEGaussianBlurElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEImageElement":
-
-      return new SVGFEImageElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEMergeElement":
-
-      return new SVGFEMergeElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEMergeNodeElement":
-
-      return new SVGFEMergeNodeElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEOffsetElement":
-
-      return new SVGFEOffsetElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFEPointLightElement":
-
-      return new SVGFEPointLightElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFESpecularLightingElement":
-
-      return new SVGFESpecularLightingElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFESpotLightElement":
-
-      return new SVGFESpotLightElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFETileElement":
-
-      return new SVGFETileElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFETurbulenceElement":
-
-      return new SVGFETurbulenceElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFilterElement":
-
-      return new SVGFilterElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFilterPrimitiveStandardAttributes":
-
-      return new SVGFilterPrimitiveStandardAttributesWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFitToViewBox":
-
-      return new SVGFitToViewBoxWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFontElement":
-
-      return new SVGFontElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFontFaceElement":
-
-      return new SVGFontFaceElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFontFaceFormatElement":
-
-      return new SVGFontFaceFormatElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFontFaceNameElement":
-
-      return new SVGFontFaceNameElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFontFaceSrcElement":
-
-      return new SVGFontFaceSrcElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGFontFaceUriElement":
-
-      return new SVGFontFaceUriElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGForeignObjectElement":
-
-      return new SVGForeignObjectElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGGElement":
-
-      return new SVGGElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGGlyphElement":
-
-      return new SVGGlyphElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGGlyphRefElement":
-
-      return new SVGGlyphRefElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGGradientElement":
-
-      return new SVGGradientElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGHKernElement":
-
-      return new SVGHKernElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGImageElement":
-
-      return new SVGImageElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGLangSpace":
-
-      return new SVGLangSpaceWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGLength":
-
-      return new SVGLengthWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGLengthList":
-
-      return new SVGLengthListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGLineElement":
-
-      return new SVGLineElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGLinearGradientElement":
-
-      return new SVGLinearGradientElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGLocatable":
-
-      return new SVGLocatableWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGMPathElement":
-
-      return new SVGMPathElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGMarkerElement":
-
-      return new SVGMarkerElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGMaskElement":
-
-      return new SVGMaskElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGMatrix":
-
-      return new SVGMatrixWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGMetadataElement":
-
-      return new SVGMetadataElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGMissingGlyphElement":
-
-      return new SVGMissingGlyphElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGNumber":
-
-      return new SVGNumberWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGNumberList":
-
-      return new SVGNumberListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPaint":
-
-      return new SVGPaintWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathElement":
-
-      return new SVGPathElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSeg":
-
-      return new SVGPathSegWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegArcAbs":
-
-      return new SVGPathSegArcAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegArcRel":
-
-      return new SVGPathSegArcRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegClosePath":
-
-      return new SVGPathSegClosePathWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoCubicAbs":
-
-      return new SVGPathSegCurvetoCubicAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoCubicRel":
-
-      return new SVGPathSegCurvetoCubicRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoCubicSmoothAbs":
-
-      return new SVGPathSegCurvetoCubicSmoothAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoCubicSmoothRel":
-
-      return new SVGPathSegCurvetoCubicSmoothRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoQuadraticAbs":
-
-      return new SVGPathSegCurvetoQuadraticAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoQuadraticRel":
-
-      return new SVGPathSegCurvetoQuadraticRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoQuadraticSmoothAbs":
-
-      return new SVGPathSegCurvetoQuadraticSmoothAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegCurvetoQuadraticSmoothRel":
-
-      return new SVGPathSegCurvetoQuadraticSmoothRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegLinetoAbs":
-
-      return new SVGPathSegLinetoAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegLinetoHorizontalAbs":
-
-      return new SVGPathSegLinetoHorizontalAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegLinetoHorizontalRel":
-
-      return new SVGPathSegLinetoHorizontalRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegLinetoRel":
-
-      return new SVGPathSegLinetoRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegLinetoVerticalAbs":
-
-      return new SVGPathSegLinetoVerticalAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegLinetoVerticalRel":
-
-      return new SVGPathSegLinetoVerticalRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegList":
-
-      return new SVGPathSegListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegMovetoAbs":
-
-      return new SVGPathSegMovetoAbsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPathSegMovetoRel":
-
-      return new SVGPathSegMovetoRelWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPatternElement":
-
-      return new SVGPatternElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPoint":
-
-      return new SVGPointWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPointList":
-
-      return new SVGPointListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPolygonElement":
-
-      return new SVGPolygonElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPolylineElement":
-
-      return new SVGPolylineElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGPreserveAspectRatio":
-
-      return new SVGPreserveAspectRatioWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGRadialGradientElement":
-
-      return new SVGRadialGradientElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGRect":
-
-      return new SVGRectWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGRectElement":
-
-      return new SVGRectElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGRenderingIntent":
-
-      return new SVGRenderingIntentWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGSVGElement":
-
-      return new SVGSVGElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGScriptElement":
-
-      return new SVGScriptElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGSetElement":
-
-      return new SVGSetElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGStopElement":
-
-      return new SVGStopElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGStringList":
-
-      return new SVGStringListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGStylable":
-
-      return new SVGStylableWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGStyleElement":
-
-      return new SVGStyleElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGSwitchElement":
-
-      return new SVGSwitchElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGSymbolElement":
-
-      return new SVGSymbolElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTRefElement":
-
-      return new SVGTRefElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTSpanElement":
-
-      return new SVGTSpanElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTests":
-
-      return new SVGTestsWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTextContentElement":
-
-      return new SVGTextContentElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTextElement":
-
-      return new SVGTextElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTextPathElement":
-
-      return new SVGTextPathElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTextPositioningElement":
-
-      return new SVGTextPositioningElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTitleElement":
-
-      return new SVGTitleElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTransform":
-
-      return new SVGTransformWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTransformList":
-
-      return new SVGTransformListWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGTransformable":
-
-      return new SVGTransformableWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGURIReference":
-
-      return new SVGURIReferenceWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGUnitTypes":
-
-      return new SVGUnitTypesWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGUseElement":
-
-      return new SVGUseElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGVKernElement":
-
-      return new SVGVKernElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGViewElement":
-
-      return new SVGViewElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGViewSpec":
-
-      return new SVGViewSpecWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGZoomAndPan":
-
-      return new SVGZoomAndPanWrappingImplementation._wrap$ctor(raw);
-
-    case "SVGZoomEvent":
-
-      return new SVGZoomEventWrappingImplementation._wrap$ctor(raw);
-
-    case "Screen":
-
-      return new ScreenWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLScriptElement":
-
-      return new ScriptElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLSelectElement":
-
-      return new SelectElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SharedWorker":
-
-      return new SharedWorkerWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLSourceElement":
-
-      return new SourceElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLSpanElement":
-
-      return new SpanElementWrappingImplementation._wrap$ctor(raw);
-
-    case "SpeechInputEvent":
-
-      return new SpeechInputEventWrappingImplementation._wrap$ctor(raw);
-
-    case "SpeechInputResult":
-
-      return new SpeechInputResultWrappingImplementation._wrap$ctor(raw);
-
-    case "SpeechInputResultList":
-
-      return new SpeechInputResultListWrappingImplementation._wrap$ctor(raw);
-
-    case "Storage":
-
-      return new StorageWrappingImplementation._wrap$ctor(raw);
-
-    case "StorageEvent":
-
-      return new StorageEventWrappingImplementation._wrap$ctor(raw);
-
-    case "StorageInfo":
-
-      return new StorageInfoWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLStyleElement":
-
-      return new StyleElementWrappingImplementation._wrap$ctor(raw);
-
-    case "StyleMedia":
-
-      return new StyleMediaWrappingImplementation._wrap$ctor(raw);
-
-    case "StyleSheet":
-
-      return new StyleSheetWrappingImplementation._wrap$ctor(raw);
-
-    case "StyleSheetList":
-
-      return new StyleSheetListWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTableCaptionElement":
-
-      return new TableCaptionElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTableCellElement":
-
-      return new TableCellElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTableColElement":
-
-      return new TableColElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTableElement":
-
-      return new TableElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTableRowElement":
-
-      return new TableRowElementWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTableSectionElement":
-
-      return new TableSectionElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Text":
-
-      return new TextWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTextAreaElement":
-
-      return new TextAreaElementWrappingImplementation._wrap$ctor(raw);
-
-    case "TextEvent":
-
-      return new TextEventWrappingImplementation._wrap$ctor(raw);
-
-    case "TextMetrics":
-
-      return new TextMetricsWrappingImplementation._wrap$ctor(raw);
-
-    case "TextTrack":
-
-      return new TextTrackWrappingImplementation._wrap$ctor(raw);
-
-    case "TextTrackCue":
-
-      return new TextTrackCueWrappingImplementation._wrap$ctor(raw);
-
-    case "TextTrackCueList":
-
-      return new TextTrackCueListWrappingImplementation._wrap$ctor(raw);
-
-    case "TimeRanges":
-
-      return new TimeRangesWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTitleElement":
-
-      return new TitleElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Touch":
-
-      return new TouchWrappingImplementation._wrap$ctor(raw);
-
-    case "TouchEvent":
-
-      return new TouchEventWrappingImplementation._wrap$ctor(raw);
-
-    case "TouchList":
-
-      return new TouchListWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLTrackElement":
-
-      return new TrackElementWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitTransitionEvent":
-
-      return new TransitionEventWrappingImplementation._wrap$ctor(raw);
-
-    case "UIEvent":
-
-      return new UIEventWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLUListElement":
-
-      return new UListElementWrappingImplementation._wrap$ctor(raw);
-
-    case "Uint16Array":
-
-      return new Uint16ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "Uint32Array":
-
-      return new Uint32ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "Uint8Array":
-
-      return new Uint8ArrayWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLUnknownElement":
-
-      return new UnknownElementWrappingImplementation._wrap$ctor(raw);
-
-    case "ValidityState":
-
-      return new ValidityStateWrappingImplementation._wrap$ctor(raw);
-
-    case "HTMLVideoElement":
-
-      return new VideoElementWrappingImplementation._wrap$ctor(raw);
-
-    case "VoidCallback":
-
-      return new VoidCallbackWrappingImplementation._wrap$ctor(raw);
-
-    case "WaveShaperNode":
-
-      return new WaveShaperNodeWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLActiveInfo":
-
-      return new WebGLActiveInfoWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLBuffer":
-
-      return new WebGLBufferWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLContextAttributes":
-
-      return new WebGLContextAttributesWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLContextEvent":
-
-      return new WebGLContextEventWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLDebugRendererInfo":
-
-      return new WebGLDebugRendererInfoWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLDebugShaders":
-
-      return new WebGLDebugShadersWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLFramebuffer":
-
-      return new WebGLFramebufferWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLProgram":
-
-      return new WebGLProgramWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLRenderbuffer":
-
-      return new WebGLRenderbufferWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLRenderingContext":
-
-      return new WebGLRenderingContextWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLShader":
-
-      return new WebGLShaderWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLTexture":
-
-      return new WebGLTextureWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLUniformLocation":
-
-      return new WebGLUniformLocationWrappingImplementation._wrap$ctor(raw);
-
-    case "WebGLVertexArrayObjectOES":
-
-      return new WebGLVertexArrayObjectOESWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitCSSFilterValue":
-
-      return new WebKitCSSFilterValueWrappingImplementation._wrap$ctor(raw);
-
-    case "WebKitMutationObserver":
-
-      return new WebKitMutationObserverWrappingImplementation._wrap$ctor(raw);
-
-    case "WebSocket":
-
-      return new WebSocketWrappingImplementation._wrap$ctor(raw);
-
-    case "WheelEvent":
-
-      return new WheelEventWrappingImplementation._wrap$ctor(raw);
-
-    case "Window":
-
-      return new WindowWrappingImplementation._wrap$ctor(raw);
-
-    case "Worker":
-
-      return new WorkerWrappingImplementation._wrap$ctor(raw);
-
-    case "XMLHttpRequest":
-
-      return new XMLHttpRequestWrappingImplementation._wrap$ctor(raw);
-
-    case "XMLHttpRequestException":
-
-      return new XMLHttpRequestExceptionWrappingImplementation._wrap$ctor(raw);
-
-    case "XMLHttpRequestProgressEvent":
-
-      return new XMLHttpRequestProgressEventWrappingImplementation._wrap$ctor(raw);
-
-    case "XMLHttpRequestUpload":
-
-      return new XMLHttpRequestUploadWrappingImplementation._wrap$ctor(raw);
-
-    default:
-
-      $throw(new UnsupportedOperationException($add("Unknown type:", raw.toString())));
-
-  }
+LevelDom.unwrapMaybePrimitive = function(raw) {
+  return (null == raw || (typeof(raw) == 'string') || (typeof(raw) == 'number') || (typeof(raw) == 'boolean')) ? raw : raw.get$_ptr();
 }
 LevelDom.unwrap = function(raw) {
   return null == raw ? null : raw.get$_ptr();
@@ -8982,107 +5015,6 @@ LevelDom.initialize = function() {
   $globals.secretWindow = LevelDom.wrapWindow(get$window());
   $globals.secretDocument = LevelDom.wrapDocument(get$document());
 }
-// ********** Code for _Collections **************
-function _Collections() {}
-_Collections.forEach = function(iterable, f) {
-  for (var $$i = iterable.iterator(); $$i.hasNext(); ) {
-    var e = $$i.next();
-    f(e);
-  }
-}
-_Collections.filter = function(source, destination, f) {
-  for (var $$i = source.iterator(); $$i.hasNext(); ) {
-    var e = $$i.next();
-    if (f(e)) destination.add(e);
-  }
-  return destination;
-}
-// ********** Code for _VariableSizeListIterator **************
-function _VariableSizeListIterator() {}
-_VariableSizeListIterator.prototype.hasNext = function() {
-  return this._htmlimpl_list.get$length() > this._htmlimpl_pos;
-}
-_VariableSizeListIterator.prototype.next = function() {
-  if (!this.hasNext()) {
-    $throw(const$0000);
-  }
-  return this._htmlimpl_list.$index(this._htmlimpl_pos++);
-}
-// ********** Code for _FixedSizeListIterator **************
-$inherits(_FixedSizeListIterator, _VariableSizeListIterator);
-function _FixedSizeListIterator() {}
-_FixedSizeListIterator.prototype.hasNext = function() {
-  return this._htmlimpl_length > this._htmlimpl_pos;
-}
-// ********** Code for _VariableSizeListIterator_dart_core_String **************
-$inherits(_VariableSizeListIterator_dart_core_String, _VariableSizeListIterator);
-function _VariableSizeListIterator_dart_core_String(list) {
-  this._htmlimpl_list = list;
-  this._htmlimpl_pos = (0);
-}
-// ********** Code for _FixedSizeListIterator_dart_core_String **************
-$inherits(_FixedSizeListIterator_dart_core_String, _FixedSizeListIterator);
-function _FixedSizeListIterator_dart_core_String(list) {
-  this._htmlimpl_length = list.get$length();
-  _VariableSizeListIterator_dart_core_String.call(this, list);
-}
-// ********** Code for _VariableSizeListIterator_int **************
-$inherits(_VariableSizeListIterator_int, _VariableSizeListIterator);
-function _VariableSizeListIterator_int(list) {
-  this._htmlimpl_list = list;
-  this._htmlimpl_pos = (0);
-}
-// ********** Code for _FixedSizeListIterator_int **************
-$inherits(_FixedSizeListIterator_int, _FixedSizeListIterator);
-function _FixedSizeListIterator_int(list) {
-  this._htmlimpl_length = list.get$length();
-  _VariableSizeListIterator_int.call(this, list);
-}
-// ********** Code for _VariableSizeListIterator_html_StyleSheet **************
-$inherits(_VariableSizeListIterator_html_StyleSheet, _VariableSizeListIterator);
-function _VariableSizeListIterator_html_StyleSheet(list) {
-  this._htmlimpl_list = list;
-  this._htmlimpl_pos = (0);
-}
-// ********** Code for _FixedSizeListIterator_html_StyleSheet **************
-$inherits(_FixedSizeListIterator_html_StyleSheet, _FixedSizeListIterator);
-function _FixedSizeListIterator_html_StyleSheet(list) {
-  this._htmlimpl_length = list.get$length();
-  _VariableSizeListIterator_html_StyleSheet.call(this, list);
-}
-// ********** Code for _VariableSizeListIterator_html_Touch **************
-$inherits(_VariableSizeListIterator_html_Touch, _VariableSizeListIterator);
-function _VariableSizeListIterator_html_Touch(list) {
-  this._htmlimpl_list = list;
-  this._htmlimpl_pos = (0);
-}
-// ********** Code for _FixedSizeListIterator_html_Touch **************
-$inherits(_FixedSizeListIterator_html_Touch, _FixedSizeListIterator);
-function _FixedSizeListIterator_html_Touch(list) {
-  this._htmlimpl_length = list.get$length();
-  _VariableSizeListIterator_html_Touch.call(this, list);
-}
-// ********** Code for AbstractWorkerWrappingImplementation **************
-$inherits(AbstractWorkerWrappingImplementation, EventTargetWrappingImplementation);
-AbstractWorkerWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AbstractWorkerWrappingImplementation._wrap$ctor.prototype = AbstractWorkerWrappingImplementation.prototype;
-function AbstractWorkerWrappingImplementation() {}
-// ********** Code for AnimationEventWrappingImplementation **************
-$inherits(AnimationEventWrappingImplementation, EventWrappingImplementation);
-AnimationEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-AnimationEventWrappingImplementation._wrap$ctor.prototype = AnimationEventWrappingImplementation.prototype;
-function AnimationEventWrappingImplementation() {}
-// ********** Code for BeforeLoadEventWrappingImplementation **************
-$inherits(BeforeLoadEventWrappingImplementation, EventWrappingImplementation);
-BeforeLoadEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-BeforeLoadEventWrappingImplementation._wrap$ctor.prototype = BeforeLoadEventWrappingImplementation.prototype;
-function BeforeLoadEventWrappingImplementation() {}
 // ********** Code for BodyElementWrappingImplementation **************
 $inherits(BodyElementWrappingImplementation, ElementWrappingImplementation);
 BodyElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -9091,62 +5023,12 @@ BodyElementWrappingImplementation._wrap$ctor = function(ptr) {
 BodyElementWrappingImplementation._wrap$ctor.prototype = BodyElementWrappingImplementation.prototype;
 function BodyElementWrappingImplementation() {}
 BodyElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for CloseEventWrappingImplementation **************
-$inherits(CloseEventWrappingImplementation, EventWrappingImplementation);
-CloseEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CloseEventWrappingImplementation._wrap$ctor.prototype = CloseEventWrappingImplementation.prototype;
-function CloseEventWrappingImplementation() {}
-// ********** Code for CompositionEventWrappingImplementation **************
-$inherits(CompositionEventWrappingImplementation, UIEventWrappingImplementation);
-CompositionEventWrappingImplementation._wrap$ctor = function(ptr) {
-  UIEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CompositionEventWrappingImplementation._wrap$ctor.prototype = CompositionEventWrappingImplementation.prototype;
-function CompositionEventWrappingImplementation() {}
-// ********** Code for CSSStyleDeclarationWrappingImplementation **************
-$inherits(CSSStyleDeclarationWrappingImplementation, DOMWrapperBase);
-CSSStyleDeclarationWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-CSSStyleDeclarationWrappingImplementation._wrap$ctor.prototype = CSSStyleDeclarationWrappingImplementation.prototype;
-function CSSStyleDeclarationWrappingImplementation() {}
-CSSStyleDeclarationWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-CSSStyleDeclarationWrappingImplementation.prototype.item = function(index) {
-  return this._ptr.item(index);
-}
-CSSStyleDeclarationWrappingImplementation.prototype.get$typeName = function() {
-  return "CSSStyleDeclaration";
-}
-// ********** Code for CustomEventWrappingImplementation **************
-$inherits(CustomEventWrappingImplementation, EventWrappingImplementation);
-CustomEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-CustomEventWrappingImplementation._wrap$ctor.prototype = CustomEventWrappingImplementation.prototype;
-function CustomEventWrappingImplementation() {}
-// ********** Code for DeviceMotionEventWrappingImplementation **************
-$inherits(DeviceMotionEventWrappingImplementation, EventWrappingImplementation);
-DeviceMotionEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DeviceMotionEventWrappingImplementation._wrap$ctor.prototype = DeviceMotionEventWrappingImplementation.prototype;
-function DeviceMotionEventWrappingImplementation() {}
-// ********** Code for DeviceOrientationEventWrappingImplementation **************
-$inherits(DeviceOrientationEventWrappingImplementation, EventWrappingImplementation);
-DeviceOrientationEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DeviceOrientationEventWrappingImplementation._wrap$ctor.prototype = DeviceOrientationEventWrappingImplementation.prototype;
-function DeviceOrientationEventWrappingImplementation() {}
 // ********** Code for FilteredElementList **************
 function FilteredElementList(node) {
   this._node = node;
   this._childNodes = node.get$nodes();
 }
+FilteredElementList.prototype.is$List_WebGLShader = function(){return false};
 FilteredElementList.prototype.get$_filtered = function() {
   return ListFactory.ListFactory$from$factory(this._childNodes.filter((function (n) {
     return !!(n && n.is$html_Element());
@@ -9238,13 +5120,6 @@ DocumentWrappingImplementation._wrap$ctor = function(_documentPtr, ptr) {
 DocumentWrappingImplementation._wrap$ctor.prototype = DocumentWrappingImplementation.prototype;
 function DocumentWrappingImplementation() {}
 DocumentWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for DOMApplicationCacheWrappingImplementation **************
-$inherits(DOMApplicationCacheWrappingImplementation, EventTargetWrappingImplementation);
-DOMApplicationCacheWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-DOMApplicationCacheWrappingImplementation._wrap$ctor.prototype = DOMApplicationCacheWrappingImplementation.prototype;
-function DOMApplicationCacheWrappingImplementation() {}
 // ********** Code for _ChildrenElementList **************
 _ChildrenElementList._wrap$ctor = function(element) {
   this._childElements = element.get$children();
@@ -9252,6 +5127,7 @@ _ChildrenElementList._wrap$ctor = function(element) {
 }
 _ChildrenElementList._wrap$ctor.prototype = _ChildrenElementList.prototype;
 function _ChildrenElementList() {}
+_ChildrenElementList.prototype.is$List_WebGLShader = function(){return false};
 _ChildrenElementList.prototype._toList = function() {
   var output = new Array(this._childElements.get$length());
   for (var i = (0), len = this._childElements.get$length();
@@ -9304,11 +5180,12 @@ _ChildrenElementList.prototype.forEach$1 = function($0) {
 };
 // ********** Code for _ListWrapper **************
 function _ListWrapper() {}
+_ListWrapper.prototype.is$List_WebGLShader = function(){return true};
 _ListWrapper.prototype.iterator = function() {
   return this._list.iterator();
 }
 _ListWrapper.prototype.forEach = function(f) {
-  return this._list.forEach(f);
+  return this._list.forEach$1(f);
 }
 _ListWrapper.prototype.filter = function(f) {
   return this._list.filter(f);
@@ -9347,6 +5224,7 @@ $inherits(_ListWrapper_Element, _ListWrapper);
 function _ListWrapper_Element(_list) {
   this._list = _list;
 }
+_ListWrapper_Element.prototype.is$List_WebGLShader = function(){return false};
 _ListWrapper_Element.prototype.add$1 = _ListWrapper_Element.prototype.add;
 _ListWrapper_Element.prototype.clear$0 = _ListWrapper_Element.prototype.clear;
 _ListWrapper_Element.prototype.filter$1 = function($0) {
@@ -9360,26 +5238,13 @@ $inherits(_ElementList, _ListWrapper_Element);
 function _ElementList(list) {
   _ListWrapper_Element.call(this, list);
 }
+_ElementList.prototype.is$List_WebGLShader = function(){return false};
 _ElementList.prototype.filter = function(f) {
   return new _ElementList(_ListWrapper_Element.prototype.filter.call(this, f));
 }
 _ElementList.prototype.filter$1 = function($0) {
   return this.filter(to$call$1($0));
 };
-// ********** Code for ErrorEventWrappingImplementation **************
-$inherits(ErrorEventWrappingImplementation, EventWrappingImplementation);
-ErrorEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-ErrorEventWrappingImplementation._wrap$ctor.prototype = ErrorEventWrappingImplementation.prototype;
-function ErrorEventWrappingImplementation() {}
-// ********** Code for EventSourceWrappingImplementation **************
-$inherits(EventSourceWrappingImplementation, EventTargetWrappingImplementation);
-EventSourceWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-EventSourceWrappingImplementation._wrap$ctor.prototype = EventSourceWrappingImplementation.prototype;
-function EventSourceWrappingImplementation() {}
 // ********** Code for Float32ArrayWrappingImplementation **************
 $inherits(Float32ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
 Float32ArrayWrappingImplementation._wrap$ctor = function(ptr) {
@@ -9387,98 +5252,13 @@ Float32ArrayWrappingImplementation._wrap$ctor = function(ptr) {
 }
 Float32ArrayWrappingImplementation._wrap$ctor.prototype = Float32ArrayWrappingImplementation.prototype;
 function Float32ArrayWrappingImplementation() {}
+Float32ArrayWrappingImplementation.prototype.is$html_ArrayBufferView = function(){return true};
+Float32ArrayWrappingImplementation.Float32ArrayWrappingImplementation$from$factory = function(list) {
+  return LevelDom.wrapFloat32Array(_TypedArrayFactoryProvider.Float32Array$fromList$factory(list));
+}
 Float32ArrayWrappingImplementation.prototype.get$length = function() {
   return this._ptr.get$length();
 }
-// ********** Code for Float64ArrayWrappingImplementation **************
-$inherits(Float64ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
-Float64ArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-Float64ArrayWrappingImplementation._wrap$ctor.prototype = Float64ArrayWrappingImplementation.prototype;
-function Float64ArrayWrappingImplementation() {}
-Float64ArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for HashChangeEventWrappingImplementation **************
-$inherits(HashChangeEventWrappingImplementation, EventWrappingImplementation);
-HashChangeEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-HashChangeEventWrappingImplementation._wrap$ctor.prototype = HashChangeEventWrappingImplementation.prototype;
-function HashChangeEventWrappingImplementation() {}
-// ********** Code for Int16ArrayWrappingImplementation **************
-$inherits(Int16ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
-Int16ArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-Int16ArrayWrappingImplementation._wrap$ctor.prototype = Int16ArrayWrappingImplementation.prototype;
-function Int16ArrayWrappingImplementation() {}
-Int16ArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for Int32ArrayWrappingImplementation **************
-$inherits(Int32ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
-Int32ArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-Int32ArrayWrappingImplementation._wrap$ctor.prototype = Int32ArrayWrappingImplementation.prototype;
-function Int32ArrayWrappingImplementation() {}
-Int32ArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for Int8ArrayWrappingImplementation **************
-$inherits(Int8ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
-Int8ArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-Int8ArrayWrappingImplementation._wrap$ctor.prototype = Int8ArrayWrappingImplementation.prototype;
-function Int8ArrayWrappingImplementation() {}
-Int8ArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for KeyboardEventWrappingImplementation **************
-$inherits(KeyboardEventWrappingImplementation, UIEventWrappingImplementation);
-KeyboardEventWrappingImplementation._wrap$ctor = function(ptr) {
-  UIEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-KeyboardEventWrappingImplementation._wrap$ctor.prototype = KeyboardEventWrappingImplementation.prototype;
-function KeyboardEventWrappingImplementation() {}
-// ********** Code for LoseContextWrappingImplementation **************
-$inherits(LoseContextWrappingImplementation, DOMWrapperBase);
-LoseContextWrappingImplementation._wrap$ctor = function(ptr) {
-  DOMWrapperBase._wrap$ctor.call(this, ptr);
-}
-LoseContextWrappingImplementation._wrap$ctor.prototype = LoseContextWrappingImplementation.prototype;
-function LoseContextWrappingImplementation() {}
-// ********** Code for MessageEventWrappingImplementation **************
-$inherits(MessageEventWrappingImplementation, EventWrappingImplementation);
-MessageEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-MessageEventWrappingImplementation._wrap$ctor.prototype = MessageEventWrappingImplementation.prototype;
-function MessageEventWrappingImplementation() {}
-// ********** Code for MessagePortWrappingImplementation **************
-$inherits(MessagePortWrappingImplementation, EventTargetWrappingImplementation);
-MessagePortWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-MessagePortWrappingImplementation._wrap$ctor.prototype = MessagePortWrappingImplementation.prototype;
-function MessagePortWrappingImplementation() {}
-// ********** Code for MouseEventWrappingImplementation **************
-$inherits(MouseEventWrappingImplementation, UIEventWrappingImplementation);
-MouseEventWrappingImplementation._wrap$ctor = function(ptr) {
-  UIEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-MouseEventWrappingImplementation._wrap$ctor.prototype = MouseEventWrappingImplementation.prototype;
-function MouseEventWrappingImplementation() {}
-// ********** Code for MutationEventWrappingImplementation **************
-$inherits(MutationEventWrappingImplementation, EventWrappingImplementation);
-MutationEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-MutationEventWrappingImplementation._wrap$ctor.prototype = MutationEventWrappingImplementation.prototype;
-function MutationEventWrappingImplementation() {}
 // ********** Code for _ChildrenNodeList **************
 _ChildrenNodeList._wrap$ctor = function(node) {
   this._node = node;
@@ -9486,6 +5266,7 @@ _ChildrenNodeList._wrap$ctor = function(node) {
 }
 _ChildrenNodeList._wrap$ctor.prototype = _ChildrenNodeList.prototype;
 function _ChildrenNodeList() {}
+_ChildrenNodeList.prototype.is$List_WebGLShader = function(){return false};
 _ChildrenNodeList.prototype._toList = function() {
   var output = new Array(this._childNodes.get$length());
   for (var i = (0), len = this._childNodes.get$length();
@@ -9541,6 +5322,7 @@ $inherits(_ListWrapper_Node, _ListWrapper);
 function _ListWrapper_Node(_list) {
   this._list = _list;
 }
+_ListWrapper_Node.prototype.is$List_WebGLShader = function(){return false};
 _ListWrapper_Node.prototype.add$1 = _ListWrapper_Node.prototype.add;
 _ListWrapper_Node.prototype.clear$0 = _ListWrapper_Node.prototype.clear;
 _ListWrapper_Node.prototype.filter$1 = function($0) {
@@ -9554,22 +5336,13 @@ $inherits(_NodeList, _ListWrapper_Node);
 function _NodeList(list) {
   _ListWrapper_Node.call(this, list);
 }
+_NodeList.prototype.is$List_WebGLShader = function(){return false};
 _NodeList.prototype.filter = function(f) {
   return new _NodeList(_ListWrapper_Node.prototype.filter.call(this, f));
 }
 _NodeList.prototype.filter$1 = function($0) {
   return this.filter(to$call$1($0));
 };
-// ********** Code for NotificationWrappingImplementation **************
-$inherits(NotificationWrappingImplementation, EventTargetWrappingImplementation);
-NotificationWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-NotificationWrappingImplementation._wrap$ctor.prototype = NotificationWrappingImplementation.prototype;
-function NotificationWrappingImplementation() {}
-NotificationWrappingImplementation.prototype.get$typeName = function() {
-  return "Notification";
-}
 // ********** Code for ObjectElementWrappingImplementation **************
 $inherits(ObjectElementWrappingImplementation, ElementWrappingImplementation);
 ObjectElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -9581,48 +5354,6 @@ ObjectElementWrappingImplementation.prototype.is$html_Element = function(){retur
 ObjectElementWrappingImplementation.prototype.get$type = function() {
   return this._ptr.get$type();
 }
-// ********** Code for OverflowEventWrappingImplementation **************
-$inherits(OverflowEventWrappingImplementation, EventWrappingImplementation);
-OverflowEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-OverflowEventWrappingImplementation._wrap$ctor.prototype = OverflowEventWrappingImplementation.prototype;
-function OverflowEventWrappingImplementation() {}
-// ********** Code for PageTransitionEventWrappingImplementation **************
-$inherits(PageTransitionEventWrappingImplementation, EventWrappingImplementation);
-PageTransitionEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-PageTransitionEventWrappingImplementation._wrap$ctor.prototype = PageTransitionEventWrappingImplementation.prototype;
-function PageTransitionEventWrappingImplementation() {}
-// ********** Code for PopStateEventWrappingImplementation **************
-$inherits(PopStateEventWrappingImplementation, EventWrappingImplementation);
-PopStateEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-PopStateEventWrappingImplementation._wrap$ctor.prototype = PopStateEventWrappingImplementation.prototype;
-function PopStateEventWrappingImplementation() {}
-// ********** Code for ProgressEventWrappingImplementation **************
-$inherits(ProgressEventWrappingImplementation, EventWrappingImplementation);
-ProgressEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-ProgressEventWrappingImplementation._wrap$ctor.prototype = ProgressEventWrappingImplementation.prototype;
-function ProgressEventWrappingImplementation() {}
-// ********** Code for SharedWorkerWrappingImplementation **************
-$inherits(SharedWorkerWrappingImplementation, AbstractWorkerWrappingImplementation);
-SharedWorkerWrappingImplementation._wrap$ctor = function(ptr) {
-  AbstractWorkerWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SharedWorkerWrappingImplementation._wrap$ctor.prototype = SharedWorkerWrappingImplementation.prototype;
-function SharedWorkerWrappingImplementation() {}
-// ********** Code for StorageEventWrappingImplementation **************
-$inherits(StorageEventWrappingImplementation, EventWrappingImplementation);
-StorageEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-StorageEventWrappingImplementation._wrap$ctor.prototype = StorageEventWrappingImplementation.prototype;
-function StorageEventWrappingImplementation() {}
 // ********** Code for SVGDocumentWrappingImplementation **************
 $inherits(SVGDocumentWrappingImplementation, DocumentWrappingImplementation);
 SVGDocumentWrappingImplementation._wrap$ctor = function(ptr) {
@@ -9631,22 +5362,6 @@ SVGDocumentWrappingImplementation._wrap$ctor = function(ptr) {
 SVGDocumentWrappingImplementation._wrap$ctor.prototype = SVGDocumentWrappingImplementation.prototype;
 function SVGDocumentWrappingImplementation() {}
 SVGDocumentWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for SVGElementInstanceWrappingImplementation **************
-$inherits(SVGElementInstanceWrappingImplementation, EventTargetWrappingImplementation);
-SVGElementInstanceWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-SVGElementInstanceWrappingImplementation._wrap$ctor.prototype = SVGElementInstanceWrappingImplementation.prototype;
-function SVGElementInstanceWrappingImplementation() {}
-SVGElementInstanceWrappingImplementation.prototype.get$childNodes = function() {
-  return LevelDom.wrapSVGElementInstanceList(this._ptr.get$childNodes());
-}
-SVGElementInstanceWrappingImplementation.prototype.get$firstChild = function() {
-  return LevelDom.wrapSVGElementInstance(this._ptr.get$firstChild());
-}
-SVGElementInstanceWrappingImplementation.prototype.get$parentNode = function() {
-  return LevelDom.wrapSVGElementInstance(this._ptr.get$parentNode());
-}
 // ********** Code for SVGSVGElementWrappingImplementation **************
 $inherits(SVGSVGElementWrappingImplementation, SVGElementWrappingImplementation);
 SVGSVGElementWrappingImplementation._wrap$ctor = function(ptr) {
@@ -9655,74 +5370,6 @@ SVGSVGElementWrappingImplementation._wrap$ctor = function(ptr) {
 SVGSVGElementWrappingImplementation._wrap$ctor.prototype = SVGSVGElementWrappingImplementation.prototype;
 function SVGSVGElementWrappingImplementation() {}
 SVGSVGElementWrappingImplementation.prototype.is$html_Element = function(){return true};
-// ********** Code for TextEventWrappingImplementation **************
-$inherits(TextEventWrappingImplementation, UIEventWrappingImplementation);
-TextEventWrappingImplementation._wrap$ctor = function(ptr) {
-  UIEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-TextEventWrappingImplementation._wrap$ctor.prototype = TextEventWrappingImplementation.prototype;
-function TextEventWrappingImplementation() {}
-// ********** Code for TouchEventWrappingImplementation **************
-$inherits(TouchEventWrappingImplementation, UIEventWrappingImplementation);
-TouchEventWrappingImplementation._wrap$ctor = function(ptr) {
-  UIEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-TouchEventWrappingImplementation._wrap$ctor.prototype = TouchEventWrappingImplementation.prototype;
-function TouchEventWrappingImplementation() {}
-// ********** Code for TransitionEventWrappingImplementation **************
-$inherits(TransitionEventWrappingImplementation, EventWrappingImplementation);
-TransitionEventWrappingImplementation._wrap$ctor = function(ptr) {
-  EventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-TransitionEventWrappingImplementation._wrap$ctor.prototype = TransitionEventWrappingImplementation.prototype;
-function TransitionEventWrappingImplementation() {}
-// ********** Code for Uint16ArrayWrappingImplementation **************
-$inherits(Uint16ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
-Uint16ArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-Uint16ArrayWrappingImplementation._wrap$ctor.prototype = Uint16ArrayWrappingImplementation.prototype;
-function Uint16ArrayWrappingImplementation() {}
-Uint16ArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for Uint32ArrayWrappingImplementation **************
-$inherits(Uint32ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
-Uint32ArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-Uint32ArrayWrappingImplementation._wrap$ctor.prototype = Uint32ArrayWrappingImplementation.prototype;
-function Uint32ArrayWrappingImplementation() {}
-Uint32ArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for Uint8ArrayWrappingImplementation **************
-$inherits(Uint8ArrayWrappingImplementation, ArrayBufferViewWrappingImplementation);
-Uint8ArrayWrappingImplementation._wrap$ctor = function(ptr) {
-  ArrayBufferViewWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-Uint8ArrayWrappingImplementation._wrap$ctor.prototype = Uint8ArrayWrappingImplementation.prototype;
-function Uint8ArrayWrappingImplementation() {}
-Uint8ArrayWrappingImplementation.prototype.get$length = function() {
-  return this._ptr.get$length();
-}
-// ********** Code for WebSocketWrappingImplementation **************
-$inherits(WebSocketWrappingImplementation, EventTargetWrappingImplementation);
-WebSocketWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-WebSocketWrappingImplementation._wrap$ctor.prototype = WebSocketWrappingImplementation.prototype;
-function WebSocketWrappingImplementation() {}
-WebSocketWrappingImplementation.prototype.get$typeName = function() {
-  return "WebSocket";
-}
-// ********** Code for WheelEventWrappingImplementation **************
-$inherits(WheelEventWrappingImplementation, UIEventWrappingImplementation);
-WheelEventWrappingImplementation._wrap$ctor = function(ptr) {
-  UIEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-WheelEventWrappingImplementation._wrap$ctor.prototype = WheelEventWrappingImplementation.prototype;
-function WheelEventWrappingImplementation() {}
 // ********** Code for WindowWrappingImplementation **************
 $inherits(WindowWrappingImplementation, EventTargetWrappingImplementation);
 WindowWrappingImplementation._wrap$ctor = function(ptr) {
@@ -9733,34 +5380,6 @@ function WindowWrappingImplementation() {}
 WindowWrappingImplementation.prototype.get$length = function() {
   return this._ptr.get$length();
 }
-// ********** Code for WorkerWrappingImplementation **************
-$inherits(WorkerWrappingImplementation, EventTargetWrappingImplementation);
-WorkerWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-WorkerWrappingImplementation._wrap$ctor.prototype = WorkerWrappingImplementation.prototype;
-function WorkerWrappingImplementation() {}
-// ********** Code for XMLHttpRequestProgressEventWrappingImplementation **************
-$inherits(XMLHttpRequestProgressEventWrappingImplementation, ProgressEventWrappingImplementation);
-XMLHttpRequestProgressEventWrappingImplementation._wrap$ctor = function(ptr) {
-  ProgressEventWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-XMLHttpRequestProgressEventWrappingImplementation._wrap$ctor.prototype = XMLHttpRequestProgressEventWrappingImplementation.prototype;
-function XMLHttpRequestProgressEventWrappingImplementation() {}
-// ********** Code for XMLHttpRequestUploadWrappingImplementation **************
-$inherits(XMLHttpRequestUploadWrappingImplementation, EventTargetWrappingImplementation);
-XMLHttpRequestUploadWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-XMLHttpRequestUploadWrappingImplementation._wrap$ctor.prototype = XMLHttpRequestUploadWrappingImplementation.prototype;
-function XMLHttpRequestUploadWrappingImplementation() {}
-// ********** Code for XMLHttpRequestWrappingImplementation **************
-$inherits(XMLHttpRequestWrappingImplementation, EventTargetWrappingImplementation);
-XMLHttpRequestWrappingImplementation._wrap$ctor = function(ptr) {
-  EventTargetWrappingImplementation._wrap$ctor.call(this, ptr);
-}
-XMLHttpRequestWrappingImplementation._wrap$ctor.prototype = XMLHttpRequestWrappingImplementation.prototype;
-function XMLHttpRequestWrappingImplementation() {}
 // ********** Code for top level **************
 var _pendingRequests;
 var _pendingMeasurementFrameCallbacks;
@@ -9784,12 +5403,23 @@ webglFundamentals.prototype.debugPrint = function(p) {
     dart_core_print(p);
   }
 }
+webglFundamentals.prototype.createProgram = function(gl, shaders) {
+  var program = gl.createProgram();
+  if (!!(shaders && shaders.is$List_WebGLShader())) {
+    this.debugPrint(("shaders.length = " + shaders.get$length()));
+    shaders.forEach$1((function (shader) {
+      return gl.attachShader(program, shader);
+    })
+    );
+  }
+  gl.linkProgram(program);
+  return program;
+}
 webglFundamentals.prototype.loadShader = function(gl, shaderSource, shaderType) {
   var shader = gl.createShader(shaderType);
   gl.shaderSource(shader, shaderSource);
   gl.compileShader(shader);
-  var compiled = gl.getShaderParameter(shader, (35713));
-  this.debugPrint(("compiled = " + compiled));
+  return shader;
 }
 webglFundamentals.prototype.createShaderFromScriptElement = function(gl, id) {
   var shaderScript = html_get$document().query(id);
@@ -9818,6 +5448,16 @@ webglFundamentals.prototype.run = function() {
   var gl = this.getWebGLContext(canvas);
   var vertexShader = this.createShaderFromScriptElement(gl, "#v2d-vertex-shader");
   var fragmentShader = this.createShaderFromScriptElement(gl, "#f2d-fragment-shader");
+  var program = this.createProgram(gl, [vertexShader, fragmentShader]);
+  gl.useProgram(program);
+  var positionLocation = gl.getAttribLocation(program, "a_position");
+  var buffer = gl.createBuffer$0();
+  gl.bindBuffer((34962), buffer);
+  var vertices = [(-1), (-1), (1), (-1), (-1), (1), (-1), (1), (1), (-1), (1), (1)];
+  gl.bufferData((34962), Float32ArrayWrappingImplementation.Float32ArrayWrappingImplementation$from$factory(vertices), (35044));
+  gl.enableVertexAttribArray(positionLocation);
+  gl.vertexAttribPointer(positionLocation, (2), (5126), false, (0), (0));
+  gl.drawArrays((4), (0), (6));
   this.write("Ran webgl fundamental sample");
 }
 webglFundamentals.prototype.write = function(message) {
@@ -9827,7 +5467,7 @@ webglFundamentals.prototype.write = function(message) {
 function main() {
   new webglFundamentals().run();
 }
-// 100 dynamic types.
+// 102 dynamic types.
 // 494 types
 // 43 !leaf
 function $dynamicSetMetadata(inputTable) {
