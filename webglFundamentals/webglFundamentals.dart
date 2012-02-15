@@ -108,7 +108,7 @@ class webglFundamentals {
     // draw
     gl.drawArrays(WebGLRenderingContext.TRIANGLES, 0, 6);
     
-    write("Ran webgl fundamental sample");
+    //write("Ran webgl fundamental sample");
   }
 
   void write(String message) {
