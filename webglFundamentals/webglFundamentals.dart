@@ -26,6 +26,9 @@ class webglFundamentals {
     // Load the shader source
     gl.shaderSource(shader, shaderSource);
     
+    // Compile the shader
+    gl.compileShader(shader);
+    
     // Check the compile status
     var compiled = gl.getShaderParameter(shader, WebGLRenderingContext.COMPILE_STATUS);
     debugPrint("compiled = ${compiled}");

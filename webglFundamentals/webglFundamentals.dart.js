@@ -5575,6 +5575,10 @@ WebGLRenderingContextWrappingImplementation._wrap$ctor = function(ptr) {
 }
 WebGLRenderingContextWrappingImplementation._wrap$ctor.prototype = WebGLRenderingContextWrappingImplementation.prototype;
 function WebGLRenderingContextWrappingImplementation() {}
+WebGLRenderingContextWrappingImplementation.prototype.compileShader = function(shader) {
+  this._ptr.compileShader(LevelDom.unwrap(shader));
+  return;
+}
 WebGLRenderingContextWrappingImplementation.prototype.createShader = function(type) {
   return LevelDom.wrapWebGLShader(this._ptr.createShader(type));
 }
@@ -9783,6 +9787,7 @@ webglFundamentals.prototype.debugPrint = function(p) {
 webglFundamentals.prototype.loadShader = function(gl, shaderSource, shaderType) {
   var shader = gl.createShader(shaderType);
   gl.shaderSource(shader, shaderSource);
+  gl.compileShader(shader);
   var compiled = gl.getShaderParameter(shader, (35713));
   this.debugPrint(("compiled = " + compiled));
 }
