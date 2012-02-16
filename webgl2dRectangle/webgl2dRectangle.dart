@@ -1,12 +1,13 @@
 #import('dart:html');
 #import('../utils/webglUtils.dart');
 
-class webglFundamentals {
+class webgl2dRectangle {
 
-  webglFundamentals() {
+  webgl2dRectangle() {
   }
-  
+
   void run() {
+    // Get a WebGL context
     var canvas = document.query("canvas");
     var gl = getWebGLContext(canvas);
     if (canvas is! CanvasElement || gl is! WebGLRenderingContext) {
@@ -14,24 +15,28 @@ class webglFundamentals {
       return;
     }
     
-    
+    // setup GLSL program
     var vertexShader = createShaderFromScriptElement(gl, "#v2d-vertex-shader");
     var fragmentShader = createShaderFromScriptElement(gl, "#f2d-fragment-shader");
     var program = createProgram(gl, [vertexShader, fragmentShader]);
     gl.useProgram(program);
     
-    // look up where the vertex data needs to go. 
+    // look up where the vertext data needs to go.
     var positionLocation = gl.getAttribLocation(program, "a_position");
+    
+    // set the resolution
+    var resolutionLocation = gl.getUniformLocation(program, "u_resolution");
+    gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
     
     // Create a buffer and put a single clipspace rectangle in it (2 triangles)
     var buffer = gl.createBuffer();
     gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, buffer);
-    var vertices = [-1.0, -1.0,
-                     1.0, -1.0,
-                    -1.0,  1.0,
-                    -1.0,  1.0,
-                     1.0, -1.0,
-                     1.0,  1.0];
+    var vertices = [10, 20,
+                    80, 20,
+                    10, 30,
+                    10, 30,
+                    80, 20,
+                    80, 30];
     gl.bufferData(WebGLRenderingContext.ARRAY_BUFFER, new Float32Array.from(vertices), WebGLRenderingContext.STATIC_DRAW);
     gl.enableVertexAttribArray(positionLocation);
     gl.vertexAttribPointer(positionLocation, 2, WebGLRenderingContext.FLOAT, false, 0, 0);
@@ -49,5 +54,5 @@ class webglFundamentals {
 }
 
 void main() {
-  new webglFundamentals().run();
+  new webgl2dRectangle().run();
 }
