@@ -5743,12 +5743,12 @@ function createShaderFromScriptElement(gl, id) {
 function getWebGLContext(canvas) {
   return canvas.getContext("experimental-webgl");
 }
-//  ********** Library webgl2dRectangle **************
-// ********** Code for webgl2dRectangle **************
-function webgl2dRectangle() {
+//  ********** Library webgl2dRectangleTopLeft **************
+// ********** Code for webgl2dRectangleTopLeft **************
+function webgl2dRectangleTopLeft() {
 
 }
-webgl2dRectangle.prototype.run = function() {
+webgl2dRectangleTopLeft.prototype.run = function() {
   var canvas = html_get$document().query("canvas");
   var gl = getWebGLContext(canvas);
   if (!(canvas && canvas.is$CanvasElement()) || !(gl && gl.is$html_WebGLRenderingContext())) {
@@ -5771,12 +5771,12 @@ webgl2dRectangle.prototype.run = function() {
   gl.drawArrays((4), (0), (6));
   this.write("");
 }
-webgl2dRectangle.prototype.write = function(message) {
+webgl2dRectangleTopLeft.prototype.write = function(message) {
   html_get$document().query("#status").set$innerHTML(message);
 }
 // ********** Code for top level **************
 function main() {
-  new webgl2dRectangle().run();
+  new webgl2dRectangleTopLeft().run();
 }
 // 143 dynamic types.
 // 494 types
