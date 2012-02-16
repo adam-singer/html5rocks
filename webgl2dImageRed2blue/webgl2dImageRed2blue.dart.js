@@ -5837,7 +5837,7 @@ function webgl2dImageRed2blue() {
 webgl2dImageRed2blue.prototype.run = function() {
   var image = html_get$document().query("#photo");
   this.render(image);
-  this.write("Run Done");
+  this.write("");
 }
 webgl2dImageRed2blue.prototype.render = function(image) {
   var canvas = html_get$document().query("canvas");
