@@ -1,9 +1,9 @@
 #import('dart:html');
 #import('../utils/webglUtils.dart');
 
-class webgl2dImageRed2blue {
+class webgl2dImageBlend {
 
-  webgl2dImageRed2blue() {
+  webgl2dImageBlend() {
   }
 
   void run() {
@@ -59,9 +59,13 @@ class webgl2dImageRed2blue {
     
     // lookup uniforms
     var resolutionLocation = gl.getUniformLocation(program, "u_resolution");
+    var textureSizeLocation = gl.getUniformLocation(program, "u_textureSize");
     
     // set the resolution
     gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
+    
+    // set the size of the image
+    gl.uniform2f(textureSizeLocation, image.width, image.height);
     
     // Create a buffer for the position of the rectangle corners.
     var positionBuffer = gl.createBuffer();
@@ -83,5 +87,5 @@ class webgl2dImageRed2blue {
 }
 
 void main() {
-  new webgl2dImageRed2blue().run();
+  new webgl2dImageBlend().run();
 }
