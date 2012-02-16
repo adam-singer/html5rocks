@@ -1,17 +1,17 @@
 #import('dart:html');
 #import('../utils/webglUtils.dart');
 
-class webgl2dImage {
+class webgl2dImageRed2blue {
 
-  webgl2dImage() {
+  webgl2dImageRed2blue() {
   }
 
   void run() {
     ImageElement image = document.query('#photo');
     render(image);
-    write("");
+    write("Run Done");
   }
-  
+
   render(image) {
     // Get a WebGL context
     var canvas = document.query("canvas");
@@ -64,18 +64,18 @@ class webgl2dImage {
     gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
     
     // Create a buffer for the position of the rectangle corners.
-    var buffer = gl.createBuffer();
-    gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, buffer);
+    var positionBuffer = gl.createBuffer();
+    gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, positionBuffer);
     gl.enableVertexAttribArray(positionLocation);
     gl.vertexAttribPointer(positionLocation, 2, WebGLRenderingContext.FLOAT, false, 0, 0);
     
     // Set a rectangle the same size as the image. 
     setRectangle(gl, 0, 0, image.width, image.height);
     
-    // Draw te rectangle.
+    // Draw the rectangle
     gl.drawArrays(WebGLRenderingContext.TRIANGLES, 0, 6);
   }
-
+  
   void write(String message) {
     // the HTML library defines a global "document" variable
     document.query('#status').innerHTML = message;
@@ -83,5 +83,5 @@ class webgl2dImage {
 }
 
 void main() {
-  new webgl2dImage().run();
+  new webgl2dImageRed2blue().run();
 }
