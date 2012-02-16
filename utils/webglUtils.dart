@@ -70,3 +70,23 @@ WebGLShader createShaderFromScriptElement(WebGLRenderingContext gl, String id) {
 WebGLRenderingContext getWebGLContext(CanvasElement canvas) {
   return canvas.getContext("experimental-webgl");
 }
+
+
+// misc functions 
+void setRectangle(gl, x, y, width, height) {
+  var x1 = x;
+  var x2 = x + width;
+  var y1 = y;
+  var y2 = y + height;
+  var vertices = [x1, y1,
+                  x2, y1,
+                  x1, y2,
+                  x1, y2,
+                  x2, y1,
+                  x2, y2];
+  gl.bufferData(WebGLRenderingContext.ARRAY_BUFFER, new Float32Array.from(vertices), WebGLRenderingContext.STATIC_DRAW);
+}
+
+int randomInt(int range) {
+  return (Math.random() * range).toInt();
+}

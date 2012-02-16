@@ -5769,6 +5769,17 @@ function createShaderFromScriptElement(gl, id) {
 function getWebGLContext(canvas) {
   return canvas.getContext("experimental-webgl");
 }
+function setRectangle(gl, x, y, width, height) {
+  var x1 = x;
+  var x2 = $add(x, width);
+  var y1 = y;
+  var y2 = $add(y, height);
+  var vertices = [x1, y1, x2, y1, x1, y2, x1, y2, x2, y1, x2, y2];
+  gl.bufferData((34962), Float32ArrayWrappingImplementation.Float32ArrayWrappingImplementation$from$factory(vertices), (35044));
+}
+function randomInt(range) {
+  return (Math.random() * range).toInt();
+}
 //  ********** Library webgl2dRectangles **************
 // ********** Code for webgl2dRectangles **************
 function webgl2dRectangles() {
@@ -5795,22 +5806,11 @@ webgl2dRectangles.prototype.run = function() {
   gl.vertexAttribPointer(positionLocation, (2), (5126), false, (0), (0));
   for (var i = (0);
    $lt(i, (50)); (i = $add(i, (1)))) {
-    this.setRectangle(gl, this.randomInt((300)), this.randomInt((300)), this.randomInt((300)), this.randomInt((300)));
+    setRectangle(gl, randomInt((300)), randomInt((300)), randomInt((300)), randomInt((300)));
     gl.uniform4f(colorLocation, Math.random(), Math.random(), Math.random(), (1));
     gl.drawArrays((4), (0), (6));
   }
   this.write("");
-}
-webgl2dRectangles.prototype.setRectangle = function(gl, x, y, width, height) {
-  var x1 = x;
-  var x2 = $add(x, width);
-  var y1 = y;
-  var y2 = $add(y, height);
-  var vertices = [x1, y1, x2, y1, x1, y2, x1, y2, x2, y1, x2, y2];
-  gl.bufferData((34962), Float32ArrayWrappingImplementation.Float32ArrayWrappingImplementation$from$factory(vertices), (35044));
-}
-webgl2dRectangles.prototype.randomInt = function(range) {
-  return (Math.random() * range).toInt();
 }
 webgl2dRectangles.prototype.write = function(message) {
   html_get$document().query("#status").set$innerHTML(message);
